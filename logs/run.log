@@ -1,0 +1,438 @@
+
+API Logic Project Server Setup (01JMCRP6RTCT32TMNM2532VCN2) Starting with CLI args: 
+.. api_logic_server_run.py
+
+Created August 03, 2024 09:34:01 at /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2
+
+Data Model Loaded, customizing...
+..discovered models: []
+LogicBank Activation - declare_logic.py
+Loading rules from /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/logic/wg_rules
+01JMCRS3A39N3C6TGVTR9CHV4R rule file: logic/wg_rules/Person_Total_Hours.py
+01JMCRS3A54C06M17HXSMN4A29 rule file: logic/wg_rules/Person_Total_Amount_Billed.py
+01JMCRS3A6WE5S8XH36SS1G6R5 rule file: logic/wg_rules/Person_Billing_Rate_Constraint.py
+01JMCRS3A6QT4J8MAPTGV3J76B rule file: logic/wg_rules/Timesheet_Copy_Billing_Rate.py
+01JMCRS3A70Z44J4CR9NS12034 rule file: logic/wg_rules/Timesheet_Total_Amount_Billed.py
+01JMCRS3A8J59C3D0TZGQDWV9C rule file: logic/wg_rules/Timesheet_Hours_Worked_Constraint.py
+01JMCRS3A8CDV1X1J36EFTGY52 rule file: logic/wg_rules/Task_Total_Task_Hours_Worked.py
+01JMCRS3A92ZYN64PPWZQYZNVE rule file: logic/wg_rules/Task_Total_Task_Amount_Billed.py
+01JMCRS3A9PK2YGHHPJVY03C5M rule file: logic/wg_rules/Task_Is_Over_Budget_Formula.py
+01JMCRS3AAC6AR2JVK19T283S0 rule file: logic/wg_rules/Project_Total_Project_Hours.py
+01JMCRS3AA7YW7ZCS54H8P9P94 rule file: logic/wg_rules/Project_Total_Project_Amount.py
+01JMCRS3AAFVFAR2WHFNJ38PF8 rule file: logic/wg_rules/Project_Is_Over_Budget_Formula.py
+01JMCRS3ABD4CABTBM26G3591E rule file: logic/wg_rules/Client_Total_Hours.py
+01JMCRS3ABMA88DHBGKG90E27K rule file: logic/wg_rules/Client_Total_Amount.py
+01JMCRS3ACBS9834HZ180DCME0 rule file: logic/wg_rules/Client_Is_Over_Budget_Formula.py
+01JMCRS3ACECESFGBBECAW098X rule file: logic/wg_rules/Invoice_Invoice_Amount.py
+01JMCRS3ADQEK2SXQ2GAJDV5PY rule file: logic/wg_rules/Invoice_Payment_Total.py
+01JMCRS3AD527KCXQFBHZ2PXNM rule file: logic/wg_rules/Invoice_Balance_Formula.py
+01JMCRS3AE89MRN0YPX0EZJPG5 rule file: logic/wg_rules/Invoice_Is_Paid_Formula.py
+01JMCRS3AE8ZKPXZPHE7PEYQ1F rule file: logic/wg_rules/Invoice_Task_Count.py
+01JMCRS3AFE9QBJBYWYYTTYJ6A rule file: logic/wg_rules/Invoice_Task_Completed_Count.py
+01JMCRS3AFDWY5TPA8Z46TM33C rule file: logic/wg_rules/Invoice_Is_Ready_Formula.py
+01JMCRS3AFZ88WR74F3B52ZHFV rule file: logic/wg_rules/Invoice_Kafka_Event.py
+01JMCRS3AGH97HQ0MKGX5MNF3P rule file: logic/wg_rules/InvoiceItem_Copy_Task_Amount.py
+01JMCRS3AG1NFX5W2M98DJ52EG rule file: logic/wg_rules/InvoiceItem_Is_Completed.py
+[32mLoading Rule Module Person_Total_Hours 01JMCRS3A39N3C6TGVTR9CHV4R [0m
+[32mLoading Rule Module Person_Total_Amount_Billed 01JMCRS3A54C06M17HXSMN4A29 [0m
+[32mLoading Rule Module Person_Billing_Rate_Constraint 01JMCRS3A6WE5S8XH36SS1G6R5 [0m
+[32mLoading Rule Module Timesheet_Copy_Billing_Rate 01JMCRS3A6QT4J8MAPTGV3J76B [0m
+[32mLoading Rule Module Timesheet_Total_Amount_Billed 01JMCRS3A70Z44J4CR9NS12034 [0m
+[32mLoading Rule Module Timesheet_Hours_Worked_Constraint 01JMCRS3A8J59C3D0TZGQDWV9C [0m
+[32mLoading Rule Module Task_Total_Task_Hours_Worked 01JMCRS3A8CDV1X1J36EFTGY52 [0m
+[32mLoading Rule Module Task_Total_Task_Amount_Billed 01JMCRS3A92ZYN64PPWZQYZNVE [0m
+[32mLoading Rule Module Task_Is_Over_Budget_Formula 01JMCRS3A9PK2YGHHPJVY03C5M [0m
+[32mLoading Rule Module Project_Total_Project_Hours 01JMCRS3AAC6AR2JVK19T283S0 [0m
+[32mLoading Rule Module Project_Total_Project_Amount 01JMCRS3AA7YW7ZCS54H8P9P94 [0m
+[32mLoading Rule Module Project_Is_Over_Budget_Formula 01JMCRS3AAFVFAR2WHFNJ38PF8 [0m
+[32mLoading Rule Module Client_Total_Hours 01JMCRS3ABD4CABTBM26G3591E [0m
+[32mLoading Rule Module Client_Total_Amount 01JMCRS3ABMA88DHBGKG90E27K [0m
+[32mLoading Rule Module Client_Is_Over_Budget_Formula 01JMCRS3ACBS9834HZ180DCME0 [0m
+[32mLoading Rule Module Invoice_Invoice_Amount 01JMCRS3ACECESFGBBECAW098X [0m
+[32mLoading Rule Module Invoice_Payment_Total 01JMCRS3ADQEK2SXQ2GAJDV5PY [0m
+[32mLoading Rule Module Invoice_Balance_Formula 01JMCRS3AD527KCXQFBHZ2PXNM [0m
+[32mLoading Rule Module Invoice_Is_Paid_Formula 01JMCRS3AE89MRN0YPX0EZJPG5 [0m
+[32mLoading Rule Module Invoice_Task_Count 01JMCRS3AE8ZKPXZPHE7PEYQ1F [0m
+[32mLoading Rule Module Invoice_Task_Completed_Count 01JMCRS3AFE9QBJBYWYYTTYJ6A [0m
+[32mLoading Rule Module Invoice_Is_Ready_Formula 01JMCRS3AFDWY5TPA8Z46TM33C [0m
+[32mLoading Rule Module Invoice_Kafka_Event 01JMCRS3AFZ88WR74F3B52ZHFV [0m
+[32mLoading Rule Module InvoiceItem_Copy_Task_Amount 01JMCRS3AGH97HQ0MKGX5MNF3P [0m
+
+The following rules have been loaded
+Rule Bank[0xffffab4c0080] (loaded 2025-02-18 14:53:29.116515)
+Mapped Class[Person] rules:
+  Derive <class 'database.models.Person'>.total_hours_entered as Sum(Timesheet.hours_worked Where  - None)
+  Derive <class 'database.models.Person'>.total_amount_billed as Formula (-1): Rule.formula(derive=Person.total_amount_billed, a [...]
+  Constraint Function: None 
+Mapped Class[Timesheet] rules:
+  Derive <class 'database.models.Timesheet'>.billing_rate as Copy(person.billing_rate)
+  Derive <class 'database.models.Timesheet'>.total_amount_billed as Formula (-1): Rule.formula(derive=Timesheet.total_amount_billed [...]
+  Constraint Function: None 
+Mapped Class[Task] rules:
+  Derive <class 'database.models.Task'>.total_task_hours_worked as Sum(Timesheet.hours_worked Where  - None)
+  Derive <class 'database.models.Task'>.total_task_amount_billed as Sum(Timesheet.total_amount_billed Where  - None)
+  Derive <class 'database.models.Task'>.is_over_budget as Formula (-1): Rule.formula(derive=Task.is_over_budget, as_expre [...]
+Mapped Class[Project] rules:
+  Derive <class 'database.models.Project'>.total_project_hours as Sum(Task.total_task_hours_worked Where  - None)
+  Derive <class 'database.models.Project'>.total_project_amount as Sum(Task.total_task_amount_billed Where  - None)
+  Derive <class 'database.models.Project'>.is_over_budget as Formula (-1): Rule.formula(derive=Project.is_over_budget, as_ex [...]
+Mapped Class[Client] rules:
+  Derive <class 'database.models.Client'>.total_hours as Sum(Project.total_project_hours Where  - None)
+  Derive <class 'database.models.Client'>.total_amount as Sum(Project.total_project_amount Where  - None)
+  Derive <class 'database.models.Client'>.is_over_budget as Formula (-1): Rule.formula(derive=Client.is_over_budget, as_exp [...]
+Mapped Class[Invoice] rules:
+  Derive <class 'database.models.Invoice'>.invoice_amount as Sum(InvoiceItem.task_amount Where  - None)
+  Derive <class 'database.models.Invoice'>.payment_total as Sum(Payment.amount Where  - None)
+  Derive <class 'database.models.Invoice'>.invoice_balance as Formula (-1): Rule.formula(derive=Invoice.invoice_balance, as_e [...]
+  Derive <class 'database.models.Invoice'>.is_paid as Formula (-1): Rule.formula(derive=Invoice.is_paid, as_expressio [...]
+  Derive <class 'database.models.Invoice'>.task_count as Count(<class 'database.models.InvoiceItem'> Where  - None)
+  Derive <class 'database.models.Invoice'>.completed_task_count as Count(<class 'database.models.InvoiceItem'> Where Rule.count(derive=Invoice.completed_task_count, as_count_of=InvoiceItem, where=lambda row: row.is_completed == True) - <function init_rule.<locals>.<lambda> at 0xffffa961ede0>)
+  Derive <class 'database.models.Invoice'>.is_ready as Formula (-1): Rule.formula(derive=Invoice.is_ready, as_expressi [...]
+  RowEvent Invoice.send_row_to_kafka() 
+Mapped Class[InvoiceItem] rules:
+  Derive <class 'database.models.InvoiceItem'>.task_amount as Copy(task.total_task_amount_billed)
+
+The following attributes have been referenced
+
+..Person.total_hours_entered: aggregate derivation
+..Timesheet.hours_worked: sum derived from
+..Person.total_hours_entered: - formula
+..Person.billing_rate: - formula
+..Person.billing_rate: constraint
+..Timesheet.billing_rate: parent copy derivation
+..Person.billing_rate: parent copy from
+..Timesheet.billing_rate: - formula
+..Timesheet.hours_worked: - formula
+..Timesheet.is_billable: - formula
+..Timesheet.hours_worked: constraint
+..Task.total_task_hours_worked: aggregate derivation
+..Timesheet.hours_worked: sum derived from
+..Task.total_task_amount_billed: aggregate derivation
+..Timesheet.total_amount_billed: sum derived from
+..Task.total_task_hours_worked: - formula
+..Task.task_budget_hours: - formula
+..Project.total_project_hours: aggregate derivation
+..Task.total_task_hours_worked: sum derived from
+..Project.total_project_amount: aggregate derivation
+..Task.total_task_amount_billed: sum derived from
+..Project.total_project_amount: - formula
+..Project.project_budget_amount: - formula
+..Client.total_hours: aggregate derivation
+..Project.total_project_hours: sum derived from
+..Client.total_amount: aggregate derivation
+..Project.total_project_amount: sum derived from
+..Client.total_amount: - formula
+..Client.budget_amount: - formula
+..Invoice.invoice_amount: aggregate derivation
+..InvoiceItem.task_amount: sum derived from
+..Invoice.payment_total: aggregate derivation
+..Payment.amount: sum derived from
+..Invoice.invoice_amount: - formula
+..Invoice.payment_total: - formula
+..Invoice.invoice_balance: - formula
+..Invoice.task_count: aggregate derivation
+..Invoice.completed_task_count: aggregate derivation
+..InvoiceItem.is_completed: aggregate where clause
+..Invoice.task_count: - formula
+..Invoice.completed_task_count: - formula
+..InvoiceItem.task_amount: parent copy derivation
+..Task.total_task_amount_billed: parent copy from
+
+The following rules have been activated
+Rule Bank[0xffffab4c0080] (loaded 2025-02-18 14:53:29.116515)
+Mapped Class[Person] rules:
+  Derive <class 'database.models.Person'>.total_hours_entered as Sum(Timesheet.hours_worked Where  - None)
+  Derive <class 'database.models.Person'>.total_amount_billed as Formula (1): Rule.formula(derive=Person.total_amount_billed, a [...]
+  Constraint Function: None 
+Mapped Class[Timesheet] rules:
+  Derive <class 'database.models.Timesheet'>.billing_rate as Copy(person.billing_rate)
+  Derive <class 'database.models.Timesheet'>.total_amount_billed as Formula (1): Rule.formula(derive=Timesheet.total_amount_billed [...]
+  Constraint Function: None 
+Mapped Class[Task] rules:
+  Derive <class 'database.models.Task'>.total_task_hours_worked as Sum(Timesheet.hours_worked Where  - None)
+  Derive <class 'database.models.Task'>.total_task_amount_billed as Sum(Timesheet.total_amount_billed Where  - None)
+  Derive <class 'database.models.Task'>.is_over_budget as Formula (1): Rule.formula(derive=Task.is_over_budget, as_expre [...]
+Mapped Class[Project] rules:
+  Derive <class 'database.models.Project'>.total_project_hours as Sum(Task.total_task_hours_worked Where  - None)
+  Derive <class 'database.models.Project'>.total_project_amount as Sum(Task.total_task_amount_billed Where  - None)
+  Derive <class 'database.models.Project'>.is_over_budget as Formula (1): Rule.formula(derive=Project.is_over_budget, as_ex [...]
+Mapped Class[Client] rules:
+  Derive <class 'database.models.Client'>.total_hours as Sum(Project.total_project_hours Where  - None)
+  Derive <class 'database.models.Client'>.total_amount as Sum(Project.total_project_amount Where  - None)
+  Derive <class 'database.models.Client'>.is_over_budget as Formula (1): Rule.formula(derive=Client.is_over_budget, as_exp [...]
+Mapped Class[Invoice] rules:
+  Derive <class 'database.models.Invoice'>.invoice_amount as Sum(InvoiceItem.task_amount Where  - None)
+  Derive <class 'database.models.Invoice'>.payment_total as Sum(Payment.amount Where  - None)
+  Derive <class 'database.models.Invoice'>.invoice_balance as Formula (1): Rule.formula(derive=Invoice.invoice_balance, as_e [...]
+  Derive <class 'database.models.Invoice'>.is_paid as Formula (2): Rule.formula(derive=Invoice.is_paid, as_expressio [...]
+  Derive <class 'database.models.Invoice'>.task_count as Count(<class 'database.models.InvoiceItem'> Where  - None)
+  Derive <class 'database.models.Invoice'>.completed_task_count as Count(<class 'database.models.InvoiceItem'> Where Rule.count(derive=Invoice.completed_task_count, as_count_of=InvoiceItem, where=lambda row: row.is_completed == True) - <function init_rule.<locals>.<lambda> at 0xffffa961ede0>)
+  Derive <class 'database.models.Invoice'>.is_ready as Formula (3): Rule.formula(derive=Invoice.is_ready, as_expressi [...]
+  RowEvent Invoice.send_row_to_kafka() 
+Mapped Class[InvoiceItem] rules:
+  Derive <class 'database.models.InvoiceItem'>.task_amount as Copy(task.total_task_amount_billed)
+Logic Bank 01.20.26 - 32 rules loaded
+Exposing /Client
+Exposing /Invoice
+Exposing /InvoiceItem
+Exposing /Payment
+Exposing /Person
+Exposing /Project
+Exposing /Task
+Exposing /Timesheet
+Declare   API - api/expose_api_models, endpoint for each table on localhost:8282, customizing...
+..discovered services: ['ontimize_api.py', 'system.py', 'new_service.py', 'newer_service.py']
+
+Authentication loaded -- api calls now require authorization header
+..declare security - security/declare_security.py authentication tables loaded
+Kafka Consumer not activated
+
+API Logic Project loaded (not WSGI), version 14.03.10
+.. startup message: normal start
+ (running from docker container at flask_host: 0.0.0.0 - may require refresh)
+
+API Logic Project (name: 01JMCRP6RTCT32TMNM2532VCN2) starting:
+..Explore data and API at http_scheme://swagger_host:port http://localhost:6040   *
+.... with flask_host: 0.0.0.0
+.... and  swagger_port: 8282
+
+Alert: These following are **Critical** to unlocking value for project: 01JMCRP6RTCT32TMNM2532VCN2:
+.. see logic.declare_logic.py       -- 
+.. see security.declare_security.py -- No Grants Yet
+
+
+*************************************************************************
+*   Startup Instructions: Open your Browser at: http://localhost:6040   *
+*************************************************************************
+
+ * Serving Flask app 'API Logic Server'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:6040
+ * Running on http://172.21.0.3:6040
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+
+API Logic Project Server Setup (01JMCRP6RTCT32TMNM2532VCN2) Starting with CLI args: 
+.. api_logic_server_run.py
+
+Created August 03, 2024 09:34:01 at /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2
+
+Data Model Loaded, customizing...
+..discovered models: []
+LogicBank Activation - declare_logic.py
+Loading rules from /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/logic/wg_rules
+01JMCRS3A39N3C6TGVTR9CHV4R rule file: logic/wg_rules/Person_Total_Hours.py
+01JMCRS3A54C06M17HXSMN4A29 rule file: logic/wg_rules/Person_Total_Amount_Billed.py
+01JMCRS3A6WE5S8XH36SS1G6R5 rule file: logic/wg_rules/Person_Billing_Rate_Constraint.py
+01JMCRS3A6QT4J8MAPTGV3J76B rule file: logic/wg_rules/Timesheet_Copy_Billing_Rate.py
+01JMCRS3A70Z44J4CR9NS12034 rule file: logic/wg_rules/Timesheet_Total_Amount_Billed.py
+01JMCRS3A8J59C3D0TZGQDWV9C rule file: logic/wg_rules/Timesheet_Hours_Worked_Constraint.py
+01JMCRS3A8CDV1X1J36EFTGY52 rule file: logic/wg_rules/Task_Total_Task_Hours_Worked.py
+01JMCRS3A92ZYN64PPWZQYZNVE rule file: logic/wg_rules/Task_Total_Task_Amount_Billed.py
+01JMCRS3A9PK2YGHHPJVY03C5M rule file: logic/wg_rules/Task_Is_Over_Budget_Formula.py
+01JMCRS3AAC6AR2JVK19T283S0 rule file: logic/wg_rules/Project_Total_Project_Hours.py
+01JMCRS3AA7YW7ZCS54H8P9P94 rule file: logic/wg_rules/Project_Total_Project_Amount.py
+01JMCRS3AAFVFAR2WHFNJ38PF8 rule file: logic/wg_rules/Project_Is_Over_Budget_Formula.py
+01JMCRS3ABD4CABTBM26G3591E rule file: logic/wg_rules/Client_Total_Hours.py
+01JMCRS3ABMA88DHBGKG90E27K rule file: logic/wg_rules/Client_Total_Amount.py
+01JMCRS3ACBS9834HZ180DCME0 rule file: logic/wg_rules/Client_Is_Over_Budget_Formula.py
+01JMCRS3ACECESFGBBECAW098X rule file: logic/wg_rules/Invoice_Invoice_Amount.py
+01JMCRS3ADQEK2SXQ2GAJDV5PY rule file: logic/wg_rules/Invoice_Payment_Total.py
+01JMCRS3AD527KCXQFBHZ2PXNM rule file: logic/wg_rules/Invoice_Balance_Formula.py
+01JMCRS3AE89MRN0YPX0EZJPG5 rule file: logic/wg_rules/Invoice_Is_Paid_Formula.py
+01JMCRS3AE8ZKPXZPHE7PEYQ1F rule file: logic/wg_rules/Invoice_Task_Count.py
+01JMCRS3AFE9QBJBYWYYTTYJ6A rule file: logic/wg_rules/Invoice_Task_Completed_Count.py
+01JMCRS3AFDWY5TPA8Z46TM33C rule file: logic/wg_rules/Invoice_Is_Ready_Formula.py
+01JMCRS3AFZ88WR74F3B52ZHFV rule file: logic/wg_rules/Invoice_Kafka_Event.py
+01JMCRS3AGH97HQ0MKGX5MNF3P rule file: logic/wg_rules/InvoiceItem_Copy_Task_Amount.py
+01JMCRS3AG1NFX5W2M98DJ52EG rule file: logic/wg_rules/InvoiceItem_Is_Completed.py
+[32mLoading Rule Module Person_Total_Hours 01JMCRS3A39N3C6TGVTR9CHV4R [0m
+[32mLoading Rule Module Person_Total_Amount_Billed 01JMCRS3A54C06M17HXSMN4A29 [0m
+[32mLoading Rule Module Person_Billing_Rate_Constraint 01JMCRS3A6WE5S8XH36SS1G6R5 [0m
+[32mLoading Rule Module Timesheet_Copy_Billing_Rate 01JMCRS3A6QT4J8MAPTGV3J76B [0m
+[32mLoading Rule Module Timesheet_Total_Amount_Billed 01JMCRS3A70Z44J4CR9NS12034 [0m
+[32mLoading Rule Module Timesheet_Hours_Worked_Constraint 01JMCRS3A8J59C3D0TZGQDWV9C [0m
+[32mLoading Rule Module Task_Total_Task_Hours_Worked 01JMCRS3A8CDV1X1J36EFTGY52 [0m
+[32mLoading Rule Module Task_Total_Task_Amount_Billed 01JMCRS3A92ZYN64PPWZQYZNVE [0m
+[32mLoading Rule Module Task_Is_Over_Budget_Formula 01JMCRS3A9PK2YGHHPJVY03C5M [0m
+[32mLoading Rule Module Project_Total_Project_Hours 01JMCRS3AAC6AR2JVK19T283S0 [0m
+[32mLoading Rule Module Project_Total_Project_Amount 01JMCRS3AA7YW7ZCS54H8P9P94 [0m
+[32mLoading Rule Module Project_Is_Over_Budget_Formula 01JMCRS3AAFVFAR2WHFNJ38PF8 [0m
+[32mLoading Rule Module Client_Total_Hours 01JMCRS3ABD4CABTBM26G3591E [0m
+[32mLoading Rule Module Client_Total_Amount 01JMCRS3ABMA88DHBGKG90E27K [0m
+[32mLoading Rule Module Client_Is_Over_Budget_Formula 01JMCRS3ACBS9834HZ180DCME0 [0m
+[32mLoading Rule Module Invoice_Invoice_Amount 01JMCRS3ACECESFGBBECAW098X [0m
+[32mLoading Rule Module Invoice_Payment_Total 01JMCRS3ADQEK2SXQ2GAJDV5PY [0m
+[32mLoading Rule Module Invoice_Balance_Formula 01JMCRS3AD527KCXQFBHZ2PXNM [0m
+[32mLoading Rule Module Invoice_Is_Paid_Formula 01JMCRS3AE89MRN0YPX0EZJPG5 [0m
+[32mLoading Rule Module Invoice_Task_Count 01JMCRS3AE8ZKPXZPHE7PEYQ1F [0m
+[32mLoading Rule Module Invoice_Task_Completed_Count 01JMCRS3AFE9QBJBYWYYTTYJ6A [0m
+[32mLoading Rule Module Invoice_Is_Ready_Formula 01JMCRS3AFDWY5TPA8Z46TM33C [0m
+[32mLoading Rule Module Invoice_Kafka_Event 01JMCRS3AFZ88WR74F3B52ZHFV [0m
+[32mLoading Rule Module InvoiceItem_Copy_Task_Amount 01JMCRS3AGH97HQ0MKGX5MNF3P [0m
+
+The following rules have been loaded
+Rule Bank[0xffff905cb4a0] (loaded 2025-02-18 14:53:30.044341)
+Mapped Class[Person] rules:
+  Derive <class 'database.models.Person'>.total_hours_entered as Sum(Timesheet.hours_worked Where  - None)
+  Derive <class 'database.models.Person'>.total_amount_billed as Formula (-1): Rule.formula(derive=Person.total_amount_billed, a [...]
+  Constraint Function: None 
+Mapped Class[Timesheet] rules:
+  Derive <class 'database.models.Timesheet'>.billing_rate as Copy(person.billing_rate)
+  Derive <class 'database.models.Timesheet'>.total_amount_billed as Formula (-1): Rule.formula(derive=Timesheet.total_amount_billed [...]
+  Constraint Function: None 
+Mapped Class[Task] rules:
+  Derive <class 'database.models.Task'>.total_task_hours_worked as Sum(Timesheet.hours_worked Where  - None)
+  Derive <class 'database.models.Task'>.total_task_amount_billed as Sum(Timesheet.total_amount_billed Where  - None)
+  Derive <class 'database.models.Task'>.is_over_budget as Formula (-1): Rule.formula(derive=Task.is_over_budget, as_expre [...]
+Mapped Class[Project] rules:
+  Derive <class 'database.models.Project'>.total_project_hours as Sum(Task.total_task_hours_worked Where  - None)
+  Derive <class 'database.models.Project'>.total_project_amount as Sum(Task.total_task_amount_billed Where  - None)
+  Derive <class 'database.models.Project'>.is_over_budget as Formula (-1): Rule.formula(derive=Project.is_over_budget, as_ex [...]
+Mapped Class[Client] rules:
+  Derive <class 'database.models.Client'>.total_hours as Sum(Project.total_project_hours Where  - None)
+  Derive <class 'database.models.Client'>.total_amount as Sum(Project.total_project_amount Where  - None)
+  Derive <class 'database.models.Client'>.is_over_budget as Formula (-1): Rule.formula(derive=Client.is_over_budget, as_exp [...]
+Mapped Class[Invoice] rules:
+  Derive <class 'database.models.Invoice'>.invoice_amount as Sum(InvoiceItem.task_amount Where  - None)
+  Derive <class 'database.models.Invoice'>.payment_total as Sum(Payment.amount Where  - None)
+  Derive <class 'database.models.Invoice'>.invoice_balance as Formula (-1): Rule.formula(derive=Invoice.invoice_balance, as_e [...]
+  Derive <class 'database.models.Invoice'>.is_paid as Formula (-1): Rule.formula(derive=Invoice.is_paid, as_expressio [...]
+  Derive <class 'database.models.Invoice'>.task_count as Count(<class 'database.models.InvoiceItem'> Where  - None)
+  Derive <class 'database.models.Invoice'>.completed_task_count as Count(<class 'database.models.InvoiceItem'> Where Rule.count(derive=Invoice.completed_task_count, as_count_of=InvoiceItem, where=lambda row: row.is_completed == True) - <function init_rule.<locals>.<lambda> at 0xffff8e29ede0>)
+  Derive <class 'database.models.Invoice'>.is_ready as Formula (-1): Rule.formula(derive=Invoice.is_ready, as_expressi [...]
+  RowEvent Invoice.send_row_to_kafka() 
+Mapped Class[InvoiceItem] rules:
+  Derive <class 'database.models.InvoiceItem'>.task_amount as Copy(task.total_task_amount_billed)
+
+The following attributes have been referenced
+
+..Person.total_hours_entered: aggregate derivation
+..Timesheet.hours_worked: sum derived from
+..Person.total_hours_entered: - formula
+..Person.billing_rate: - formula
+..Person.billing_rate: constraint
+..Timesheet.billing_rate: parent copy derivation
+..Person.billing_rate: parent copy from
+..Timesheet.billing_rate: - formula
+..Timesheet.hours_worked: - formula
+..Timesheet.is_billable: - formula
+..Timesheet.hours_worked: constraint
+..Task.total_task_hours_worked: aggregate derivation
+..Timesheet.hours_worked: sum derived from
+..Task.total_task_amount_billed: aggregate derivation
+..Timesheet.total_amount_billed: sum derived from
+..Task.total_task_hours_worked: - formula
+..Task.task_budget_hours: - formula
+..Project.total_project_hours: aggregate derivation
+..Task.total_task_hours_worked: sum derived from
+..Project.total_project_amount: aggregate derivation
+..Task.total_task_amount_billed: sum derived from
+..Project.total_project_amount: - formula
+..Project.project_budget_amount: - formula
+..Client.total_hours: aggregate derivation
+..Project.total_project_hours: sum derived from
+..Client.total_amount: aggregate derivation
+..Project.total_project_amount: sum derived from
+..Client.total_amount: - formula
+..Client.budget_amount: - formula
+..Invoice.invoice_amount: aggregate derivation
+..InvoiceItem.task_amount: sum derived from
+..Invoice.payment_total: aggregate derivation
+..Payment.amount: sum derived from
+..Invoice.invoice_amount: - formula
+..Invoice.payment_total: - formula
+..Invoice.invoice_balance: - formula
+..Invoice.task_count: aggregate derivation
+..Invoice.completed_task_count: aggregate derivation
+..InvoiceItem.is_completed: aggregate where clause
+..Invoice.task_count: - formula
+..Invoice.completed_task_count: - formula
+..InvoiceItem.task_amount: parent copy derivation
+..Task.total_task_amount_billed: parent copy from
+
+The following rules have been activated
+Rule Bank[0xffff905cb4a0] (loaded 2025-02-18 14:53:30.044341)
+Mapped Class[Person] rules:
+  Derive <class 'database.models.Person'>.total_hours_entered as Sum(Timesheet.hours_worked Where  - None)
+  Derive <class 'database.models.Person'>.total_amount_billed as Formula (1): Rule.formula(derive=Person.total_amount_billed, a [...]
+  Constraint Function: None 
+Mapped Class[Timesheet] rules:
+  Derive <class 'database.models.Timesheet'>.billing_rate as Copy(person.billing_rate)
+  Derive <class 'database.models.Timesheet'>.total_amount_billed as Formula (1): Rule.formula(derive=Timesheet.total_amount_billed [...]
+  Constraint Function: None 
+Mapped Class[Task] rules:
+  Derive <class 'database.models.Task'>.total_task_hours_worked as Sum(Timesheet.hours_worked Where  - None)
+  Derive <class 'database.models.Task'>.total_task_amount_billed as Sum(Timesheet.total_amount_billed Where  - None)
+  Derive <class 'database.models.Task'>.is_over_budget as Formula (1): Rule.formula(derive=Task.is_over_budget, as_expre [...]
+Mapped Class[Project] rules:
+  Derive <class 'database.models.Project'>.total_project_hours as Sum(Task.total_task_hours_worked Where  - None)
+  Derive <class 'database.models.Project'>.total_project_amount as Sum(Task.total_task_amount_billed Where  - None)
+  Derive <class 'database.models.Project'>.is_over_budget as Formula (1): Rule.formula(derive=Project.is_over_budget, as_ex [...]
+Mapped Class[Client] rules:
+  Derive <class 'database.models.Client'>.total_hours as Sum(Project.total_project_hours Where  - None)
+  Derive <class 'database.models.Client'>.total_amount as Sum(Project.total_project_amount Where  - None)
+  Derive <class 'database.models.Client'>.is_over_budget as Formula (1): Rule.formula(derive=Client.is_over_budget, as_exp [...]
+Mapped Class[Invoice] rules:
+  Derive <class 'database.models.Invoice'>.invoice_amount as Sum(InvoiceItem.task_amount Where  - None)
+  Derive <class 'database.models.Invoice'>.payment_total as Sum(Payment.amount Where  - None)
+  Derive <class 'database.models.Invoice'>.invoice_balance as Formula (1): Rule.formula(derive=Invoice.invoice_balance, as_e [...]
+  Derive <class 'database.models.Invoice'>.is_paid as Formula (2): Rule.formula(derive=Invoice.is_paid, as_expressio [...]
+  Derive <class 'database.models.Invoice'>.task_count as Count(<class 'database.models.InvoiceItem'> Where  - None)
+  Derive <class 'database.models.Invoice'>.completed_task_count as Count(<class 'database.models.InvoiceItem'> Where Rule.count(derive=Invoice.completed_task_count, as_count_of=InvoiceItem, where=lambda row: row.is_completed == True) - <function init_rule.<locals>.<lambda> at 0xffff8e29ede0>)
+  Derive <class 'database.models.Invoice'>.is_ready as Formula (3): Rule.formula(derive=Invoice.is_ready, as_expressi [...]
+  RowEvent Invoice.send_row_to_kafka() 
+Mapped Class[InvoiceItem] rules:
+  Derive <class 'database.models.InvoiceItem'>.task_amount as Copy(task.total_task_amount_billed)
+Logic Bank 01.20.26 - 32 rules loaded
+Exposing /Client
+Exposing /Invoice
+Exposing /InvoiceItem
+Exposing /Payment
+Exposing /Person
+Exposing /Project
+Exposing /Task
+Exposing /Timesheet
+Declare   API - api/expose_api_models, endpoint for each table on localhost:8282, customizing...
+..discovered services: ['ontimize_api.py', 'system.py', 'new_service.py', 'newer_service.py']
+
+Authentication loaded -- api calls now require authorization header
+..declare security - security/declare_security.py authentication tables loaded
+Kafka Consumer not activated
+
+API Logic Project loaded (not WSGI), version 14.03.10
+.. startup message: normal start
+ (running from docker container at flask_host: 0.0.0.0 - may require refresh)
+
+API Logic Project (name: 01JMCRP6RTCT32TMNM2532VCN2) starting:
+..Explore data and API at http_scheme://swagger_host:port http://localhost:6040   *
+.... with flask_host: 0.0.0.0
+.... and  swagger_port: 8282
+
+Alert: These following are **Critical** to unlocking value for project: 01JMCRP6RTCT32TMNM2532VCN2:
+.. see logic.declare_logic.py       -- 
+.. see security.declare_security.py -- No Grants Yet
+
+
+*************************************************************************
+*   Startup Instructions: Open your Browser at: http://localhost:6040   *
+*************************************************************************
+
+ * Debugger is active!
+ * Debugger PIN: 383-785-902
+127.0.0.1 - - [18/Feb/2025 14:55:18] "GET /ui/admin/admin.yaml?v=1739890518352 HTTP/1.0" 200 -
+127.0.0.1 - - [18/Feb/2025 14:55:18] "GET /ui/admin/admin.yaml?v=1739890518793 HTTP/1.0" 200 -
+127.0.0.1 - - [18/Feb/2025 14:55:18] "GET /01JMCRP6RTCT32TMNM2532VCN2/SPAPage?include=SectionList&page[limit]=10&page[number]=1&page[offset]=0&page[size]=10&sort=name HTTP/1.0" 200 -
+127.0.0.1 - - [18/Feb/2025 14:55:19] "[31m[1mGET /01JMCRP6RTCT32TMNM2532VCN2/Client?include=%2Ball&page[limit]=5&page[number]=1&page[offset]=0&page[size]=5&sort=name HTTP/1.0[0m" 401 -
+127.0.0.1 - - [18/Feb/2025 14:55:19] "[31m[1mGET /01JMCRP6RTCT32TMNM2532VCN2/Invoice?include=project,project,%2Ball&page[limit]=5&page[number]=1&page[offset]=0&page[size]=5&sort=id HTTP/1.0[0m" 401 -
+127.0.0.1 - - [18/Feb/2025 14:55:19] "[31m[1mGET /01JMCRP6RTCT32TMNM2532VCN2/InvoiceItem?include=invoice,task,invoice,task,%2Ball&page[limit]=5&page[number]=1&page[offset]=0&page[size]=5&sort=id HTTP/1.0[0m" 401 -
+127.0.0.1 - - [18/Feb/2025 14:55:19] "[31m[1mGET /01JMCRP6RTCT32TMNM2532VCN2/Payment?include=invoice,invoice,%2Ball&page[limit]=5&page[number]=1&page[offset]=0&page[size]=5&sort=id HTTP/1.0[0m" 401 -
+127.0.0.1 - - [18/Feb/2025 14:55:19] "[31m[1mGET /01JMCRP6RTCT32TMNM2532VCN2/Project?include=client,client,%2Ball&page[limit]=5&page[number]=1&page[offset]=0&page[size]=5&sort=name HTTP/1.0[0m" 401 -
+127.0.0.1 - - [18/Feb/2025 14:55:19] "[31m[1mGET /01JMCRP6RTCT32TMNM2532VCN2/Person?include=client,client,%2Ball&page[limit]=5&page[number]=1&page[offset]=0&page[size]=5&sort=name HTTP/1.0[0m" 401 -
+127.0.0.1 - - [18/Feb/2025 14:55:19] "[31m[1mGET /01JMCRP6RTCT32TMNM2532VCN2/Task?include=project,project,%2Ball&page[limit]=5&page[number]=1&page[offset]=0&page[size]=5&sort=name HTTP/1.0[0m" 401 -
+127.0.0.1 - - [18/Feb/2025 14:55:19] "[31m[1mGET /01JMCRP6RTCT32TMNM2532VCN2/Timesheet?include=person,task,person,task,%2Ball&page[limit]=5&page[number]=1&page[offset]=0&page[size]=5&sort=id HTTP/1.0[0m" 401 -
+127.0.0.1 - - [18/Feb/2025 14:55:25] "GET /ui/admin/admin.yaml?v=1739890525020 HTTP/1.0" 200 -
+ * Detected change in '/opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/logic/wg_rules/active_rules_export.py', reloading
+ * Restarting with stat

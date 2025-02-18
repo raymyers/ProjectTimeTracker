@@ -1,0 +1,64 @@
+<o-form #TimesheetForm attr="Timesheet_form_insert" service="Timesheet" entity="Timesheet" 
+keys="id" fxLayout="column" show-header="yes" header-actions="I"
+horizontal-scroll="yes"
+after-insert-mode="new" class="standalone-form-container" (onInsertMode)="onInsertMode()">
+
+<o-row attr="row1" layout-align="start stretch">
+  <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlex fxLayoutGap="14px">
+    
+        <o-integer-input #id attr="id" label=" id*" type="integer" editable="no" required="no" ></o-integer-input>
+      
+        <o-list-picker 
+        attr="person_id"
+        service="Person" 
+        entity="PersonType"
+        fxFlex="30" 
+        query-on-init="no" 
+        query-on-bind="yes" 
+        required="no" 
+        enabled="yes" 
+        filter="yes"
+        value-column="id" 
+        value-column-type="INTEGER"  
+        keys="id" 
+        columns="id;person_id;name" 
+        title="person_id"
+        visible-columns="id;name" 
+        separator=" - " width="680px" class="form-field">
+</o-list-picker>
+      
+        <o-list-picker 
+        attr="task_id"
+        service="Task" 
+        entity="TaskType"
+        fxFlex="30" 
+        query-on-init="no" 
+        query-on-bind="yes" 
+        required="no" 
+        enabled="yes" 
+        filter="yes"
+        value-column="id" 
+        value-column-type="INTEGER"  
+        keys="id" 
+        columns="id;task_id;name" 
+        title="task_id"
+        visible-columns="id;name" 
+        separator=" - " width="680px" class="form-field">
+</o-list-picker>
+      
+        <o-real-input #billing_rate attr="billing_rate" label="billing_rate" min-decimal-digits="2" max-decimal-digits="4" min="0" max="1000000000" fxFlex="20%" class="form-field"></o-real-input>
+      
+        <o-checkbox #is_billable attr="is_billable" label="is_billable" read-only="no" enabled="yes"></o-checkbox>
+      
+        <o-date-input #date_worked attr="date_worked" type="timestamp" label="date_worked" editable="no" required="no" format="LL" fxFlex="20%" class="form-field"></o-date-input>
+      
+        <o-real-input #hours_worked attr="hours_worked" label="hours_worked" min-decimal-digits="2" max-decimal-digits="4" min="0" max="1000000000" fxFlex="20%" class="form-field"></o-real-input>
+      
+        <o-real-input #total_amount_billed attr="total_amount_billed" label="total_amount_billed" min-decimal-digits="2" max-decimal-digits="4" min="0" max="1000000000" fxFlex="20%" class="form-field"></o-real-input>
+      
+</div>
+</o-row>
+
+<div layout-padding></div>
+
+</o-form>

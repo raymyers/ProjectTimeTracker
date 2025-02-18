@@ -1,0 +1,166 @@
+INFO:response2code:Loading GPT response from system/genai/temp/response.json
+INFO:response2code:Successfully wrote test data code to database/test_data/test_data_code.py
+..  logic_logger: <Logger logic_logger (DEBUG)>
+..  db_url: sqlite:////opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/database/test_data/db.sqlite
+..  cwd: /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2
+..  python_loc: /usr/local/bin/python
+..  test_data_loader version: 1.1
+config.py - SQLALCHEMY_DATABASE_URI_AUTHENTICATION: sqlite:////opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/database/authentication_db.sqlite
+
+Loading rules from /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/logic/wg_rules
+/opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/docs/export/export.json does not exist
+
+The following rules have been loaded
+Rule Bank[0xffffab95ed20] (loaded 2025-02-18 14:53:15.983751)
+
+The following attributes have been referenced
+
+
+The following rules have been activated
+Rule Bank[0xffffab95ed20] (loaded 2025-02-18 14:53:15.983751)
+Logic Bank 01.20.26 - 1 rules loaded
+..  LogicBank activated
+
+Logic Phase:		ROW LOGIC		(session=0xffffab647350) (sqlalchemy before_flush)			
+..Client[None] {Insert - client} id: None, name: Client A, email: clienta@example.com, phone: 123-456-7890, total_hours: 100, total_amount: 2000, budget_amount: 3000, is_over_budget: False  row: 0xffffabe4f830  session: 0xffffab647350  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0xffffab647350)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0xffffab647350)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0xffffab647350))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0xffffab647350) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0xffffab647350) (sqlalchemy before_flush)			
+..Client[None] {Insert - client} id: None, name: Client B, email: clientb@example.com, phone: 234-567-8901, total_hours: 150, total_amount: 3000, budget_amount: 3000, is_over_budget: False  row: 0xffffab647470  session: 0xffffab647350  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0xffffab647350)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0xffffab647350)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0xffffab647350))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0xffffab647350) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0xffffab647350) (sqlalchemy before_flush)			
+..Client[None] {Insert - client} id: None, name: Client C, email: clientc@example.com, phone: 345-678-9012, total_hours: 120, total_amount: 3500, budget_amount: 3000, is_over_budget: True  row: 0xffffab5d13a0  session: 0xffffab647350  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0xffffab647350)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0xffffab647350)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0xffffab647350))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0xffffab647350) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0xffffab647350) (sqlalchemy before_flush)			
+..Client[None] {Insert - client} id: None, name: Client D, email: clientd@example.com, phone: 456-789-0123, total_hours: 50, total_amount: 1000, budget_amount: 2000, is_over_budget: False  row: 0xffffab5d00e0  session: 0xffffab647350  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0xffffab647350)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0xffffab647350)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0xffffab647350))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0xffffab647350) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0xffffab647350) (sqlalchemy before_flush)			
+..Project[None] {Insert - client} id: None, client_id: 1, name: Project X, total_project_hours: 80, total_project_amount: 1600, project_budget_amount: 2000, is_over_budget: False, is_active: True  row: 0xffffab1930e0  session: 0xffffab647350  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0xffffab647350)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0xffffab647350)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0xffffab647350))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0xffffab647350) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0xffffab647350) (sqlalchemy before_flush)			
+..Project[None] {Insert - client} id: None, client_id: 2, name: Project Y, total_project_hours: 90, total_project_amount: 1800, project_budget_amount: 2000, is_over_budget: False, is_active: True  row: 0xffffad16e930  session: 0xffffab647350  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0xffffab647350)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0xffffab647350)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0xffffab647350))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0xffffab647350) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0xffffab647350) (sqlalchemy before_flush)			
+..Project[None] {Insert - client} id: None, client_id: 3, name: Project Z, total_project_hours: 60, total_project_amount: 2000, project_budget_amount: 1800, is_over_budget: True, is_active: True  row: 0xffffab1e7d70  session: 0xffffab647350  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0xffffab647350)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0xffffab647350)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0xffffab647350))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0xffffab647350) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0xffffab647350) (sqlalchemy before_flush)			
+..Project[None] {Insert - client} id: None, client_id: 4, name: Project W, total_project_hours: 30, total_project_amount: 600, project_budget_amount: 1000, is_over_budget: False, is_active: True  row: 0xffffab5b3fe0  session: 0xffffab647350  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0xffffab647350)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0xffffab647350)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0xffffab647350))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0xffffab647350) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0xffffab647350) (sqlalchemy before_flush)			
+..Invoice[None] {Insert - client} id: None, invoice_date: 2023-06-01, project_id: 1, invoice_amount: 400, payment_total: 200, invoice_balance: 200, is_paid: False, is_ready: False, task_count: 2, completed_task_count: 1  row: 0xffffab1e5fa0  session: 0xffffab647350  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0xffffab647350)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0xffffab647350)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0xffffab647350))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0xffffab647350) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0xffffab647350) (sqlalchemy before_flush)			
+..Invoice[None] {Insert - client} id: None, invoice_date: 2023-06-05, project_id: 2, invoice_amount: 500, payment_total: 500, invoice_balance: 0, is_paid: True, is_ready: True, task_count: 3, completed_task_count: 3  row: 0xffffab676960  session: 0xffffab647350  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0xffffab647350)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0xffffab647350)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0xffffab647350))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0xffffab647350) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0xffffab647350) (sqlalchemy before_flush)			
+..Invoice[None] {Insert - client} id: None, invoice_date: 2023-06-10, project_id: 3, invoice_amount: 400, payment_total: 100, invoice_balance: 300, is_paid: False, is_ready: False, task_count: 1, completed_task_count: 0  row: 0xffffab204e00  session: 0xffffab647350  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0xffffab647350)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0xffffab647350)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0xffffab647350))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0xffffab647350) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0xffffab647350) (sqlalchemy before_flush)			
+..Invoice[None] {Insert - client} id: None, invoice_date: 2023-06-15, project_id: 4, invoice_amount: 200, payment_total: 200, invoice_balance: 0, is_paid: True, is_ready: True, task_count: 2, completed_task_count: 2  row: 0xffffab2060c0  session: 0xffffab647350  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0xffffab647350)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0xffffab647350)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0xffffab647350))       	
+*** Models.py Using TestBase ***
+..  db_url: sqlite:////opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/database/test_data/db.sqlite
+..  cwd: /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2
+..  python_loc: /usr/local/bin/python
+..  test_data_loader version: 1.1
+..  LogicBank activated
+print(Pass: 1)
+..  db_url: sqlite:////opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/database/test_data/db.sqlite
+..  cwd: /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2
+..  python_loc: /usr/local/bin/python
+..  test_data_loader version: 1.1
+..  LogicBank activated
+print(Pass: 1)
+Error: near line 14: UNIQUE constraint failed: client.id
+Error: near line 15: UNIQUE constraint failed: client.id
+Error: near line 16: UNIQUE constraint failed: client.id
+Error: near line 17: UNIQUE constraint failed: client.id
+Error: near line 42: UNIQUE constraint failed: project.id
+Error: near line 43: UNIQUE constraint failed: project.id
+Error: near line 44: UNIQUE constraint failed: project.id
+Error: near line 45: UNIQUE constraint failed: project.id
+Error: near line 60: UNIQUE constraint failed: invoice.id
+Error: near line 61: UNIQUE constraint failed: invoice.id
+Error: near line 62: UNIQUE constraint failed: invoice.id
+Error: near line 63: UNIQUE constraint failed: invoice.id

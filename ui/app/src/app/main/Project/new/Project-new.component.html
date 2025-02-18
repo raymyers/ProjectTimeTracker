@@ -1,0 +1,47 @@
+<o-form #ProjectForm attr="Project_form_insert" service="Project" entity="Project" 
+keys="id" fxLayout="column" show-header="yes" header-actions="I"
+horizontal-scroll="yes"
+after-insert-mode="new" class="standalone-form-container" (onInsertMode)="onInsertMode()">
+
+<o-row attr="row1" layout-align="start stretch">
+  <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlex fxLayoutGap="14px">
+    
+        <o-text-input #name attr="name" label=" name*" enabled="yes" required="no" fxFlex="20%" class="form-field"></o-text-input>
+      
+        <o-list-picker 
+        attr="client_id"
+        service="Client" 
+        entity="ClientType"
+        fxFlex="30" 
+        query-on-init="no" 
+        query-on-bind="yes" 
+        required="no" 
+        enabled="yes" 
+        filter="yes"
+        value-column="id" 
+        value-column-type="INTEGER"  
+        keys="id" 
+        columns="id;client_id;name" 
+        title="client_id"
+        visible-columns="id;name" 
+        separator=" - " width="680px" class="form-field">
+</o-list-picker>
+      
+        <o-real-input #total_project_hours attr="total_project_hours" label="total_project_hours" min-decimal-digits="2" max-decimal-digits="4" min="0" max="1000000000" fxFlex="20%" class="form-field"></o-real-input>
+      
+        <o-currency-input #total_project_amount attr="total_project_amount" title="total_project_amount" type="currency" editable="no" required="no" currency-symbol="$" currency-symbol-position="left" thousand-separator="," decimal-separator="."></o-currency-input>
+      
+        <o-currency-input #project_budget_amount attr="project_budget_amount" title="project_budget_amount" type="currency" editable="no" required="no" currency-symbol="$" currency-symbol-position="left" thousand-separator="," decimal-separator="."></o-currency-input>
+      
+        <o-checkbox #is_over_budget attr="is_over_budget" label="is_over_budget" read-only="no" enabled="yes"></o-checkbox>
+      
+        <o-checkbox #is_active attr="is_active" label="is_active" read-only="no" enabled="yes"></o-checkbox>
+      
+        <o-integer-input #id attr="id" label="id" type="integer" editable="no" required="no" ></o-integer-input>
+      
+</div>
+</o-row>
+
+<div layout-padding></div>
+
+</o-form>

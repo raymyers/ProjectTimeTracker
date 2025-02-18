@@ -1,0 +1,9 @@
+Creating SPA for project 01JMCRP6RTCT32TMNM2532VCN2
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/images/generations "HTTP/1.1 200 OK"
+INFO:/opt/webgenai/tools/openai_spa.py:Waiting for /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/static
+INFO:/opt/webgenai/tools/openai_spa.py:Adding page ProjectTrue to the database
+INFO:/opt/webgenai/tools/openai_spa.py:Ignoring Image: {'Type': 'Hero', 'name': 'MainBanner.png', 'description': 'An image depicting project management and invoicing, featuring a laptop and clock.'}
+INFO:/opt/webgenai/tools/openai_spa.py:Ignoring Image: {'Type': 'Background', 'name': 'TeamWorkingTogether', 'description': 'A team of professionals collaborating on a project, symbolizing teamwork and productivity facilitated by ProjectTrue.'}
+INFO:/opt/webgenai/tools/openai_spa.py:Ignoring Image: {'Type': 'Infographic', 'name': 'ServiceFeatures', 'description': 'Visual representation of all the features offered by ProjectTrue.'}
+INFO:/opt/webgenai/tools/openai_spa.py:Ignoring Image: {'Type': 'Map', 'name': 'OfficeMap', 'description': "Map depicting the location of ProjectTrue's main office."}

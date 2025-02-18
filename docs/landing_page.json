@@ -1,0 +1,74 @@
+{
+    "name": "ProjectTrue",
+    "logo": {
+        "Type": "Logo",
+        "name": "ProjectTrueLogo",
+        "description": "Logo of ProjectTrue featuring a stopwatch and invoice icon indicating project tracking and billing services."
+    },
+    "sections": [
+        {
+            "title": "Effortless Project Time Tracking and Invoicing",
+            "subtitle": "",
+            "name": "hero",
+            "label": "Home",
+            "content": "Welcome to **ProjectTrue**, your comprehensive solution for seamless project time tracking and invoicing. Streamline your project management and billing in one efficient platform.",
+            "order": 1,
+            "Type": "Hero",
+            "images": [
+                {
+                    "Type": "Hero",
+                    "name": "MainBanner",
+                    "description": "An image depicting project management and invoicing, featuring a laptop and clock."
+                }
+            ]
+        },
+        {
+            "title": "About ProjectTrue",
+            "subtitle": "",
+            "name": "about",
+            "label": "About",
+            "content": "At **ProjectTrue**, we believe in empowering businesses with easy and reliable time and invoice management. Our software enables you to track project progress, manage budgets, and create invoices effortlessly, giving you more time to focus on what matters most \u2013 growing your business. Join us as we pave the way towards better time management and transparency in billing.",
+            "order": 2,
+            "Type": "About",
+            "images": [
+                {
+                    "Type": "Background",
+                    "name": "TeamWorkingTogether",
+                    "description": "A team of professionals collaborating on a project, symbolizing teamwork and productivity facilitated by ProjectTrue."
+                }
+            ]
+        },
+        {
+            "title": "Our Services",
+            "subtitle": "",
+            "name": "services",
+            "label": "Services",
+            "content": "Explore the functionalities that make **ProjectTrue** the best choice for your business:\n\n- **Client Management:** Keep all your client data, from contact information to total billed amounts, organized in one place.\n- **Project Tracking:** Monitor hours worked and budget consumption with detailed project reports.\n- **Invoice Generation:** Create, manage, and send invoices easily, with the option to include detailed task breakdowns.\n- **Task Management:** Allocate resources efficiently, track task progress, and ensure projects stay on track.\n- **Timesheets:** Conveniently log hours worked and calculate billing with precision.",
+            "order": 3,
+            "Type": "Services",
+            "images": [
+                {
+                    "Type": "Infographic",
+                    "name": "ServiceFeatures",
+                    "description": "Visual representation of all the features offered by ProjectTrue."
+                }
+            ]
+        },
+        {
+            "title": "Get in Touch",
+            "subtitle": "",
+            "name": "contact",
+            "label": "Contact",
+            "content": "For questions or support, reach out to us and our team will be happy to assist you:\n\n- **Email:** support@projecttrue.com  \n- **Phone:** +1 (800) 123-4567  \n- **Address:** 123 Project Lane, Suite 400, Business City, BC 12345  \n\nAlternatively, use the contact form to send us a message directly from here.",
+            "order": 4,
+            "Type": "Contact",
+            "images": [
+                {
+                    "Type": "Map",
+                    "name": "OfficeMap",
+                    "description": "Map depicting the location of ProjectTrue's main office."
+                }
+            ]
+        }
+    ]
+}

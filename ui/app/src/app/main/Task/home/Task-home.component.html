@@ -1,0 +1,60 @@
+<o-form-layout-manager attr="Task" mode="tab" title="TASK">
+    <div fxFill fxLayout="column" fxLayoutAlign="start">
+        <o-table 
+            attr="TaskTable" 
+            service="Task" 
+            entity="Task" 
+            title="TASK"
+            keys="id"
+            columns="name;project_id;description;task_budget_hours;is_over_budget;id;total_task_hours_worked;total_task_amount_billed;is_completed" 
+            header-actions="R;D"
+            visible-columns="name;project_id;description;task_budget_hours;is_over_budget;id;total_task_hours_worked;total_task_amount_billed;is_completed"  
+            sort-columns="name" 
+            query-rows="20" 
+            quick-filter="yes"
+            row-height="medium" 
+            select-all-checkbox="true" 
+            pageable="yes"  
+            auto-adjust="true" 
+            virtual-scroll="yes" 
+            edition-mode="dblclick"
+            horizontal-scroll="yes"
+            show-title="yes"
+            export-button="yes">
+            
+            <o-table-column #name attr="name" title=" name*" editable="no" required="no" content-align="left"></o-table-column>
+            
+            <o-table-column attr="project_id" title="project_id">
+    <o-table-cell-renderer-service attr="project_id" 
+        service="Project" entity="ProjectType" columns="id;name"
+        parent-keys="id:project_id"
+        value-column="name" keys="project_id"
+        visible-columns="name" separator=" - " width="680px">
+    </o-table-cell-renderer-service>
+</o-table-column>
+            
+            <o-table-column #description attr="description" title="description" editable="no" required="no" content-align="left"></o-table-column>
+            
+            <o-table-column #task_budget_hours attr="task_budget_hours" title="task_budget_hours" type="real" min-decimal-digits="2" max-decimal-digits="4" min="0" max="1000000.0000" content-align="center"></o-table-column>
+            
+            <o-table-column attr="is_over_budget" title="is_over_budget">
+    <o-table-cell-renderer-boolean render-true-value="check_circle" render-false-value="highlight_off"
+        render-type="icon" boolean-type="boolean" true-value="true" false-value="false"></o-table-cell-renderer-boolean>
+</o-table-column>
+            
+            <o-table-column #id attr="id" title="id" type="integer" editable="no" required="no" content-align="center"></o-table-column>
+            
+            <o-table-column #total_task_hours_worked attr="total_task_hours_worked" title="total_task_hours_worked" type="real" min-decimal-digits="2" max-decimal-digits="4" min="0" max="1000000.0000" content-align="center"></o-table-column>
+            
+            <o-table-column #total_task_amount_billed attr="total_task_amount_billed" title="total_task_amount_billed" type="real" min-decimal-digits="2" max-decimal-digits="4" min="0" max="1000000.0000" content-align="center"></o-table-column>
+            
+            <o-table-column attr="is_completed" title="is_completed">
+    <o-table-cell-renderer-boolean render-true-value="check_circle" render-false-value="highlight_off"
+        render-type="icon" boolean-type="boolean" true-value="true" false-value="false"></o-table-cell-renderer-boolean>
+</o-table-column>
+            
+            <o-table-context-menu></o-table-context-menu>
+            <o-table-paginator page-size-options="24;48;96"></o-table-paginator>
+        </o-table>
+    </div>
+</o-form-layout-manager>

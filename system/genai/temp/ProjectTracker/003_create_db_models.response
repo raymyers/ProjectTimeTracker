@@ -1,0 +1,282 @@
+{
+    "models": [
+        {
+            "classname": "Client",
+            "code": "class Client(Base):\n    __tablename__ = 'client'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    name = Column(String)\n    email = Column(String)\n    phone = Column(String)\n    total_hours = Column(DECIMAL(10, 2), default=0)\n    total_amount = Column(DECIMAL(10, 2), default=0)\n    budget_amount = Column(DECIMAL(10, 2))\n    is_over_budget = Column(Boolean, default=False)\n\n    # projects = relationship('Project', backref='client')",
+            "description": "Represents a client entity in the application.",
+            "name": "client"
+        },
+        {
+            "classname": "Project",
+            "code": "class Project(Base):\n    __tablename__ = 'project'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    client_id = Column(Integer, ForeignKey('client.id'))\n    name = Column(String)\n    total_project_hours = Column(DECIMAL(10, 2), default=0)\n    total_project_amount = Column(DECIMAL(10, 2), default=0)\n    project_budget_amount = Column(DECIMAL(10, 2))\n    is_over_budget = Column(Boolean, default=False)\n    is_active = Column(Boolean, default=True)\n\n    # tasks = relationship('Task', backref='project')\n    # invoices = relationship('Invoice', backref='project')",
+            "description": "Represents a project linked to a client.",
+            "name": "project"
+        },
+        {
+            "classname": "Invoice",
+            "code": "class Invoice(Base):\n    __tablename__ = 'invoice'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    invoice_date = Column(Date)\n    project_id = Column(Integer, ForeignKey('project.id'))\n    invoice_amount = Column(DECIMAL(10, 2), default=0)\n    payment_total = Column(DECIMAL(10, 2), default=0)\n    invoice_balance = Column(DECIMAL(10, 2))\n    is_paid = Column(Boolean, default=False)\n    is_ready = Column(Boolean, default=False)\n    task_count = Column(Integer, default=0)\n    completed_task_count = Column(Integer, default=0)\n\n    # invoice_items = relationship('InvoiceItem', backref='invoice')\n    # payments = relationship('Payment', backref='invoice')",
+            "description": "Represents an invoice related to a project, tracking financials and approval status.",
+            "name": "invoice"
+        },
+        {
+            "classname": "InvoiceItem",
+            "code": "class InvoiceItem(Base):\n    __tablename__ = 'invoice_item'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    invoice_id = Column(Integer, ForeignKey('invoice.id'))\n    task_id = Column(Integer, ForeignKey('task.id'))\n    task_amount = Column(DECIMAL(10, 2), default=0)\n    is_completed = Column(Boolean, default=False)",
+            "description": "Represents an individual item in an invoice, which is derived from a task.",
+            "name": "invoice_item"
+        },
+        {
+            "classname": "Task",
+            "code": "class Task(Base):\n    __tablename__ = 'task'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    project_id = Column(Integer, ForeignKey('project.id'))\n    name = Column(String)\n    description = Column(String)\n    total_task_hours_worked = Column(DECIMAL(10, 2), default=0)\n    total_task_amount_billed = Column(DECIMAL(10, 2), default=0)\n    task_budget_hours = Column(DECIMAL(10, 2))\n    is_over_budget = Column(Boolean, default=False)\n    is_completed = Column(Boolean, default=False)\n\n    # timesheets = relationship('Timesheet', backref='task')\n    # invoice_items = relationship('InvoiceItem', backref='task')",
+            "description": "Represents a task under a project, measuring progress and budget adherence.",
+            "name": "task"
+        },
+        {
+            "classname": "Person",
+            "code": "class Person(Base):\n    __tablename__ = 'person'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    client_id = Column(Integer, ForeignKey('client.id'))\n    name = Column(String)\n    email = Column(String)\n    phone = Column(String)\n    billing_rate = Column(DECIMAL(10, 2), default=0)\n    total_hours_entered = Column(DECIMAL(10, 2), default=0)\n    total_amount_billed = Column(DECIMAL(10, 2), default=0)\n\n    # timesheets = relationship('Timesheet', backref='person')",
+            "description": "Represents a person associated with a client, who logs time and generates billing amounts.",
+            "name": "person"
+        },
+        {
+            "classname": "Timesheet",
+            "code": "class Timesheet(Base):\n    __tablename__ = 'timesheet'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    task_id = Column(Integer, ForeignKey('task.id'))\n    person_id = Column(Integer, ForeignKey('person.id'))\n    date_worked = Column(Date)\n    hours_worked = Column(DECIMAL(10, 2), default=0)\n    billing_rate = Column(DECIMAL(10, 2), default=0)\n    total_amount_billed = Column(DECIMAL(10, 2), default=0)\n    is_billable = Column(Boolean, default=False)",
+            "description": "Tracks the time worked by a person on a task, used for billing and reporting purposes.",
+            "name": "timesheet"
+        },
+        {
+            "classname": "Payment",
+            "code": "class Payment(Base):\n    __tablename__ = 'payment'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    invoice_id = Column(Integer, ForeignKey('invoice.id'))\n    amount = Column(DECIMAL(10, 2), default=0)\n    payment_date = Column(Date)\n    notes = Column(String)",
+            "description": "Represents a payment made against an invoice, logging the payment amounts and dates.",
+            "name": "payment"
+        }
+    ],
+    "rules": [
+        {
+            "name": "Person Total Hours",
+            "description": "Total Hours entered is sum of timesheet hours worked",
+            "use_case": "Person",
+            "entity": "Person",
+            "code": "Rule.sum(derive=Person.total_hours_entered, as_sum_of=Timesheet.hours_worked)"
+        },
+        {
+            "name": "Person Total Amount Billed",
+            "description": "Total amount billed is total hours entered times billing rate",
+            "use_case": "Person",
+            "entity": "Person",
+            "code": "Rule.formula(derive=Person.total_amount_billed, as_expression=lambda row: row.total_hours_entered * row.billing_rate)"
+        },
+        {
+            "name": "Person Billing Rate Constraint",
+            "description": "Billing rate must be greater than 0 and less than 200",
+            "use_case": "Person",
+            "entity": "Person",
+            "code": "Rule.constraint(validate=Person, as_condition=lambda row: 0 < row.billing_rate < 200, error_msg='Billing rate must be between 0 and 200')"
+        },
+        {
+            "name": "Timesheet Copy Billing Rate",
+            "description": "Copy billing rate from Person billing rate",
+            "use_case": "Timesheet",
+            "entity": "Timesheet",
+            "code": "Rule.copy(derive=Timesheet.billing_rate, from_parent=Person.billing_rate)"
+        },
+        {
+            "name": "Timesheet Total Amount Billed",
+            "description": "If is_billable then total amount billed is billing rate times hours worked",
+            "use_case": "Timesheet",
+            "entity": "Timesheet",
+            "code": "Rule.formula(derive=Timesheet.total_amount_billed, as_expression=lambda row: row.billing_rate * row.hours_worked if row.is_billable else 0)"
+        },
+        {
+            "name": "Timesheet Hours Worked Constraint",
+            "description": "Hours worked must be greater than 0 and less than 15",
+            "use_case": "Timesheet",
+            "entity": "Timesheet",
+            "code": "Rule.constraint(validate=Timesheet, as_condition=lambda row: 0 < row.hours_worked < 15, error_msg='Hours worked must be between 0 and 15')"
+        },
+        {
+            "name": "Task Total Task Hours Worked",
+            "description": "Total task hours worked is the sum of the Timesheet hours worked",
+            "use_case": "Task",
+            "entity": "Task",
+            "code": "Rule.sum(derive=Task.total_task_hours_worked, as_sum_of=Timesheet.hours_worked)"
+        },
+        {
+            "name": "Task Total Task Amount Billed",
+            "description": "Total task amount billed is the sum of the Timesheet total amount billed",
+            "use_case": "Task",
+            "entity": "Task",
+            "code": "Rule.sum(derive=Task.total_task_amount_billed, as_sum_of=Timesheet.total_amount_billed)"
+        },
+        {
+            "name": "Task Is Over Budget Formula",
+            "description": "Formula: is Over Budget when total task hours worked exceeds task budget hours",
+            "use_case": "Task",
+            "entity": "Task",
+            "code": "Rule.formula(derive=Task.is_over_budget, as_expression=lambda row: row.total_task_hours_worked > row.task_budget_hours)"
+        },
+        {
+            "name": "Project Total Project Hours",
+            "description": "Total project hours is the sum of Task total task hours worked",
+            "use_case": "Project",
+            "entity": "Project",
+            "code": "Rule.sum(derive=Project.total_project_hours, as_sum_of=Task.total_task_hours_worked)"
+        },
+        {
+            "name": "Project Total Project Amount",
+            "description": "Total project amount is the sum of Task total amount billed",
+            "use_case": "Project",
+            "entity": "Project",
+            "code": "Rule.sum(derive=Project.total_project_amount, as_sum_of=Task.total_task_amount_billed)"
+        },
+        {
+            "name": "Project Is Over Budget Formula",
+            "description": "Formula: is Over Budget when total project amount exceeds project budget amount",
+            "use_case": "Project",
+            "entity": "Project",
+            "code": "Rule.formula(derive=Project.is_over_budget, as_expression=lambda row: row.total_project_amount > row.project_budget_amount)"
+        },
+        {
+            "name": "Client Total Hours",
+            "description": "Total hours is the sum of Project total project hours",
+            "use_case": "Client",
+            "entity": "Client",
+            "code": "Rule.sum(derive=Client.total_hours, as_sum_of=Project.total_project_hours)"
+        },
+        {
+            "name": "Client Total Amount",
+            "description": "Total amount is the sum of Project total project amount",
+            "use_case": "Client",
+            "entity": "Client",
+            "code": "Rule.sum(derive=Client.total_amount, as_sum_of=Project.total_project_amount)"
+        },
+        {
+            "name": "Client Is Over Budget Formula",
+            "description": "Formula: is Over Budget equals true when total amount exceeds budget amount",
+            "use_case": "Client",
+            "entity": "Client",
+            "code": "Rule.formula(derive=Client.is_over_budget, as_expression=lambda row: row.total_amount > row.budget_amount)"
+        },
+        {
+            "name": "Invoice Invoice Amount",
+            "description": "Invoice Amount is the sum of InvoiceItem task amount",
+            "use_case": "Invoice",
+            "entity": "Invoice",
+            "code": "Rule.sum(derive=Invoice.invoice_amount, as_sum_of=InvoiceItem.task_amount)"
+        },
+        {
+            "name": "Invoice Payment Total",
+            "description": "Payment total is the sum of Payment amount",
+            "use_case": "Invoice",
+            "entity": "Invoice",
+            "code": "Rule.sum(derive=Invoice.payment_total, as_sum_of=Payment.amount)"
+        },
+        {
+            "name": "Invoice Balance Formula",
+            "description": "Invoice balance is invoice amount less payment total",
+            "use_case": "Invoice",
+            "entity": "Invoice",
+            "code": "Rule.formula(derive=Invoice.invoice_balance, as_expression=lambda row: row.invoice_amount - row.payment_total)"
+        },
+        {
+            "name": "Invoice Is Paid Formula",
+            "description": "Formula: is_paid when invoice balance is than or equal to zero",
+            "use_case": "Invoice",
+            "entity": "Invoice",
+            "code": "Rule.formula(derive=Invoice.is_paid, as_expression=lambda row: row.invoice_balance <= 0)"
+        },
+        {
+            "name": "Invoice Task Count",
+            "description": "Task Count is count of InvoiceItem",
+            "use_case": "Invoice",
+            "entity": "Invoice",
+            "code": "Rule.count(derive=Invoice.task_count, as_count_of=InvoiceItem)"
+        },
+        {
+            "name": "Invoice Task Completed Count",
+            "description": "Task completed count is count of InvoiceItem where is_completed is True",
+            "use_case": "Invoice",
+            "entity": "Invoice",
+            "code": "Rule.count(derive=Invoice.completed_task_count, as_count_of=InvoiceItem, where=lambda row: row.is_completed == True)"
+        },
+        {
+            "name": "Invoice Is Ready Formula",
+            "description": "Formula: is ready when Task Count is equal to Task Completed Count",
+            "use_case": "Invoice",
+            "entity": "Invoice",
+            "code": "Rule.formula(derive=Invoice.is_ready, as_expression=lambda row: row.task_count == row.completed_task_count)"
+        },
+        {
+            "name": "Invoice Kafka Event",
+            "description": "Send invoice to Kafka when is_ready is True",
+            "use_case": "Invoice",
+            "entity": "Invoice",
+            "code": "Rule.after_flush_row_event(on_class=Invoice, calling=kafka_producer.send_row_to_kafka, if_condition=lambda row: row.is_ready, with_args={'topic': 'invoice_ready'})"
+        },
+        {
+            "name": "InvoiceItem Copy Task Amount",
+            "description": "InvoiceItem task amount is copied from Task total task amount billed",
+            "use_case": "InvoiceItem",
+            "entity": "InvoiceItem",
+            "code": "Rule.copy(derive=InvoiceItem.task_amount, from_parent=Task.total_task_amount_billed)"
+        },
+        {
+            "name": "InvoiceItem Is Completed",
+            "description": "InvoiceItem is_completed is sum of Task is_completed when True",
+            "use_case": "InvoiceItem",
+            "entity": "InvoiceItem",
+            "code": "Rule.formula(derive=InvoiceItem.is_completed, as_expression=lambda row: all(item.is_completed for item in row.invoice_items))"
+        }
+    ],
+    "test_data": "# Test data for Client\ntest_client_1 = Client(name=\"Client A\", email=\"clienta@example.com\", phone=\"123-456-7890\", total_hours=100.00, total_amount=2000.00, budget_amount=3000.00, is_over_budget=False)\ntest_client_2 = Client(name=\"Client B\", email=\"clientb@example.com\", phone=\"234-567-8901\", total_hours=150.00, total_amount=3000.00, budget_amount=3000.00, is_over_budget=False)\ntest_client_3 = Client(name=\"Client C\", email=\"clientc@example.com\", phone=\"345-678-9012\", total_hours=120.00, total_amount=3500.00, budget_amount=3000.00, is_over_budget=True)\ntest_client_4 = Client(name=\"Client D\", email=\"clientd@example.com\", phone=\"456-789-0123\", total_hours=50.00, total_amount=1000.00, budget_amount=2000.00, is_over_budget=False)\n\n# Test data for Project\ntest_project_1 = Project(client_id=1, name=\"Project X\", total_project_hours=80.00, total_project_amount=1600.00, project_budget_amount=2000.00, is_over_budget=False, is_active=True)\ntest_project_2 = Project(client_id=2, name=\"Project Y\", total_project_hours=90.00, total_project_amount=1800.00, project_budget_amount=2000.00, is_over_budget=False, is_active=True)\ntest_project_3 = Project(client_id=3, name=\"Project Z\", total_project_hours=60.00, total_project_amount=2000.00, project_budget_amount=1800.00, is_over_budget=True, is_active=True)\ntest_project_4 = Project(client_id=4, name=\"Project W\", total_project_hours=30.00, total_project_amount=600.00, project_budget_amount=1000.00, is_over_budget=False, is_active=True)\n\n# Test data for Invoice\ntest_invoice_1 = Invoice(invoice_date=date(2023, 6, 1), project_id=1, invoice_amount=400.00, payment_total=200.00, invoice_balance=200.00, is_paid=False, is_ready=False, task_count=2, completed_task_count=1)\ntest_invoice_2 = Invoice(invoice_date=date(2023, 6, 5), project_id=2, invoice_amount=500.00, payment_total=500.00, invoice_balance=0.00, is_paid=True, is_ready=True, task_count=3, completed_task_count=3)\ntest_invoice_3 = Invoice(invoice_date=date(2023, 6, 10), project_id=3, invoice_amount=400.00, payment_total=100.00, invoice_balance=300.00, is_paid=False, is_ready=False, task_count=1, completed_task_count=0)\ntest_invoice_4 = Invoice(invoice_date=date(2023, 6, 15), project_id=4, invoice_amount=200.00, payment_total=200.00, invoice_balance=0.00, is_paid=True, is_ready=True, task_count=2, completed_task_count=2)",
+    "test_data_rows": [
+        {
+            "test_data_row_variable": "test_client_1",
+            "code": "test_client_1 = Client(name=\"Client A\", email=\"clienta@example.com\", phone=\"123-456-7890\", total_hours=100.00, total_amount=2000.00, budget_amount=3000.00, is_over_budget=False)"
+        },
+        {
+            "test_data_row_variable": "test_client_2",
+            "code": "test_client_2 = Client(name=\"Client B\", email=\"clientb@example.com\", phone=\"234-567-8901\", total_hours=150.00, total_amount=3000.00, budget_amount=3000.00, is_over_budget=False)"
+        },
+        {
+            "test_data_row_variable": "test_client_3",
+            "code": "test_client_3 = Client(name=\"Client C\", email=\"clientc@example.com\", phone=\"345-678-9012\", total_hours=120.00, total_amount=3500.00, budget_amount=3000.00, is_over_budget=True)"
+        },
+        {
+            "test_data_row_variable": "test_client_4",
+            "code": "test_client_4 = Client(name=\"Client D\", email=\"clientd@example.com\", phone=\"456-789-0123\", total_hours=50.00, total_amount=1000.00, budget_amount=2000.00, is_over_budget=False)"
+        },
+        {
+            "test_data_row_variable": "test_project_1",
+            "code": "test_project_1 = Project(client_id=1, name=\"Project X\", total_project_hours=80.00, total_project_amount=1600.00, project_budget_amount=2000.00, is_over_budget=False, is_active=True)"
+        },
+        {
+            "test_data_row_variable": "test_project_2",
+            "code": "test_project_2 = Project(client_id=2, name=\"Project Y\", total_project_hours=90.00, total_project_amount=1800.00, project_budget_amount=2000.00, is_over_budget=False, is_active=True)"
+        },
+        {
+            "test_data_row_variable": "test_project_3",
+            "code": "test_project_3 = Project(client_id=3, name=\"Project Z\", total_project_hours=60.00, total_project_amount=2000.00, project_budget_amount=1800.00, is_over_budget=True, is_active=True)"
+        },
+        {
+            "test_data_row_variable": "test_project_4",
+            "code": "test_project_4 = Project(client_id=4, name=\"Project W\", total_project_hours=30.00, total_project_amount=600.00, project_budget_amount=1000.00, is_over_budget=False, is_active=True)"
+        },
+        {
+            "test_data_row_variable": "test_invoice_1",
+            "code": "test_invoice_1 = Invoice(invoice_date=date(2023, 6, 1), project_id=1, invoice_amount=400.00, payment_total=200.00, invoice_balance=200.00, is_paid=False, is_ready=False, task_count=2, completed_task_count=1)"
+        },
+        {
+            "test_data_row_variable": "test_invoice_2",
+            "code": "test_invoice_2 = Invoice(invoice_date=date(2023, 6, 5), project_id=2, invoice_amount=500.00, payment_total=500.00, invoice_balance=0.00, is_paid=True, is_ready=True, task_count=3, completed_task_count=3)"
+        },
+        {
+            "test_data_row_variable": "test_invoice_3",
+            "code": "test_invoice_3 = Invoice(invoice_date=date(2023, 6, 10), project_id=3, invoice_amount=400.00, payment_total=100.00, invoice_balance=300.00, is_paid=False, is_ready=False, task_count=1, completed_task_count=0)"
+        },
+        {
+            "test_data_row_variable": "test_invoice_4",
+            "code": "test_invoice_4 = Invoice(invoice_date=date(2023, 6, 15), project_id=4, invoice_amount=200.00, payment_total=200.00, invoice_balance=0.00, is_paid=True, is_ready=True, task_count=2, completed_task_count=2)"
+        }
+    ],
+    "test_data_sqlite": "INSERT INTO client (name, email, phone, total_hours, total_amount, budget_amount, is_over_budget) VALUES\n(\"Client A\", \"clienta@example.com\", \"123-456-7890\", 100.00, 2000.00, 3000.00, False),\n(\"Client B\", \"clientb@example.com\", \"234-567-8901\", 150.00, 3000.00, 3000.00, False),\n(\"Client C\", \"clientc@example.com\", \"345-678-9012\", 120.00, 3500.00, 3000.00, True),\n(\"Client D\", \"clientd@example.com\", \"456-789-0123\", 50.00, 1000.00, 2000.00, False);",
+    "name": "ProjectTracker"
+}
