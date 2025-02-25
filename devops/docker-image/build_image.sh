@@ -9,8 +9,8 @@
 #    $ cd <your project>
 #    $ sh devops/docker-image/build_image.sh .
 
-projectname="projecttracker"  # lower case, only
-repositoryname="apilogicserver"
+projectname="timetracker"  # lower case, only
+repositoryname="tylerm007"
 version="1.0.0"
 
 debug() {

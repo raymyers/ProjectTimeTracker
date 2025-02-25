@@ -14,7 +14,26 @@
   <o-row attr="row1" layout-align="start stretch">
     <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlex fxLayoutGap="14px">
       
-      <o-integer-input #id attr="id" label=" id*" type="integer" editable="no" required="no" ></o-integer-input>
+      <o-integer-input #id attr="id" label=" id" type="integer" editable="no" required="no" ></o-integer-input>
+      
+      <o-list-picker 
+        attr="client_id"
+        service="Client" 
+        entity="ClientType"
+        fxFlex="30" 
+        query-on-init="no" 
+        query-on-bind="yes" 
+        required="no" 
+        enabled="yes" 
+        filter="yes"
+        value-column="id" 
+        value-column-type="INTEGER"  
+        keys="id" 
+        columns="id;client_id;name" 
+        title="client_id"
+        visible-columns="id;name" 
+        separator=" - " width="680px" class="form-field">
+</o-list-picker>
       
       <o-list-picker 
         attr="invoice_id"
@@ -37,7 +56,7 @@
       
       <o-currency-input #amount attr="amount" title="amount" type="currency" editable="no" required="no" currency-symbol="$" currency-symbol-position="left" thousand-separator="," decimal-separator="."></o-currency-input>
       
-      <o-date-input #payment_date attr="payment_date" type="timestamp" label="payment_date" editable="no" required="no" format="LL" fxFlex="20%" class="form-field"></o-date-input>
+      <o-date-input #payment_date attr="payment_date" type="date" label="payment_date" enabled="yes" required="no" format="LL" fxFlex="20%" class="form-field"></o-date-input>
       
       <o-text-input #notes attr="notes" label="notes" enabled="yes" required="no" fxFlex="20%" class="form-field"></o-text-input>
       

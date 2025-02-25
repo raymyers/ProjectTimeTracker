@@ -14,7 +14,7 @@
   <o-row attr="row1" layout-align="start stretch">
     <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlex fxLayoutGap="14px">
       
-      <o-text-input #name attr="name" label=" name*" enabled="yes" required="no" fxFlex="20%" class="form-field"></o-text-input>
+      <o-text-input #name attr="name" label=" name" enabled="yes" required="no" fxFlex="20%" class="form-field"></o-text-input>
       
       <o-list-picker 
         attr="project_id"
@@ -82,7 +82,7 @@
         edition-mode="dblclick" 
         horizontal-scroll="yes" class="fill-form">
         
-          <o-table-column #id attr="id" title=" id*" type="integer" editable="no" required="no" content-align="center"></o-table-column>
+          <o-table-column #id attr="id" title=" id" type="integer" editable="no" required="no" content-align="center"></o-table-column>
         
           <o-table-column attr="invoice_id" title="invoice_id">
     <o-table-cell-renderer-service attr="invoice_id" 
@@ -142,7 +142,7 @@
         edition-mode="dblclick" 
         horizontal-scroll="yes" class="fill-form">
         
-          <o-table-column #id attr="id" title=" id*" type="integer" editable="no" required="no" content-align="center"></o-table-column>
+          <o-table-column #id attr="id" title=" id" type="integer" editable="no" required="no" content-align="center"></o-table-column>
         
           <o-table-column attr="person_id" title="person_id">
     <o-table-cell-renderer-service attr="person_id" 
@@ -169,7 +169,7 @@
         render-type="icon" boolean-type="boolean" true-value="true" false-value="false"></o-table-cell-renderer-boolean>
 </o-table-column>
         
-          <o-table-column #date_worked attr="date_worked" title="date_worked" editable="no" required="no" content-align="left"></o-table-column>
+          <o-date-input #date_worked attr="date_worked" type="date" label="date_worked" enabled="yes" required="no" format="LL" fxFlex="20%" class="form-field"></o-date-input>
         
           <o-table-column #hours_worked attr="hours_worked" title="hours_worked" type="real" min-decimal-digits="2" max-decimal-digits="4" min="0" max="1000000.0000" content-align="center"></o-table-column>
         

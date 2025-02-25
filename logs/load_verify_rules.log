@@ -1,270 +1,285 @@
-Loading rules from /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/logic/wg_rules
-/opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/docs/export/export.json does not exist
-Loading rules from /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/logic/wg_rules
-01JMCRS3A39N3C6TGVTR9CHV4R rule file: logic/wg_rules/Person_Total_Hours.py
-01JMCRS3A54C06M17HXSMN4A29 rule file: logic/wg_rules/Person_Total_Amount_Billed.py
-01JMCRS3A6WE5S8XH36SS1G6R5 rule file: logic/wg_rules/Person_Billing_Rate_Constraint.py
-01JMCRS3A6QT4J8MAPTGV3J76B rule file: logic/wg_rules/Timesheet_Copy_Billing_Rate.py
-01JMCRS3A70Z44J4CR9NS12034 rule file: logic/wg_rules/Timesheet_Total_Amount_Billed.py
-01JMCRS3A8J59C3D0TZGQDWV9C rule file: logic/wg_rules/Timesheet_Hours_Worked_Constraint.py
-01JMCRS3A8CDV1X1J36EFTGY52 rule file: logic/wg_rules/Task_Total_Task_Hours_Worked.py
-01JMCRS3A92ZYN64PPWZQYZNVE rule file: logic/wg_rules/Task_Total_Task_Amount_Billed.py
-01JMCRS3A9PK2YGHHPJVY03C5M rule file: logic/wg_rules/Task_Is_Over_Budget_Formula.py
-01JMCRS3AAC6AR2JVK19T283S0 rule file: logic/wg_rules/Project_Total_Project_Hours.py
-01JMCRS3AA7YW7ZCS54H8P9P94 rule file: logic/wg_rules/Project_Total_Project_Amount.py
-01JMCRS3AAFVFAR2WHFNJ38PF8 rule file: logic/wg_rules/Project_Is_Over_Budget_Formula.py
-01JMCRS3ABD4CABTBM26G3591E rule file: logic/wg_rules/Client_Total_Hours.py
-01JMCRS3ABMA88DHBGKG90E27K rule file: logic/wg_rules/Client_Total_Amount.py
-01JMCRS3ACBS9834HZ180DCME0 rule file: logic/wg_rules/Client_Is_Over_Budget_Formula.py
-01JMCRS3ACECESFGBBECAW098X rule file: logic/wg_rules/Invoice_Invoice_Amount.py
-01JMCRS3ADQEK2SXQ2GAJDV5PY rule file: logic/wg_rules/Invoice_Payment_Total.py
-01JMCRS3AD527KCXQFBHZ2PXNM rule file: logic/wg_rules/Invoice_Balance_Formula.py
-01JMCRS3AE89MRN0YPX0EZJPG5 rule file: logic/wg_rules/Invoice_Is_Paid_Formula.py
-01JMCRS3AE8ZKPXZPHE7PEYQ1F rule file: logic/wg_rules/Invoice_Task_Count.py
-01JMCRS3AFE9QBJBYWYYTTYJ6A rule file: logic/wg_rules/Invoice_Task_Completed_Count.py
-01JMCRS3AFDWY5TPA8Z46TM33C rule file: logic/wg_rules/Invoice_Is_Ready_Formula.py
-01JMCRS3AFZ88WR74F3B52ZHFV rule file: logic/wg_rules/Invoice_Kafka_Event.py
-01JMCRS3AGH97HQ0MKGX5MNF3P rule file: logic/wg_rules/InvoiceItem_Copy_Task_Amount.py
-01JMCRS3AG1NFX5W2M98DJ52EG rule file: logic/wg_rules/InvoiceItem_Is_Completed.py
-01JMCRS3A39N3C6TGVTR9CHV4R rule file: logic/wg_rules/Person_Total_Hours.py
-01JMCRS3A54C06M17HXSMN4A29 rule file: logic/wg_rules/Person_Total_Amount_Billed.py
-01JMCRS3A6WE5S8XH36SS1G6R5 rule file: logic/wg_rules/Person_Billing_Rate_Constraint.py
-01JMCRS3A6QT4J8MAPTGV3J76B rule file: logic/wg_rules/Timesheet_Copy_Billing_Rate.py
-01JMCRS3A70Z44J4CR9NS12034 rule file: logic/wg_rules/Timesheet_Total_Amount_Billed.py
-01JMCRS3A8J59C3D0TZGQDWV9C rule file: logic/wg_rules/Timesheet_Hours_Worked_Constraint.py
-01JMCRS3A8CDV1X1J36EFTGY52 rule file: logic/wg_rules/Task_Total_Task_Hours_Worked.py
-01JMCRS3A92ZYN64PPWZQYZNVE rule file: logic/wg_rules/Task_Total_Task_Amount_Billed.py
-01JMCRS3A9PK2YGHHPJVY03C5M rule file: logic/wg_rules/Task_Is_Over_Budget_Formula.py
-01JMCRS3AAC6AR2JVK19T283S0 rule file: logic/wg_rules/Project_Total_Project_Hours.py
-01JMCRS3AA7YW7ZCS54H8P9P94 rule file: logic/wg_rules/Project_Total_Project_Amount.py
-01JMCRS3AAFVFAR2WHFNJ38PF8 rule file: logic/wg_rules/Project_Is_Over_Budget_Formula.py
-01JMCRS3ABD4CABTBM26G3591E rule file: logic/wg_rules/Client_Total_Hours.py
-01JMCRS3ABMA88DHBGKG90E27K rule file: logic/wg_rules/Client_Total_Amount.py
-01JMCRS3ACBS9834HZ180DCME0 rule file: logic/wg_rules/Client_Is_Over_Budget_Formula.py
-01JMCRS3ACECESFGBBECAW098X rule file: logic/wg_rules/Invoice_Invoice_Amount.py
-01JMCRS3ADQEK2SXQ2GAJDV5PY rule file: logic/wg_rules/Invoice_Payment_Total.py
-01JMCRS3AD527KCXQFBHZ2PXNM rule file: logic/wg_rules/Invoice_Balance_Formula.py
-01JMCRS3AE89MRN0YPX0EZJPG5 rule file: logic/wg_rules/Invoice_Is_Paid_Formula.py
-01JMCRS3AE8ZKPXZPHE7PEYQ1F rule file: logic/wg_rules/Invoice_Task_Count.py
-01JMCRS3AFE9QBJBYWYYTTYJ6A rule file: logic/wg_rules/Invoice_Task_Completed_Count.py
-01JMCRS3AFDWY5TPA8Z46TM33C rule file: logic/wg_rules/Invoice_Is_Ready_Formula.py
-01JMCRS3AFZ88WR74F3B52ZHFV rule file: logic/wg_rules/Invoice_Kafka_Event.py
-01JMCRS3AGH97HQ0MKGX5MNF3P rule file: logic/wg_rules/InvoiceItem_Copy_Task_Amount.py
-01JMCRS3AG1NFX5W2M98DJ52EG rule file: logic/wg_rules/InvoiceItem_Is_Completed.py
+Loading rules from /opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/logic/wg_rules
+/opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/docs/export/export.json does not exist
+Loading rules from /opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/logic/wg_rules
+01JMW5DWSE1BEGMTDQR2RQ61TW rule file: logic/wg_rules/Person_Total_Hours.py
+01JMW5DWVCNE5Y6R0EPFYJB094 rule file: logic/wg_rules/Person_Total_Amount.py
+01JMW5DWW29JKP1CR7WTPRYBDT rule file: logic/wg_rules/Person_Billing_Rate_Constraint.py
+01JMW5DWWXY42Q5TKGTMYJH454 rule file: logic/wg_rules/Timesheet_Copy_Rate.py
+01JMW5DWX9Q6GB7F5GKC75W9QG rule file: logic/wg_rules/Timesheet_Amount_Billed.py
+01JMW5DWY1NGPH7CE3WQXDNVQ0 rule file: logic/wg_rules/Timesheet_Hours_Worked_Constraint.py
+01JMW5DWYTXJ3N98QVWCYV7FBM rule file: logic/wg_rules/Task_Hours_Calculations.py
+01JMW5DWZ5V2FAMVYFVC0DD7GP rule file: logic/wg_rules/Task_Amount_Calculations.py
+01JMW5DWZF891E8702490NSGHA rule file: logic/wg_rules/Task_Budget_Check.py
+01JMW5DX03KFYJA5AJK9C8KYS9 rule file: logic/wg_rules/Project_Hours_Calculations.py
+01JMW5DX0TD8SHCZYE7G1MSQ7J rule file: logic/wg_rules/Project_Amount_Calculations.py
+01JMW5DX1B07T9QV15HE1V5MFB rule file: logic/wg_rules/Project_Budget_Check.py
+01JMW5DX1R3BXWYJH4CH4650DK rule file: logic/wg_rules/Client_Hours_Calculations.py
+01JMW5DX27DQABTT3XZ6TP985N rule file: logic/wg_rules/Client_Amount_Calculations.py
+01JMW5DX34P4CF7NAPZEWJ67P7 rule file: logic/wg_rules/Client_Budget_Check.py
+01JMW5DX3JV7G9ZE5P9H9HXM6H rule file: logic/wg_rules/Client_Invoice_Total_Calculation.py
+01JMW5DX43MBDE38C28W76HVAR rule file: logic/wg_rules/Client_Payment_Total_Calculation.py
+01JMW5DX4EJ2M8C6XJDQDEH5RM rule file: logic/wg_rules/Client_Kafka_Event.py
+01JMW5DX59HGF46T3DHPD0GD8K rule file: logic/wg_rules/Invoice_Amount_Credit.py
+01JMW5DX5WFK04KWHEPE33GDRJ rule file: logic/wg_rules/Invoice_Payment_Credit.py
+01JMW5DX69TVMQ1S9QRHJS74D9 rule file: logic/wg_rules/Invoice_Balance_Calculation.py
+01JMW5DX76ZTX5M03HR47KTT06 rule file: logic/wg_rules/Invoice_Payment_Constraint.py
+01JMW5DX7RZD5NJYGT45RKA48Q rule file: logic/wg_rules/Invoice_Task_Count_Calculation.py
+01JMW5DX866R30GT9X5FEXBVYM rule file: logic/wg_rules/Invoice_Task_Completion_Count.py
+01JMW5DX9694SWB6AF2ZWDG4QH rule file: logic/wg_rules/Invoice_Readiness_Check.py
+01JMW5DX9TSQXHGRJD88PYV2D9 rule file: logic/wg_rules/Invoice_Kafka_Event.py
+01JMW5DXA53HY0Z8R16HP0X1TC rule file: logic/wg_rules/InvoiceItem_Task_Amount.py
+01JMW5DXAQJNWBP7364GXGB0CX rule file: logic/wg_rules/InvoiceItem_Completion_Check.py
+01JMW5DWSE1BEGMTDQR2RQ61TW rule file: logic/wg_rules/Person_Total_Hours.py
+01JMW5DWVCNE5Y6R0EPFYJB094 rule file: logic/wg_rules/Person_Total_Amount.py
+01JMW5DWW29JKP1CR7WTPRYBDT rule file: logic/wg_rules/Person_Billing_Rate_Constraint.py
+01JMW5DWWXY42Q5TKGTMYJH454 rule file: logic/wg_rules/Timesheet_Copy_Rate.py
+01JMW5DWX9Q6GB7F5GKC75W9QG rule file: logic/wg_rules/Timesheet_Amount_Billed.py
+01JMW5DWY1NGPH7CE3WQXDNVQ0 rule file: logic/wg_rules/Timesheet_Hours_Worked_Constraint.py
+01JMW5DWYTXJ3N98QVWCYV7FBM rule file: logic/wg_rules/Task_Hours_Calculations.py
+01JMW5DWZ5V2FAMVYFVC0DD7GP rule file: logic/wg_rules/Task_Amount_Calculations.py
+01JMW5DWZF891E8702490NSGHA rule file: logic/wg_rules/Task_Budget_Check.py
+01JMW5DX03KFYJA5AJK9C8KYS9 rule file: logic/wg_rules/Project_Hours_Calculations.py
+01JMW5DX0TD8SHCZYE7G1MSQ7J rule file: logic/wg_rules/Project_Amount_Calculations.py
+01JMW5DX1B07T9QV15HE1V5MFB rule file: logic/wg_rules/Project_Budget_Check.py
+01JMW5DX1R3BXWYJH4CH4650DK rule file: logic/wg_rules/Client_Hours_Calculations.py
+01JMW5DX27DQABTT3XZ6TP985N rule file: logic/wg_rules/Client_Amount_Calculations.py
+01JMW5DX34P4CF7NAPZEWJ67P7 rule file: logic/wg_rules/Client_Budget_Check.py
+01JMW5DX3JV7G9ZE5P9H9HXM6H rule file: logic/wg_rules/Client_Invoice_Total_Calculation.py
+01JMW5DX43MBDE38C28W76HVAR rule file: logic/wg_rules/Client_Payment_Total_Calculation.py
+01JMW5DX4EJ2M8C6XJDQDEH5RM rule file: logic/wg_rules/Client_Kafka_Event.py
+01JMW5DX59HGF46T3DHPD0GD8K rule file: logic/wg_rules/Invoice_Amount_Credit.py
+01JMW5DX5WFK04KWHEPE33GDRJ rule file: logic/wg_rules/Invoice_Payment_Credit.py
+01JMW5DX69TVMQ1S9QRHJS74D9 rule file: logic/wg_rules/Invoice_Balance_Calculation.py
+01JMW5DX76ZTX5M03HR47KTT06 rule file: logic/wg_rules/Invoice_Payment_Constraint.py
+01JMW5DX7RZD5NJYGT45RKA48Q rule file: logic/wg_rules/Invoice_Task_Count_Calculation.py
+01JMW5DX866R30GT9X5FEXBVYM rule file: logic/wg_rules/Invoice_Task_Completion_Count.py
+01JMW5DX9694SWB6AF2ZWDG4QH rule file: logic/wg_rules/Invoice_Readiness_Check.py
+01JMW5DX9TSQXHGRJD88PYV2D9 rule file: logic/wg_rules/Invoice_Kafka_Event.py
+01JMW5DXA53HY0Z8R16HP0X1TC rule file: logic/wg_rules/InvoiceItem_Task_Amount.py
+01JMW5DXAQJNWBP7364GXGB0CX rule file: logic/wg_rules/InvoiceItem_Completion_Check.py
 
-[34mVerifying rule: Person_Total_Hours - 01JMCRS3A39N3C6TGVTR9CHV4R[0m
+[34mVerifying rule: Person_Total_Hours - 01JMW5DWSE1BEGMTDQR2RQ61TW[0m
 
-[32mActivated rule 01JMCRS3A39N3C6TGVTR9CHV4R[0m
+[32mActivated rule 01JMW5DWSE1BEGMTDQR2RQ61TW[0m
 
-[34mVerifying rule: Person_Total_Amount_Billed - 01JMCRS3A54C06M17HXSMN4A29[0m
+[34mVerifying rule: Person_Total_Amount - 01JMW5DWVCNE5Y6R0EPFYJB094[0m
 
-[32mActivated rule 01JMCRS3A54C06M17HXSMN4A29[0m
+[32mActivated rule 01JMW5DWVCNE5Y6R0EPFYJB094[0m
 
-[34mVerifying rule: Person_Billing_Rate_Constraint - 01JMCRS3A6WE5S8XH36SS1G6R5[0m
+[34mVerifying rule: Person_Billing_Rate_Constraint - 01JMW5DWW29JKP1CR7WTPRYBDT[0m
 
-[32mActivated rule 01JMCRS3A6WE5S8XH36SS1G6R5[0m
+[32mActivated rule 01JMW5DWW29JKP1CR7WTPRYBDT[0m
 
-[34mVerifying rule: Timesheet_Copy_Billing_Rate - 01JMCRS3A6QT4J8MAPTGV3J76B[0m
+[34mVerifying rule: Timesheet_Copy_Rate - 01JMW5DWWXY42Q5TKGTMYJH454[0m
 
-[32mActivated rule 01JMCRS3A6QT4J8MAPTGV3J76B[0m
+[32mActivated rule 01JMW5DWWXY42Q5TKGTMYJH454[0m
 
-[34mVerifying rule: Timesheet_Total_Amount_Billed - 01JMCRS3A70Z44J4CR9NS12034[0m
+[34mVerifying rule: Timesheet_Amount_Billed - 01JMW5DWX9Q6GB7F5GKC75W9QG[0m
 
-[32mActivated rule 01JMCRS3A70Z44J4CR9NS12034[0m
+[32mActivated rule 01JMW5DWX9Q6GB7F5GKC75W9QG[0m
 
-[34mVerifying rule: Timesheet_Hours_Worked_Constraint - 01JMCRS3A8J59C3D0TZGQDWV9C[0m
+[34mVerifying rule: Timesheet_Hours_Worked_Constraint - 01JMW5DWY1NGPH7CE3WQXDNVQ0[0m
 
-[32mActivated rule 01JMCRS3A8J59C3D0TZGQDWV9C[0m
+[32mActivated rule 01JMW5DWY1NGPH7CE3WQXDNVQ0[0m
 
-[34mVerifying rule: Task_Total_Task_Hours_Worked - 01JMCRS3A8CDV1X1J36EFTGY52[0m
+[34mVerifying rule: Task_Hours_Calculations - 01JMW5DWYTXJ3N98QVWCYV7FBM[0m
 
-[32mActivated rule 01JMCRS3A8CDV1X1J36EFTGY52[0m
+[32mActivated rule 01JMW5DWYTXJ3N98QVWCYV7FBM[0m
 
-[34mVerifying rule: Task_Total_Task_Amount_Billed - 01JMCRS3A92ZYN64PPWZQYZNVE[0m
+[34mVerifying rule: Task_Amount_Calculations - 01JMW5DWZ5V2FAMVYFVC0DD7GP[0m
 
-[32mActivated rule 01JMCRS3A92ZYN64PPWZQYZNVE[0m
+[32mActivated rule 01JMW5DWZ5V2FAMVYFVC0DD7GP[0m
 
-[34mVerifying rule: Task_Is_Over_Budget_Formula - 01JMCRS3A9PK2YGHHPJVY03C5M[0m
+[34mVerifying rule: Task_Budget_Check - 01JMW5DWZF891E8702490NSGHA[0m
 
-[32mActivated rule 01JMCRS3A9PK2YGHHPJVY03C5M[0m
+[32mActivated rule 01JMW5DWZF891E8702490NSGHA[0m
 
-[34mVerifying rule: Project_Total_Project_Hours - 01JMCRS3AAC6AR2JVK19T283S0[0m
+[34mVerifying rule: Project_Hours_Calculations - 01JMW5DX03KFYJA5AJK9C8KYS9[0m
 
-[32mActivated rule 01JMCRS3AAC6AR2JVK19T283S0[0m
+[32mActivated rule 01JMW5DX03KFYJA5AJK9C8KYS9[0m
 
-[34mVerifying rule: Project_Total_Project_Amount - 01JMCRS3AA7YW7ZCS54H8P9P94[0m
+[34mVerifying rule: Project_Amount_Calculations - 01JMW5DX0TD8SHCZYE7G1MSQ7J[0m
 
-[32mActivated rule 01JMCRS3AA7YW7ZCS54H8P9P94[0m
+[32mActivated rule 01JMW5DX0TD8SHCZYE7G1MSQ7J[0m
 
-[34mVerifying rule: Project_Is_Over_Budget_Formula - 01JMCRS3AAFVFAR2WHFNJ38PF8[0m
+[34mVerifying rule: Project_Budget_Check - 01JMW5DX1B07T9QV15HE1V5MFB[0m
 
-[32mActivated rule 01JMCRS3AAFVFAR2WHFNJ38PF8[0m
+[32mActivated rule 01JMW5DX1B07T9QV15HE1V5MFB[0m
 
-[34mVerifying rule: Client_Total_Hours - 01JMCRS3ABD4CABTBM26G3591E[0m
+[34mVerifying rule: Client_Hours_Calculations - 01JMW5DX1R3BXWYJH4CH4650DK[0m
 
-[32mActivated rule 01JMCRS3ABD4CABTBM26G3591E[0m
+[32mActivated rule 01JMW5DX1R3BXWYJH4CH4650DK[0m
 
-[34mVerifying rule: Client_Total_Amount - 01JMCRS3ABMA88DHBGKG90E27K[0m
+[34mVerifying rule: Client_Amount_Calculations - 01JMW5DX27DQABTT3XZ6TP985N[0m
 
-[32mActivated rule 01JMCRS3ABMA88DHBGKG90E27K[0m
+[32mActivated rule 01JMW5DX27DQABTT3XZ6TP985N[0m
 
-[34mVerifying rule: Client_Is_Over_Budget_Formula - 01JMCRS3ACBS9834HZ180DCME0[0m
+[34mVerifying rule: Client_Budget_Check - 01JMW5DX34P4CF7NAPZEWJ67P7[0m
 
-[32mActivated rule 01JMCRS3ACBS9834HZ180DCME0[0m
+[32mActivated rule 01JMW5DX34P4CF7NAPZEWJ67P7[0m
 
-[34mVerifying rule: Invoice_Invoice_Amount - 01JMCRS3ACECESFGBBECAW098X[0m
+[34mVerifying rule: Client_Invoice_Total_Calculation - 01JMW5DX3JV7G9ZE5P9H9HXM6H[0m
 
-[32mActivated rule 01JMCRS3ACECESFGBBECAW098X[0m
+[32mActivated rule 01JMW5DX3JV7G9ZE5P9H9HXM6H[0m
 
-[34mVerifying rule: Invoice_Payment_Total - 01JMCRS3ADQEK2SXQ2GAJDV5PY[0m
+[34mVerifying rule: Client_Payment_Total_Calculation - 01JMW5DX43MBDE38C28W76HVAR[0m
 
-[32mActivated rule 01JMCRS3ADQEK2SXQ2GAJDV5PY[0m
+[32mActivated rule 01JMW5DX43MBDE38C28W76HVAR[0m
 
-[34mVerifying rule: Invoice_Balance_Formula - 01JMCRS3AD527KCXQFBHZ2PXNM[0m
+[34mVerifying rule: Client_Kafka_Event - 01JMW5DX4EJ2M8C6XJDQDEH5RM[0m
 
-[32mActivated rule 01JMCRS3AD527KCXQFBHZ2PXNM[0m
+[32mActivated rule 01JMW5DX4EJ2M8C6XJDQDEH5RM[0m
 
-[34mVerifying rule: Invoice_Is_Paid_Formula - 01JMCRS3AE89MRN0YPX0EZJPG5[0m
+[34mVerifying rule: Invoice_Amount_Credit - 01JMW5DX59HGF46T3DHPD0GD8K[0m
 
-[32mActivated rule 01JMCRS3AE89MRN0YPX0EZJPG5[0m
+[32mActivated rule 01JMW5DX59HGF46T3DHPD0GD8K[0m
 
-[34mVerifying rule: Invoice_Task_Count - 01JMCRS3AE8ZKPXZPHE7PEYQ1F[0m
+[34mVerifying rule: Invoice_Payment_Credit - 01JMW5DX5WFK04KWHEPE33GDRJ[0m
 
-[32mActivated rule 01JMCRS3AE8ZKPXZPHE7PEYQ1F[0m
+[32mActivated rule 01JMW5DX5WFK04KWHEPE33GDRJ[0m
 
-[34mVerifying rule: Invoice_Task_Completed_Count - 01JMCRS3AFE9QBJBYWYYTTYJ6A[0m
+[34mVerifying rule: Invoice_Balance_Calculation - 01JMW5DX69TVMQ1S9QRHJS74D9[0m
 
-[32mActivated rule 01JMCRS3AFE9QBJBYWYYTTYJ6A[0m
+[32mActivated rule 01JMW5DX69TVMQ1S9QRHJS74D9[0m
 
-[34mVerifying rule: Invoice_Is_Ready_Formula - 01JMCRS3AFDWY5TPA8Z46TM33C[0m
+[34mVerifying rule: Invoice_Payment_Constraint - 01JMW5DX76ZTX5M03HR47KTT06[0m
 
-[32mActivated rule 01JMCRS3AFDWY5TPA8Z46TM33C[0m
+[32mActivated rule 01JMW5DX76ZTX5M03HR47KTT06[0m
 
-[34mVerifying rule: Invoice_Kafka_Event - 01JMCRS3AFZ88WR74F3B52ZHFV[0m
+[34mVerifying rule: Invoice_Task_Count_Calculation - 01JMW5DX7RZD5NJYGT45RKA48Q[0m
 
-[32mActivated rule 01JMCRS3AFZ88WR74F3B52ZHFV[0m
+[32mActivated rule 01JMW5DX7RZD5NJYGT45RKA48Q[0m
 
-[34mVerifying rule: InvoiceItem_Copy_Task_Amount - 01JMCRS3AGH97HQ0MKGX5MNF3P[0m
+[34mVerifying rule: Invoice_Task_Completion_Count - 01JMW5DX866R30GT9X5FEXBVYM[0m
 
-[32mActivated rule 01JMCRS3AGH97HQ0MKGX5MNF3P[0m
+[32mActivated rule 01JMW5DX866R30GT9X5FEXBVYM[0m
 
-[34mVerifying rule: InvoiceItem_Is_Completed - 01JMCRS3AG1NFX5W2M98DJ52EG[0m
-LBActivateException: 
-[]
-['InvoiceItem.invoice_items): - formula']
-LogicBank Activation Error
-Traceback (most recent call last):
-  File "/opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/logic/load_verify_rules.py", line 147, in verify_rules
-    LogicBank.activate(session=safrs.DB.session, activator=rule_module.init_rule)
-  File "/usr/local/lib/python3.12/site-packages/logic_bank/logic_bank.py", line 152, in activate
-    raise LBActivateException(rule_bank.invalid_rules, missing_attributes)
-logic_bank.exceptions.LBActivateException: LBActivateException: 
-[]
-['InvoiceItem.invoice_items): - formula']
-LogicBank Activation Error
-[31mFailed to verify accepted rule code
-Rule.formula(derive=InvoiceItem.is_completed, as_expression=lambda row: all(item.is_completed for item in row.invoice_items))
-[33mLBActivateException: LBActivateException: 
-[]
-['InvoiceItem.invoice_items): - formula']
-LogicBank Activation Error[0m
-Loading rules from /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/logic/wg_rules
-01JMCRS3A39N3C6TGVTR9CHV4R rule file: logic/wg_rules/Person_Total_Hours.py
-01JMCRS3A54C06M17HXSMN4A29 rule file: logic/wg_rules/Person_Total_Amount_Billed.py
-01JMCRS3A6WE5S8XH36SS1G6R5 rule file: logic/wg_rules/Person_Billing_Rate_Constraint.py
-01JMCRS3A6QT4J8MAPTGV3J76B rule file: logic/wg_rules/Timesheet_Copy_Billing_Rate.py
-01JMCRS3A70Z44J4CR9NS12034 rule file: logic/wg_rules/Timesheet_Total_Amount_Billed.py
-01JMCRS3A8J59C3D0TZGQDWV9C rule file: logic/wg_rules/Timesheet_Hours_Worked_Constraint.py
-01JMCRS3A8CDV1X1J36EFTGY52 rule file: logic/wg_rules/Task_Total_Task_Hours_Worked.py
-01JMCRS3A92ZYN64PPWZQYZNVE rule file: logic/wg_rules/Task_Total_Task_Amount_Billed.py
-01JMCRS3A9PK2YGHHPJVY03C5M rule file: logic/wg_rules/Task_Is_Over_Budget_Formula.py
-01JMCRS3AAC6AR2JVK19T283S0 rule file: logic/wg_rules/Project_Total_Project_Hours.py
-01JMCRS3AA7YW7ZCS54H8P9P94 rule file: logic/wg_rules/Project_Total_Project_Amount.py
-01JMCRS3AAFVFAR2WHFNJ38PF8 rule file: logic/wg_rules/Project_Is_Over_Budget_Formula.py
-01JMCRS3ABD4CABTBM26G3591E rule file: logic/wg_rules/Client_Total_Hours.py
-01JMCRS3ABMA88DHBGKG90E27K rule file: logic/wg_rules/Client_Total_Amount.py
-01JMCRS3ACBS9834HZ180DCME0 rule file: logic/wg_rules/Client_Is_Over_Budget_Formula.py
-01JMCRS3ACECESFGBBECAW098X rule file: logic/wg_rules/Invoice_Invoice_Amount.py
-01JMCRS3ADQEK2SXQ2GAJDV5PY rule file: logic/wg_rules/Invoice_Payment_Total.py
-01JMCRS3AD527KCXQFBHZ2PXNM rule file: logic/wg_rules/Invoice_Balance_Formula.py
-01JMCRS3AE89MRN0YPX0EZJPG5 rule file: logic/wg_rules/Invoice_Is_Paid_Formula.py
-01JMCRS3AE8ZKPXZPHE7PEYQ1F rule file: logic/wg_rules/Invoice_Task_Count.py
-01JMCRS3AFE9QBJBYWYYTTYJ6A rule file: logic/wg_rules/Invoice_Task_Completed_Count.py
-01JMCRS3AFDWY5TPA8Z46TM33C rule file: logic/wg_rules/Invoice_Is_Ready_Formula.py
-01JMCRS3AFZ88WR74F3B52ZHFV rule file: logic/wg_rules/Invoice_Kafka_Event.py
-01JMCRS3AGH97HQ0MKGX5MNF3P rule file: logic/wg_rules/InvoiceItem_Copy_Task_Amount.py
-01JMCRS3AG1NFX5W2M98DJ52EG rule file: logic/wg_rules/InvoiceItem_Is_Completed.py
-[32mLoading Rule Module Person_Total_Hours 01JMCRS3A39N3C6TGVTR9CHV4R [0m
-[32mLoading Rule Module Person_Total_Amount_Billed 01JMCRS3A54C06M17HXSMN4A29 [0m
-[32mLoading Rule Module Person_Billing_Rate_Constraint 01JMCRS3A6WE5S8XH36SS1G6R5 [0m
-[32mLoading Rule Module Timesheet_Copy_Billing_Rate 01JMCRS3A6QT4J8MAPTGV3J76B [0m
-[32mLoading Rule Module Timesheet_Total_Amount_Billed 01JMCRS3A70Z44J4CR9NS12034 [0m
-[32mLoading Rule Module Timesheet_Hours_Worked_Constraint 01JMCRS3A8J59C3D0TZGQDWV9C [0m
-[32mLoading Rule Module Task_Total_Task_Hours_Worked 01JMCRS3A8CDV1X1J36EFTGY52 [0m
-[32mLoading Rule Module Task_Total_Task_Amount_Billed 01JMCRS3A92ZYN64PPWZQYZNVE [0m
-[32mLoading Rule Module Task_Is_Over_Budget_Formula 01JMCRS3A9PK2YGHHPJVY03C5M [0m
-[32mLoading Rule Module Project_Total_Project_Hours 01JMCRS3AAC6AR2JVK19T283S0 [0m
-[32mLoading Rule Module Project_Total_Project_Amount 01JMCRS3AA7YW7ZCS54H8P9P94 [0m
-[32mLoading Rule Module Project_Is_Over_Budget_Formula 01JMCRS3AAFVFAR2WHFNJ38PF8 [0m
-[32mLoading Rule Module Client_Total_Hours 01JMCRS3ABD4CABTBM26G3591E [0m
-[32mLoading Rule Module Client_Total_Amount 01JMCRS3ABMA88DHBGKG90E27K [0m
-[32mLoading Rule Module Client_Is_Over_Budget_Formula 01JMCRS3ACBS9834HZ180DCME0 [0m
-[32mLoading Rule Module Invoice_Invoice_Amount 01JMCRS3ACECESFGBBECAW098X [0m
-[32mLoading Rule Module Invoice_Payment_Total 01JMCRS3ADQEK2SXQ2GAJDV5PY [0m
-[32mLoading Rule Module Invoice_Balance_Formula 01JMCRS3AD527KCXQFBHZ2PXNM [0m
-[32mLoading Rule Module Invoice_Is_Paid_Formula 01JMCRS3AE89MRN0YPX0EZJPG5 [0m
-[32mLoading Rule Module Invoice_Task_Count 01JMCRS3AE8ZKPXZPHE7PEYQ1F [0m
-[32mLoading Rule Module Invoice_Task_Completed_Count 01JMCRS3AFE9QBJBYWYYTTYJ6A [0m
-[32mLoading Rule Module Invoice_Is_Ready_Formula 01JMCRS3AFDWY5TPA8Z46TM33C [0m
-[32mLoading Rule Module Invoice_Kafka_Event 01JMCRS3AFZ88WR74F3B52ZHFV [0m
-[32mLoading Rule Module InvoiceItem_Copy_Task_Amount 01JMCRS3AGH97HQ0MKGX5MNF3P [0m
-Loading rules from /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/logic/wg_rules
-01JMCRS3A39N3C6TGVTR9CHV4R rule file: logic/wg_rules/Person_Total_Hours.py
-01JMCRS3A54C06M17HXSMN4A29 rule file: logic/wg_rules/Person_Total_Amount_Billed.py
-01JMCRS3A6WE5S8XH36SS1G6R5 rule file: logic/wg_rules/Person_Billing_Rate_Constraint.py
-01JMCRS3A6QT4J8MAPTGV3J76B rule file: logic/wg_rules/Timesheet_Copy_Billing_Rate.py
-01JMCRS3A70Z44J4CR9NS12034 rule file: logic/wg_rules/Timesheet_Total_Amount_Billed.py
-01JMCRS3A8J59C3D0TZGQDWV9C rule file: logic/wg_rules/Timesheet_Hours_Worked_Constraint.py
-01JMCRS3A8CDV1X1J36EFTGY52 rule file: logic/wg_rules/Task_Total_Task_Hours_Worked.py
-01JMCRS3A92ZYN64PPWZQYZNVE rule file: logic/wg_rules/Task_Total_Task_Amount_Billed.py
-01JMCRS3A9PK2YGHHPJVY03C5M rule file: logic/wg_rules/Task_Is_Over_Budget_Formula.py
-01JMCRS3AAC6AR2JVK19T283S0 rule file: logic/wg_rules/Project_Total_Project_Hours.py
-01JMCRS3AA7YW7ZCS54H8P9P94 rule file: logic/wg_rules/Project_Total_Project_Amount.py
-01JMCRS3AAFVFAR2WHFNJ38PF8 rule file: logic/wg_rules/Project_Is_Over_Budget_Formula.py
-01JMCRS3ABD4CABTBM26G3591E rule file: logic/wg_rules/Client_Total_Hours.py
-01JMCRS3ABMA88DHBGKG90E27K rule file: logic/wg_rules/Client_Total_Amount.py
-01JMCRS3ACBS9834HZ180DCME0 rule file: logic/wg_rules/Client_Is_Over_Budget_Formula.py
-01JMCRS3ACECESFGBBECAW098X rule file: logic/wg_rules/Invoice_Invoice_Amount.py
-01JMCRS3ADQEK2SXQ2GAJDV5PY rule file: logic/wg_rules/Invoice_Payment_Total.py
-01JMCRS3AD527KCXQFBHZ2PXNM rule file: logic/wg_rules/Invoice_Balance_Formula.py
-01JMCRS3AE89MRN0YPX0EZJPG5 rule file: logic/wg_rules/Invoice_Is_Paid_Formula.py
-01JMCRS3AE8ZKPXZPHE7PEYQ1F rule file: logic/wg_rules/Invoice_Task_Count.py
-01JMCRS3AFE9QBJBYWYYTTYJ6A rule file: logic/wg_rules/Invoice_Task_Completed_Count.py
-01JMCRS3AFDWY5TPA8Z46TM33C rule file: logic/wg_rules/Invoice_Is_Ready_Formula.py
-01JMCRS3AFZ88WR74F3B52ZHFV rule file: logic/wg_rules/Invoice_Kafka_Event.py
-01JMCRS3AGH97HQ0MKGX5MNF3P rule file: logic/wg_rules/InvoiceItem_Copy_Task_Amount.py
-01JMCRS3AG1NFX5W2M98DJ52EG rule file: logic/wg_rules/InvoiceItem_Is_Completed.py
-[32mLoading Rule Module Person_Total_Hours 01JMCRS3A39N3C6TGVTR9CHV4R [0m
-[32mLoading Rule Module Person_Total_Amount_Billed 01JMCRS3A54C06M17HXSMN4A29 [0m
-[32mLoading Rule Module Person_Billing_Rate_Constraint 01JMCRS3A6WE5S8XH36SS1G6R5 [0m
-[32mLoading Rule Module Timesheet_Copy_Billing_Rate 01JMCRS3A6QT4J8MAPTGV3J76B [0m
-[32mLoading Rule Module Timesheet_Total_Amount_Billed 01JMCRS3A70Z44J4CR9NS12034 [0m
-[32mLoading Rule Module Timesheet_Hours_Worked_Constraint 01JMCRS3A8J59C3D0TZGQDWV9C [0m
-[32mLoading Rule Module Task_Total_Task_Hours_Worked 01JMCRS3A8CDV1X1J36EFTGY52 [0m
-[32mLoading Rule Module Task_Total_Task_Amount_Billed 01JMCRS3A92ZYN64PPWZQYZNVE [0m
-[32mLoading Rule Module Task_Is_Over_Budget_Formula 01JMCRS3A9PK2YGHHPJVY03C5M [0m
-[32mLoading Rule Module Project_Total_Project_Hours 01JMCRS3AAC6AR2JVK19T283S0 [0m
-[32mLoading Rule Module Project_Total_Project_Amount 01JMCRS3AA7YW7ZCS54H8P9P94 [0m
-[32mLoading Rule Module Project_Is_Over_Budget_Formula 01JMCRS3AAFVFAR2WHFNJ38PF8 [0m
-[32mLoading Rule Module Client_Total_Hours 01JMCRS3ABD4CABTBM26G3591E [0m
-[32mLoading Rule Module Client_Total_Amount 01JMCRS3ABMA88DHBGKG90E27K [0m
-[32mLoading Rule Module Client_Is_Over_Budget_Formula 01JMCRS3ACBS9834HZ180DCME0 [0m
-[32mLoading Rule Module Invoice_Invoice_Amount 01JMCRS3ACECESFGBBECAW098X [0m
-[32mLoading Rule Module Invoice_Payment_Total 01JMCRS3ADQEK2SXQ2GAJDV5PY [0m
-[32mLoading Rule Module Invoice_Balance_Formula 01JMCRS3AD527KCXQFBHZ2PXNM [0m
-[32mLoading Rule Module Invoice_Is_Paid_Formula 01JMCRS3AE89MRN0YPX0EZJPG5 [0m
-[32mLoading Rule Module Invoice_Task_Count 01JMCRS3AE8ZKPXZPHE7PEYQ1F [0m
-[32mLoading Rule Module Invoice_Task_Completed_Count 01JMCRS3AFE9QBJBYWYYTTYJ6A [0m
-[32mLoading Rule Module Invoice_Is_Ready_Formula 01JMCRS3AFDWY5TPA8Z46TM33C [0m
-[32mLoading Rule Module Invoice_Kafka_Event 01JMCRS3AFZ88WR74F3B52ZHFV [0m
-[32mLoading Rule Module InvoiceItem_Copy_Task_Amount 01JMCRS3AGH97HQ0MKGX5MNF3P [0m
+[34mVerifying rule: Invoice_Readiness_Check - 01JMW5DX9694SWB6AF2ZWDG4QH[0m
+
+[32mActivated rule 01JMW5DX9694SWB6AF2ZWDG4QH[0m
+
+[34mVerifying rule: Invoice_Kafka_Event - 01JMW5DX9TSQXHGRJD88PYV2D9[0m
+
+[32mActivated rule 01JMW5DX9TSQXHGRJD88PYV2D9[0m
+
+[34mVerifying rule: InvoiceItem_Task_Amount - 01JMW5DXA53HY0Z8R16HP0X1TC[0m
+
+[32mActivated rule 01JMW5DXA53HY0Z8R16HP0X1TC[0m
+
+[34mVerifying rule: InvoiceItem_Completion_Check - 01JMW5DXAQJNWBP7364GXGB0CX[0m
+
+[32mActivated rule 01JMW5DXAQJNWBP7364GXGB0CX[0m
+Loading rules from /opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/logic/wg_rules
+01JMW5DWSE1BEGMTDQR2RQ61TW rule file: logic/wg_rules/Person_Total_Hours.py
+01JMW5DWVCNE5Y6R0EPFYJB094 rule file: logic/wg_rules/Person_Total_Amount.py
+01JMW5DWW29JKP1CR7WTPRYBDT rule file: logic/wg_rules/Person_Billing_Rate_Constraint.py
+01JMW5DWWXY42Q5TKGTMYJH454 rule file: logic/wg_rules/Timesheet_Copy_Rate.py
+01JMW5DWX9Q6GB7F5GKC75W9QG rule file: logic/wg_rules/Timesheet_Amount_Billed.py
+01JMW5DWY1NGPH7CE3WQXDNVQ0 rule file: logic/wg_rules/Timesheet_Hours_Worked_Constraint.py
+01JMW5DWYTXJ3N98QVWCYV7FBM rule file: logic/wg_rules/Task_Hours_Calculations.py
+01JMW5DWZ5V2FAMVYFVC0DD7GP rule file: logic/wg_rules/Task_Amount_Calculations.py
+01JMW5DWZF891E8702490NSGHA rule file: logic/wg_rules/Task_Budget_Check.py
+01JMW5DX03KFYJA5AJK9C8KYS9 rule file: logic/wg_rules/Project_Hours_Calculations.py
+01JMW5DX0TD8SHCZYE7G1MSQ7J rule file: logic/wg_rules/Project_Amount_Calculations.py
+01JMW5DX1B07T9QV15HE1V5MFB rule file: logic/wg_rules/Project_Budget_Check.py
+01JMW5DX1R3BXWYJH4CH4650DK rule file: logic/wg_rules/Client_Hours_Calculations.py
+01JMW5DX27DQABTT3XZ6TP985N rule file: logic/wg_rules/Client_Amount_Calculations.py
+01JMW5DX34P4CF7NAPZEWJ67P7 rule file: logic/wg_rules/Client_Budget_Check.py
+01JMW5DX3JV7G9ZE5P9H9HXM6H rule file: logic/wg_rules/Client_Invoice_Total_Calculation.py
+01JMW5DX43MBDE38C28W76HVAR rule file: logic/wg_rules/Client_Payment_Total_Calculation.py
+01JMW5DX4EJ2M8C6XJDQDEH5RM rule file: logic/wg_rules/Client_Kafka_Event.py
+01JMW5DX59HGF46T3DHPD0GD8K rule file: logic/wg_rules/Invoice_Amount_Credit.py
+01JMW5DX5WFK04KWHEPE33GDRJ rule file: logic/wg_rules/Invoice_Payment_Credit.py
+01JMW5DX69TVMQ1S9QRHJS74D9 rule file: logic/wg_rules/Invoice_Balance_Calculation.py
+01JMW5DX76ZTX5M03HR47KTT06 rule file: logic/wg_rules/Invoice_Payment_Constraint.py
+01JMW5DX7RZD5NJYGT45RKA48Q rule file: logic/wg_rules/Invoice_Task_Count_Calculation.py
+01JMW5DX866R30GT9X5FEXBVYM rule file: logic/wg_rules/Invoice_Task_Completion_Count.py
+01JMW5DX9694SWB6AF2ZWDG4QH rule file: logic/wg_rules/Invoice_Readiness_Check.py
+01JMW5DX9TSQXHGRJD88PYV2D9 rule file: logic/wg_rules/Invoice_Kafka_Event.py
+01JMW5DXA53HY0Z8R16HP0X1TC rule file: logic/wg_rules/InvoiceItem_Task_Amount.py
+01JMW5DXAQJNWBP7364GXGB0CX rule file: logic/wg_rules/InvoiceItem_Completion_Check.py
+[32mLoading Rule Module Person_Total_Hours 01JMW5DWSE1BEGMTDQR2RQ61TW [0m
+[32mLoading Rule Module Person_Total_Amount 01JMW5DWVCNE5Y6R0EPFYJB094 [0m
+[32mLoading Rule Module Person_Billing_Rate_Constraint 01JMW5DWW29JKP1CR7WTPRYBDT [0m
+[32mLoading Rule Module Timesheet_Copy_Rate 01JMW5DWWXY42Q5TKGTMYJH454 [0m
+[32mLoading Rule Module Timesheet_Amount_Billed 01JMW5DWX9Q6GB7F5GKC75W9QG [0m
+[32mLoading Rule Module Timesheet_Hours_Worked_Constraint 01JMW5DWY1NGPH7CE3WQXDNVQ0 [0m
+[32mLoading Rule Module Task_Hours_Calculations 01JMW5DWYTXJ3N98QVWCYV7FBM [0m
+[32mLoading Rule Module Task_Amount_Calculations 01JMW5DWZ5V2FAMVYFVC0DD7GP [0m
+[32mLoading Rule Module Task_Budget_Check 01JMW5DWZF891E8702490NSGHA [0m
+[32mLoading Rule Module Project_Hours_Calculations 01JMW5DX03KFYJA5AJK9C8KYS9 [0m
+[32mLoading Rule Module Project_Amount_Calculations 01JMW5DX0TD8SHCZYE7G1MSQ7J [0m
+[32mLoading Rule Module Project_Budget_Check 01JMW5DX1B07T9QV15HE1V5MFB [0m
+[32mLoading Rule Module Client_Hours_Calculations 01JMW5DX1R3BXWYJH4CH4650DK [0m
+[32mLoading Rule Module Client_Amount_Calculations 01JMW5DX27DQABTT3XZ6TP985N [0m
+[32mLoading Rule Module Client_Budget_Check 01JMW5DX34P4CF7NAPZEWJ67P7 [0m
+[32mLoading Rule Module Client_Invoice_Total_Calculation 01JMW5DX3JV7G9ZE5P9H9HXM6H [0m
+[32mLoading Rule Module Client_Payment_Total_Calculation 01JMW5DX43MBDE38C28W76HVAR [0m
+[32mLoading Rule Module Client_Kafka_Event 01JMW5DX4EJ2M8C6XJDQDEH5RM [0m
+[32mLoading Rule Module Invoice_Amount_Credit 01JMW5DX59HGF46T3DHPD0GD8K [0m
+[32mLoading Rule Module Invoice_Payment_Credit 01JMW5DX5WFK04KWHEPE33GDRJ [0m
+[32mLoading Rule Module Invoice_Balance_Calculation 01JMW5DX69TVMQ1S9QRHJS74D9 [0m
+[32mLoading Rule Module Invoice_Payment_Constraint 01JMW5DX76ZTX5M03HR47KTT06 [0m
+[32mLoading Rule Module Invoice_Task_Count_Calculation 01JMW5DX7RZD5NJYGT45RKA48Q [0m
+[32mLoading Rule Module Invoice_Task_Completion_Count 01JMW5DX866R30GT9X5FEXBVYM [0m
+[32mLoading Rule Module Invoice_Readiness_Check 01JMW5DX9694SWB6AF2ZWDG4QH [0m
+[32mLoading Rule Module Invoice_Kafka_Event 01JMW5DX9TSQXHGRJD88PYV2D9 [0m
+[32mLoading Rule Module InvoiceItem_Task_Amount 01JMW5DXA53HY0Z8R16HP0X1TC [0m
+[32mLoading Rule Module InvoiceItem_Completion_Check 01JMW5DXAQJNWBP7364GXGB0CX [0m
+Loading rules from /opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/logic/wg_rules
+01JMW5DWSE1BEGMTDQR2RQ61TW rule file: logic/wg_rules/Person_Total_Hours.py
+01JMW5DWVCNE5Y6R0EPFYJB094 rule file: logic/wg_rules/Person_Total_Amount.py
+01JMW5DWW29JKP1CR7WTPRYBDT rule file: logic/wg_rules/Person_Billing_Rate_Constraint.py
+01JMW5DWWXY42Q5TKGTMYJH454 rule file: logic/wg_rules/Timesheet_Copy_Rate.py
+01JMW5DWX9Q6GB7F5GKC75W9QG rule file: logic/wg_rules/Timesheet_Amount_Billed.py
+01JMW5DWY1NGPH7CE3WQXDNVQ0 rule file: logic/wg_rules/Timesheet_Hours_Worked_Constraint.py
+01JMW5DWYTXJ3N98QVWCYV7FBM rule file: logic/wg_rules/Task_Hours_Calculations.py
+01JMW5DWZ5V2FAMVYFVC0DD7GP rule file: logic/wg_rules/Task_Amount_Calculations.py
+01JMW5DWZF891E8702490NSGHA rule file: logic/wg_rules/Task_Budget_Check.py
+01JMW5DX03KFYJA5AJK9C8KYS9 rule file: logic/wg_rules/Project_Hours_Calculations.py
+01JMW5DX0TD8SHCZYE7G1MSQ7J rule file: logic/wg_rules/Project_Amount_Calculations.py
+01JMW5DX1B07T9QV15HE1V5MFB rule file: logic/wg_rules/Project_Budget_Check.py
+01JMW5DX1R3BXWYJH4CH4650DK rule file: logic/wg_rules/Client_Hours_Calculations.py
+01JMW5DX27DQABTT3XZ6TP985N rule file: logic/wg_rules/Client_Amount_Calculations.py
+01JMW5DX34P4CF7NAPZEWJ67P7 rule file: logic/wg_rules/Client_Budget_Check.py
+01JMW5DX3JV7G9ZE5P9H9HXM6H rule file: logic/wg_rules/Client_Invoice_Total_Calculation.py
+01JMW5DX43MBDE38C28W76HVAR rule file: logic/wg_rules/Client_Payment_Total_Calculation.py
+01JMW5DX4EJ2M8C6XJDQDEH5RM rule file: logic/wg_rules/Client_Kafka_Event.py
+01JMW5DX59HGF46T3DHPD0GD8K rule file: logic/wg_rules/Invoice_Amount_Credit.py
+01JMW5DX5WFK04KWHEPE33GDRJ rule file: logic/wg_rules/Invoice_Payment_Credit.py
+01JMW5DX69TVMQ1S9QRHJS74D9 rule file: logic/wg_rules/Invoice_Balance_Calculation.py
+01JMW5DX76ZTX5M03HR47KTT06 rule file: logic/wg_rules/Invoice_Payment_Constraint.py
+01JMW5DX7RZD5NJYGT45RKA48Q rule file: logic/wg_rules/Invoice_Task_Count_Calculation.py
+01JMW5DX866R30GT9X5FEXBVYM rule file: logic/wg_rules/Invoice_Task_Completion_Count.py
+01JMW5DX9694SWB6AF2ZWDG4QH rule file: logic/wg_rules/Invoice_Readiness_Check.py
+01JMW5DX9TSQXHGRJD88PYV2D9 rule file: logic/wg_rules/Invoice_Kafka_Event.py
+01JMW5DXA53HY0Z8R16HP0X1TC rule file: logic/wg_rules/InvoiceItem_Task_Amount.py
+01JMW5DXAQJNWBP7364GXGB0CX rule file: logic/wg_rules/InvoiceItem_Completion_Check.py
+[32mLoading Rule Module Person_Total_Hours 01JMW5DWSE1BEGMTDQR2RQ61TW [0m
+[32mLoading Rule Module Person_Total_Amount 01JMW5DWVCNE5Y6R0EPFYJB094 [0m
+[32mLoading Rule Module Person_Billing_Rate_Constraint 01JMW5DWW29JKP1CR7WTPRYBDT [0m
+[32mLoading Rule Module Timesheet_Copy_Rate 01JMW5DWWXY42Q5TKGTMYJH454 [0m
+[32mLoading Rule Module Timesheet_Amount_Billed 01JMW5DWX9Q6GB7F5GKC75W9QG [0m
+[32mLoading Rule Module Timesheet_Hours_Worked_Constraint 01JMW5DWY1NGPH7CE3WQXDNVQ0 [0m
+[32mLoading Rule Module Task_Hours_Calculations 01JMW5DWYTXJ3N98QVWCYV7FBM [0m
+[32mLoading Rule Module Task_Amount_Calculations 01JMW5DWZ5V2FAMVYFVC0DD7GP [0m
+[32mLoading Rule Module Task_Budget_Check 01JMW5DWZF891E8702490NSGHA [0m
+[32mLoading Rule Module Project_Hours_Calculations 01JMW5DX03KFYJA5AJK9C8KYS9 [0m
+[32mLoading Rule Module Project_Amount_Calculations 01JMW5DX0TD8SHCZYE7G1MSQ7J [0m
+[32mLoading Rule Module Project_Budget_Check 01JMW5DX1B07T9QV15HE1V5MFB [0m
+[32mLoading Rule Module Client_Hours_Calculations 01JMW5DX1R3BXWYJH4CH4650DK [0m
+[32mLoading Rule Module Client_Amount_Calculations 01JMW5DX27DQABTT3XZ6TP985N [0m
+[32mLoading Rule Module Client_Budget_Check 01JMW5DX34P4CF7NAPZEWJ67P7 [0m
+[32mLoading Rule Module Client_Invoice_Total_Calculation 01JMW5DX3JV7G9ZE5P9H9HXM6H [0m
+[32mLoading Rule Module Client_Payment_Total_Calculation 01JMW5DX43MBDE38C28W76HVAR [0m
+[32mLoading Rule Module Client_Kafka_Event 01JMW5DX4EJ2M8C6XJDQDEH5RM [0m
+[32mLoading Rule Module Invoice_Amount_Credit 01JMW5DX59HGF46T3DHPD0GD8K [0m
+[32mLoading Rule Module Invoice_Payment_Credit 01JMW5DX5WFK04KWHEPE33GDRJ [0m
+[32mLoading Rule Module Invoice_Balance_Calculation 01JMW5DX69TVMQ1S9QRHJS74D9 [0m
+[32mLoading Rule Module Invoice_Payment_Constraint 01JMW5DX76ZTX5M03HR47KTT06 [0m
+[32mLoading Rule Module Invoice_Task_Count_Calculation 01JMW5DX7RZD5NJYGT45RKA48Q [0m
+[32mLoading Rule Module Invoice_Task_Completion_Count 01JMW5DX866R30GT9X5FEXBVYM [0m
+[32mLoading Rule Module Invoice_Readiness_Check 01JMW5DX9694SWB6AF2ZWDG4QH [0m
+[32mLoading Rule Module Invoice_Kafka_Event 01JMW5DX9TSQXHGRJD88PYV2D9 [0m
+[32mLoading Rule Module InvoiceItem_Task_Amount 01JMW5DXA53HY0Z8R16HP0X1TC [0m
+[32mLoading Rule Module InvoiceItem_Completion_Check 01JMW5DXAQJNWBP7364GXGB0CX [0m

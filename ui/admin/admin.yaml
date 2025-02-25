@@ -1,11 +1,11 @@
 about:
-  date: February 18, 2025 14:53:09
+  date: February 24, 2025 14:22:31
   recent_changes: works with modified safrs-react-admin
   version: 0.0.0
 api_root: '{http_type}://{swagger_host}:{port}/{api}'
 authentication: '{system-default}'
 info:
-  number_relationships: 9
+  number_relationships: 11
   number_tables: 8
 info_toggle_checked: true
 resources:
@@ -22,10 +22,22 @@ resources:
     - name: budget_amount
     - name: is_over_budget
       type: Boolean
+    - name: invoice_total
+    - name: payment_total
     - name: id
-    description: Represents a client entity in the application.
-    info_list: Represents a client entity in the application.
+    description: Table to store client details including contact and budget info.
+    info_list: Table to store client details including contact and budget info.
     tab_groups:
+    - direction: tomany
+      fks:
+      - client_id
+      name: InvoiceList
+      resource: Invoice
+    - direction: tomany
+      fks:
+      - client_id
+      name: PaymentList
+      resource: Payment
     - direction: tomany
       fks:
       - client_id
@@ -44,6 +56,7 @@ resources:
       name: id
       search: true
       sort: true
+    - name: client_id
     - name: project_id
     - name: invoice_date
       type: DATE
@@ -56,10 +69,8 @@ resources:
     - name: completed_task_count
     - name: is_paid
       type: Boolean
-    description: Represents an invoice related to a project, tracking financials and
-      approval status.
-    info_list: Represents an invoice related to a project, tracking financials and
-      approval status.
+    description: Stores invoice details for clients including payment tracking.
+    info_list: Stores invoice details for clients including payment tracking.
     tab_groups:
     - direction: tomany
       fks:
@@ -71,6 +82,11 @@ resources:
       - invoice_id
       name: PaymentList
       resource: Payment
+    - direction: toone
+      fks:
+      - client_id
+      name: client
+      resource: Client
     - direction: toone
       fks:
       - project_id
@@ -89,10 +105,8 @@ resources:
     - name: task_amount
     - name: is_completed
       type: Boolean
-    description: Represents an individual item in an invoice, which is derived from
-      a task.
-    info_list: Represents an individual item in an invoice, which is derived from
-      a task.
+    description: Details individual items in an invoice, linking tasks and invoices.
+    info_list: Details individual items in an invoice, linking tasks and invoices.
     tab_groups:
     - direction: toone
       fks:
@@ -112,16 +126,20 @@ resources:
       name: id
       search: true
       sort: true
+    - name: client_id
     - name: invoice_id
     - name: amount
     - name: payment_date
       type: DATE
     - name: notes
-    description: Represents a payment made against an invoice, logging the payment
-      amounts and dates.
-    info_list: Represents a payment made against an invoice, logging the payment amounts
-      and dates.
+    description: Stores payment details for client invoices, linking to those entities.
+    info_list: Stores payment details for client invoices, linking to those entities.
     tab_groups:
+    - direction: toone
+      fks:
+      - client_id
+      name: client
+      resource: Client
     - direction: toone
       fks:
       - invoice_id
@@ -142,10 +160,10 @@ resources:
     - name: id
     - name: total_hours_entered
     - name: total_amount_billed
-    description: Represents a person associated with a client, who logs time and generates
-      billing amounts.
-    info_list: Represents a person associated with a client, who logs time and generates
-      billing amounts.
+    description: Contains person-specific details, responsible for logging hours billed
+      to clients.
+    info_list: Contains person-specific details, responsible for logging hours billed
+      to clients.
     tab_groups:
     - direction: tomany
       fks:
@@ -174,8 +192,10 @@ resources:
     - name: is_active
       type: Boolean
     - name: id
-    description: Represents a project linked to a client.
-    info_list: Represents a project linked to a client.
+    description: Table to manage projects of clients, tracking hours, budget, and
+      active status.
+    info_list: Table to manage projects of clients, tracking hours, budget, and active
+      status.
     tab_groups:
     - direction: tomany
       fks:
@@ -298,9 +318,8 @@ resources:
     - name: total_task_amount_billed
     - name: is_completed
       type: Boolean
-    description: Represents a task under a project, measuring progress and budget
-      adherence.
-    info_list: Represents a task under a project, measuring progress and budget adherence.
+    description: Manage tasks within projects, tracking work and budget allocations.
+    info_list: Manage tasks within projects, tracking work and budget allocations.
     tab_groups:
     - direction: tomany
       fks:
@@ -334,10 +353,8 @@ resources:
       type: DATE
     - name: hours_worked
     - name: total_amount_billed
-    description: Tracks the time worked by a person on a task, used for billing and
-      reporting purposes.
-    info_list: Tracks the time worked by a person on a task, used for billing and
-      reporting purposes.
+    description: Tracks individual time entries and corresponding billing information.
+    info_list: Tracks individual time entries and corresponding billing information.
     tab_groups:
     - direction: toone
       fks:

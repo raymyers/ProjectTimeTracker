@@ -1,132 +1,138 @@
 
-API Logic Project Server Setup (01JMCRP6RTCT32TMNM2532VCN2) Starting with CLI args: 
-.. /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/alp_verify_only.py
+API Logic Project Server Setup (01JMW56P6X34M85CN1WNAZCFFR) Starting with CLI args: 
+.. /opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/alp_verify_only.py
 
-Created August 03, 2024 09:34:01 at /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2
+Created August 03, 2024 09:34:01 at /opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR
 
 
 server_setup - get_args: Config args: 
 .. flask_host: 0.0.0.0, port: 5656, 
-.. swagger_host: localhost, swagger_port: 8282, 
+.. swagger_host: g.apifabric.ai, swagger_port: 443, 
 .. client_uri: None, 
 .. http_scheme: http, api_prefix: /api, 
 .. | verbose: False, create_and_run: False
-config - get_cli_args: Getting cli args, with hostname=5f23a89e1360 on local_ip=172.21.0.3
-config - get_cli_args: WSGI - no args, using creation default host/port..  sys.argv = ['/opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/alp_verify_only.py']
+config - get_cli_args: Getting cli args, with hostname=b47642243e99 on local_ip=172.18.0.2
+config - get_cli_args: WSGI - no args, using creation default host/port..  sys.argv = ['/opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/alp_verify_only.py']
 
 
 server_setup - get_args: CLI args: 
 .. flask_host: 0.0.0.0, port: 5656, 
-.. swagger_host: localhost, swagger_port: 8282, 
+.. swagger_host: g.apifabric.ai, swagger_port: 443, 
 .. client_uri: None, 
 .. http_scheme: http, api_prefix: /api, 
 .. | verbose: False, create_and_run: False
 
 server_setup - get_args: ENV args: 
 .. flask_host: 0.0.0.0, port: 4444, 
-.. swagger_host: localhost, swagger_port: 8282, 
+.. swagger_host: g.apifabric.ai, swagger_port: 443, 
 .. client_uri: None, 
-.. http_scheme: http, api_prefix: /01JMCRP6RTCT32TMNM2532VCN2, 
+.. http_scheme: https, api_prefix: /01JMW56P6X34M85CN1WNAZCFFR, 
 .. | verbose: False, create_and_run: False
 
 
 
 server_setup - get_args: ENV args: 
 .. flask_host: 0.0.0.0, port: 4444, 
-.. swagger_host: localhost, swagger_port: 8282, 
+.. swagger_host: g.apifabric.ai, swagger_port: 443, 
 .. client_uri: None, 
-.. http_scheme: http, api_prefix: /01JMCRP6RTCT32TMNM2532VCN2, 
+.. http_scheme: https, api_prefix: /01JMW56P6X34M85CN1WNAZCFFR, 
 .. | verbose: False, create_and_run: False
 
 
 
 Config args: 
 .. flask_host: 0.0.0.0, port: 4444, 
-.. swagger_host: localhost, swagger_port: 8282, 
+.. swagger_host: g.apifabric.ai, swagger_port: 443, 
 .. client_uri: None, 
-.. http_scheme: http, api_prefix: /01JMCRP6RTCT32TMNM2532VCN2, 
+.. http_scheme: https, api_prefix: /01JMW56P6X34M85CN1WNAZCFFR, 
 .. | verbose: False, create_and_run: False
-config - get_cli_args: Getting cli args, with hostname=5f23a89e1360 on local_ip=172.21.0.3
+config - get_cli_args: Getting cli args, with hostname=b47642243e99 on local_ip=172.18.0.2
 config - get_cli_args: No arguments - using creation default host/port
 
 CLI args: 
 .. flask_host: 0.0.0.0, port: 4444, 
-.. swagger_host: localhost, swagger_port: 8282, 
+.. swagger_host: g.apifabric.ai, swagger_port: 443, 
 .. client_uri: None, 
-.. http_scheme: http, api_prefix: /01JMCRP6RTCT32TMNM2532VCN2, 
+.. http_scheme: https, api_prefix: /01JMW56P6X34M85CN1WNAZCFFR, 
 .. | verbose: False, create_and_run: False
 
 ENV args: 
 .. flask_host: 0.0.0.0, port: 4444, 
-.. swagger_host: localhost, swagger_port: 8282, 
+.. swagger_host: g.apifabric.ai, swagger_port: 443, 
 .. client_uri: None, 
-.. http_scheme: http, api_prefix: /01JMCRP6RTCT32TMNM2532VCN2, 
+.. http_scheme: https, api_prefix: /01JMW56P6X34M85CN1WNAZCFFR, 
 .. | verbose: False, create_and_run: False
 
 
-sqlite_db_path validity check with db_uri: sqlite:////opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/database/db.sqlite
-	.. Absolute: //opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/database/db.sqlite
+sqlite_db_path validity check with db_uri: sqlite:////opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/database/db.sqlite
+	.. Absolute: //opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/database/db.sqlite
 	.. sqlite_db_path is a valid file
 
 Data Model Loaded, customizing...
 ..discovered models: []
 LogicBank Activation - declare_logic.py
-Loading rules from /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/logic/wg_rules
-01JMCRS3A39N3C6TGVTR9CHV4R rule file: logic/wg_rules/Person_Total_Hours.py
-01JMCRS3A54C06M17HXSMN4A29 rule file: logic/wg_rules/Person_Total_Amount_Billed.py
-01JMCRS3A6WE5S8XH36SS1G6R5 rule file: logic/wg_rules/Person_Billing_Rate_Constraint.py
-01JMCRS3A6QT4J8MAPTGV3J76B rule file: logic/wg_rules/Timesheet_Copy_Billing_Rate.py
-01JMCRS3A70Z44J4CR9NS12034 rule file: logic/wg_rules/Timesheet_Total_Amount_Billed.py
-01JMCRS3A8J59C3D0TZGQDWV9C rule file: logic/wg_rules/Timesheet_Hours_Worked_Constraint.py
-01JMCRS3A8CDV1X1J36EFTGY52 rule file: logic/wg_rules/Task_Total_Task_Hours_Worked.py
-01JMCRS3A92ZYN64PPWZQYZNVE rule file: logic/wg_rules/Task_Total_Task_Amount_Billed.py
-01JMCRS3A9PK2YGHHPJVY03C5M rule file: logic/wg_rules/Task_Is_Over_Budget_Formula.py
-01JMCRS3AAC6AR2JVK19T283S0 rule file: logic/wg_rules/Project_Total_Project_Hours.py
-01JMCRS3AA7YW7ZCS54H8P9P94 rule file: logic/wg_rules/Project_Total_Project_Amount.py
-01JMCRS3AAFVFAR2WHFNJ38PF8 rule file: logic/wg_rules/Project_Is_Over_Budget_Formula.py
-01JMCRS3ABD4CABTBM26G3591E rule file: logic/wg_rules/Client_Total_Hours.py
-01JMCRS3ABMA88DHBGKG90E27K rule file: logic/wg_rules/Client_Total_Amount.py
-01JMCRS3ACBS9834HZ180DCME0 rule file: logic/wg_rules/Client_Is_Over_Budget_Formula.py
-01JMCRS3ACECESFGBBECAW098X rule file: logic/wg_rules/Invoice_Invoice_Amount.py
-01JMCRS3ADQEK2SXQ2GAJDV5PY rule file: logic/wg_rules/Invoice_Payment_Total.py
-01JMCRS3AD527KCXQFBHZ2PXNM rule file: logic/wg_rules/Invoice_Balance_Formula.py
-01JMCRS3AE89MRN0YPX0EZJPG5 rule file: logic/wg_rules/Invoice_Is_Paid_Formula.py
-01JMCRS3AE8ZKPXZPHE7PEYQ1F rule file: logic/wg_rules/Invoice_Task_Count.py
-01JMCRS3AFE9QBJBYWYYTTYJ6A rule file: logic/wg_rules/Invoice_Task_Completed_Count.py
-01JMCRS3AFDWY5TPA8Z46TM33C rule file: logic/wg_rules/Invoice_Is_Ready_Formula.py
-01JMCRS3AFZ88WR74F3B52ZHFV rule file: logic/wg_rules/Invoice_Kafka_Event.py
-01JMCRS3AGH97HQ0MKGX5MNF3P rule file: logic/wg_rules/InvoiceItem_Copy_Task_Amount.py
-01JMCRS3AG1NFX5W2M98DJ52EG rule file: logic/wg_rules/InvoiceItem_Is_Completed.py
-01JMCRS3A39N3C6TGVTR9CHV4R rule file: logic/wg_rules/Person_Total_Hours.py
-01JMCRS3A54C06M17HXSMN4A29 rule file: logic/wg_rules/Person_Total_Amount_Billed.py
-01JMCRS3A6WE5S8XH36SS1G6R5 rule file: logic/wg_rules/Person_Billing_Rate_Constraint.py
-01JMCRS3A6QT4J8MAPTGV3J76B rule file: logic/wg_rules/Timesheet_Copy_Billing_Rate.py
-01JMCRS3A70Z44J4CR9NS12034 rule file: logic/wg_rules/Timesheet_Total_Amount_Billed.py
-01JMCRS3A8J59C3D0TZGQDWV9C rule file: logic/wg_rules/Timesheet_Hours_Worked_Constraint.py
-01JMCRS3A8CDV1X1J36EFTGY52 rule file: logic/wg_rules/Task_Total_Task_Hours_Worked.py
-01JMCRS3A92ZYN64PPWZQYZNVE rule file: logic/wg_rules/Task_Total_Task_Amount_Billed.py
-01JMCRS3A9PK2YGHHPJVY03C5M rule file: logic/wg_rules/Task_Is_Over_Budget_Formula.py
-01JMCRS3AAC6AR2JVK19T283S0 rule file: logic/wg_rules/Project_Total_Project_Hours.py
-01JMCRS3AA7YW7ZCS54H8P9P94 rule file: logic/wg_rules/Project_Total_Project_Amount.py
-01JMCRS3AAFVFAR2WHFNJ38PF8 rule file: logic/wg_rules/Project_Is_Over_Budget_Formula.py
-01JMCRS3ABD4CABTBM26G3591E rule file: logic/wg_rules/Client_Total_Hours.py
-01JMCRS3ABMA88DHBGKG90E27K rule file: logic/wg_rules/Client_Total_Amount.py
-01JMCRS3ACBS9834HZ180DCME0 rule file: logic/wg_rules/Client_Is_Over_Budget_Formula.py
-01JMCRS3ACECESFGBBECAW098X rule file: logic/wg_rules/Invoice_Invoice_Amount.py
-01JMCRS3ADQEK2SXQ2GAJDV5PY rule file: logic/wg_rules/Invoice_Payment_Total.py
-01JMCRS3AD527KCXQFBHZ2PXNM rule file: logic/wg_rules/Invoice_Balance_Formula.py
-01JMCRS3AE89MRN0YPX0EZJPG5 rule file: logic/wg_rules/Invoice_Is_Paid_Formula.py
-01JMCRS3AE8ZKPXZPHE7PEYQ1F rule file: logic/wg_rules/Invoice_Task_Count.py
-01JMCRS3AFE9QBJBYWYYTTYJ6A rule file: logic/wg_rules/Invoice_Task_Completed_Count.py
-01JMCRS3AFDWY5TPA8Z46TM33C rule file: logic/wg_rules/Invoice_Is_Ready_Formula.py
-01JMCRS3AFZ88WR74F3B52ZHFV rule file: logic/wg_rules/Invoice_Kafka_Event.py
-01JMCRS3AGH97HQ0MKGX5MNF3P rule file: logic/wg_rules/InvoiceItem_Copy_Task_Amount.py
-01JMCRS3AG1NFX5W2M98DJ52EG rule file: logic/wg_rules/InvoiceItem_Is_Completed.py
+Loading rules from /opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/logic/wg_rules
+01JMW5DWSE1BEGMTDQR2RQ61TW rule file: logic/wg_rules/Person_Total_Hours.py
+01JMW5DWVCNE5Y6R0EPFYJB094 rule file: logic/wg_rules/Person_Total_Amount.py
+01JMW5DWW29JKP1CR7WTPRYBDT rule file: logic/wg_rules/Person_Billing_Rate_Constraint.py
+01JMW5DWWXY42Q5TKGTMYJH454 rule file: logic/wg_rules/Timesheet_Copy_Rate.py
+01JMW5DWX9Q6GB7F5GKC75W9QG rule file: logic/wg_rules/Timesheet_Amount_Billed.py
+01JMW5DWY1NGPH7CE3WQXDNVQ0 rule file: logic/wg_rules/Timesheet_Hours_Worked_Constraint.py
+01JMW5DWYTXJ3N98QVWCYV7FBM rule file: logic/wg_rules/Task_Hours_Calculations.py
+01JMW5DWZ5V2FAMVYFVC0DD7GP rule file: logic/wg_rules/Task_Amount_Calculations.py
+01JMW5DWZF891E8702490NSGHA rule file: logic/wg_rules/Task_Budget_Check.py
+01JMW5DX03KFYJA5AJK9C8KYS9 rule file: logic/wg_rules/Project_Hours_Calculations.py
+01JMW5DX0TD8SHCZYE7G1MSQ7J rule file: logic/wg_rules/Project_Amount_Calculations.py
+01JMW5DX1B07T9QV15HE1V5MFB rule file: logic/wg_rules/Project_Budget_Check.py
+01JMW5DX1R3BXWYJH4CH4650DK rule file: logic/wg_rules/Client_Hours_Calculations.py
+01JMW5DX27DQABTT3XZ6TP985N rule file: logic/wg_rules/Client_Amount_Calculations.py
+01JMW5DX34P4CF7NAPZEWJ67P7 rule file: logic/wg_rules/Client_Budget_Check.py
+01JMW5DX3JV7G9ZE5P9H9HXM6H rule file: logic/wg_rules/Client_Invoice_Total_Calculation.py
+01JMW5DX43MBDE38C28W76HVAR rule file: logic/wg_rules/Client_Payment_Total_Calculation.py
+01JMW5DX4EJ2M8C6XJDQDEH5RM rule file: logic/wg_rules/Client_Kafka_Event.py
+01JMW5DX59HGF46T3DHPD0GD8K rule file: logic/wg_rules/Invoice_Amount_Credit.py
+01JMW5DX5WFK04KWHEPE33GDRJ rule file: logic/wg_rules/Invoice_Payment_Credit.py
+01JMW5DX69TVMQ1S9QRHJS74D9 rule file: logic/wg_rules/Invoice_Balance_Calculation.py
+01JMW5DX76ZTX5M03HR47KTT06 rule file: logic/wg_rules/Invoice_Payment_Constraint.py
+01JMW5DX7RZD5NJYGT45RKA48Q rule file: logic/wg_rules/Invoice_Task_Count_Calculation.py
+01JMW5DX866R30GT9X5FEXBVYM rule file: logic/wg_rules/Invoice_Task_Completion_Count.py
+01JMW5DX9694SWB6AF2ZWDG4QH rule file: logic/wg_rules/Invoice_Readiness_Check.py
+01JMW5DX9TSQXHGRJD88PYV2D9 rule file: logic/wg_rules/Invoice_Kafka_Event.py
+01JMW5DXA53HY0Z8R16HP0X1TC rule file: logic/wg_rules/InvoiceItem_Task_Amount.py
+01JMW5DXAQJNWBP7364GXGB0CX rule file: logic/wg_rules/InvoiceItem_Completion_Check.py
+01JMW5DWSE1BEGMTDQR2RQ61TW rule file: logic/wg_rules/Person_Total_Hours.py
+01JMW5DWVCNE5Y6R0EPFYJB094 rule file: logic/wg_rules/Person_Total_Amount.py
+01JMW5DWW29JKP1CR7WTPRYBDT rule file: logic/wg_rules/Person_Billing_Rate_Constraint.py
+01JMW5DWWXY42Q5TKGTMYJH454 rule file: logic/wg_rules/Timesheet_Copy_Rate.py
+01JMW5DWX9Q6GB7F5GKC75W9QG rule file: logic/wg_rules/Timesheet_Amount_Billed.py
+01JMW5DWY1NGPH7CE3WQXDNVQ0 rule file: logic/wg_rules/Timesheet_Hours_Worked_Constraint.py
+01JMW5DWYTXJ3N98QVWCYV7FBM rule file: logic/wg_rules/Task_Hours_Calculations.py
+01JMW5DWZ5V2FAMVYFVC0DD7GP rule file: logic/wg_rules/Task_Amount_Calculations.py
+01JMW5DWZF891E8702490NSGHA rule file: logic/wg_rules/Task_Budget_Check.py
+01JMW5DX03KFYJA5AJK9C8KYS9 rule file: logic/wg_rules/Project_Hours_Calculations.py
+01JMW5DX0TD8SHCZYE7G1MSQ7J rule file: logic/wg_rules/Project_Amount_Calculations.py
+01JMW5DX1B07T9QV15HE1V5MFB rule file: logic/wg_rules/Project_Budget_Check.py
+01JMW5DX1R3BXWYJH4CH4650DK rule file: logic/wg_rules/Client_Hours_Calculations.py
+01JMW5DX27DQABTT3XZ6TP985N rule file: logic/wg_rules/Client_Amount_Calculations.py
+01JMW5DX34P4CF7NAPZEWJ67P7 rule file: logic/wg_rules/Client_Budget_Check.py
+01JMW5DX3JV7G9ZE5P9H9HXM6H rule file: logic/wg_rules/Client_Invoice_Total_Calculation.py
+01JMW5DX43MBDE38C28W76HVAR rule file: logic/wg_rules/Client_Payment_Total_Calculation.py
+01JMW5DX4EJ2M8C6XJDQDEH5RM rule file: logic/wg_rules/Client_Kafka_Event.py
+01JMW5DX59HGF46T3DHPD0GD8K rule file: logic/wg_rules/Invoice_Amount_Credit.py
+01JMW5DX5WFK04KWHEPE33GDRJ rule file: logic/wg_rules/Invoice_Payment_Credit.py
+01JMW5DX69TVMQ1S9QRHJS74D9 rule file: logic/wg_rules/Invoice_Balance_Calculation.py
+01JMW5DX76ZTX5M03HR47KTT06 rule file: logic/wg_rules/Invoice_Payment_Constraint.py
+01JMW5DX7RZD5NJYGT45RKA48Q rule file: logic/wg_rules/Invoice_Task_Count_Calculation.py
+01JMW5DX866R30GT9X5FEXBVYM rule file: logic/wg_rules/Invoice_Task_Completion_Count.py
+01JMW5DX9694SWB6AF2ZWDG4QH rule file: logic/wg_rules/Invoice_Readiness_Check.py
+01JMW5DX9TSQXHGRJD88PYV2D9 rule file: logic/wg_rules/Invoice_Kafka_Event.py
+01JMW5DXA53HY0Z8R16HP0X1TC rule file: logic/wg_rules/InvoiceItem_Task_Amount.py
+01JMW5DXAQJNWBP7364GXGB0CX rule file: logic/wg_rules/InvoiceItem_Completion_Check.py
 
-[34mVerifying rule: Person_Total_Hours - 01JMCRS3A39N3C6TGVTR9CHV4R[0m
+[34mVerifying rule: Person_Total_Hours - 01JMW5DWSE1BEGMTDQR2RQ61TW[0m
 
 The following rules have been loaded
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:17.425803)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:07.347331)
 Mapped Class[Person] rules:
   Derive <class 'database.models.Person'>.total_hours_entered as Sum(Timesheet.hours_worked Where  - None)
 
@@ -136,17 +142,17 @@ The following attributes have been referenced
 ..Timesheet.hours_worked: sum derived from
 
 The following rules have been activated
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:17.425803)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:07.347331)
 Mapped Class[Person] rules:
   Derive <class 'database.models.Person'>.total_hours_entered as Sum(Timesheet.hours_worked Where  - None)
-Logic Bank 01.20.26 - 3 rules loaded
+Logic Bank 01.20.25 - 3 rules loaded
 
-[32mActivated rule 01JMCRS3A39N3C6TGVTR9CHV4R[0m
+[32mActivated rule 01JMW5DWSE1BEGMTDQR2RQ61TW[0m
 
-[34mVerifying rule: Person_Total_Amount_Billed - 01JMCRS3A54C06M17HXSMN4A29[0m
+[34mVerifying rule: Person_Total_Amount - 01JMW5DWVCNE5Y6R0EPFYJB094[0m
 
 The following rules have been loaded
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:17.821694)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:09.577410)
 Mapped Class[Person] rules:
   Derive <class 'database.models.Person'>.total_amount_billed as Formula (-1): Rule.formula(derive=Person.total_amount_billed, a [...]
 
@@ -156,17 +162,17 @@ The following attributes have been referenced
 ..Person.billing_rate: - formula
 
 The following rules have been activated
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:17.821694)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:09.577410)
 Mapped Class[Person] rules:
   Derive <class 'database.models.Person'>.total_amount_billed as Formula (1): Rule.formula(derive=Person.total_amount_billed, a [...]
-Logic Bank 01.20.26 - 3 rules loaded
+Logic Bank 01.20.25 - 3 rules loaded
 
-[32mActivated rule 01JMCRS3A54C06M17HXSMN4A29[0m
+[32mActivated rule 01JMW5DWVCNE5Y6R0EPFYJB094[0m
 
-[34mVerifying rule: Person_Billing_Rate_Constraint - 01JMCRS3A6WE5S8XH36SS1G6R5[0m
+[34mVerifying rule: Person_Billing_Rate_Constraint - 01JMW5DWW29JKP1CR7WTPRYBDT[0m
 
 The following rules have been loaded
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:18.143098)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:12.027413)
 Mapped Class[Person] rules:
   Constraint Function: None 
 
@@ -175,17 +181,17 @@ The following attributes have been referenced
 ..Person.billing_rate: constraint
 
 The following rules have been activated
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:18.143098)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:12.027413)
 Mapped Class[Person] rules:
   Constraint Function: None 
-Logic Bank 01.20.26 - 3 rules loaded
+Logic Bank 01.20.25 - 3 rules loaded
 
-[32mActivated rule 01JMCRS3A6WE5S8XH36SS1G6R5[0m
+[32mActivated rule 01JMW5DWW29JKP1CR7WTPRYBDT[0m
 
-[34mVerifying rule: Timesheet_Copy_Billing_Rate - 01JMCRS3A6QT4J8MAPTGV3J76B[0m
+[34mVerifying rule: Timesheet_Copy_Rate - 01JMW5DWWXY42Q5TKGTMYJH454[0m
 
 The following rules have been loaded
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:18.482399)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:14.493003)
 Mapped Class[Timesheet] rules:
   Derive <class 'database.models.Timesheet'>.billing_rate as Copy(person.billing_rate)
 
@@ -195,17 +201,17 @@ The following attributes have been referenced
 ..Person.billing_rate: parent copy from
 
 The following rules have been activated
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:18.482399)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:14.493003)
 Mapped Class[Timesheet] rules:
   Derive <class 'database.models.Timesheet'>.billing_rate as Copy(person.billing_rate)
-Logic Bank 01.20.26 - 3 rules loaded
+Logic Bank 01.20.25 - 3 rules loaded
 
-[32mActivated rule 01JMCRS3A6QT4J8MAPTGV3J76B[0m
+[32mActivated rule 01JMW5DWWXY42Q5TKGTMYJH454[0m
 
-[34mVerifying rule: Timesheet_Total_Amount_Billed - 01JMCRS3A70Z44J4CR9NS12034[0m
+[34mVerifying rule: Timesheet_Amount_Billed - 01JMW5DWX9Q6GB7F5GKC75W9QG[0m
 
 The following rules have been loaded
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:18.813718)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:17.129225)
 Mapped Class[Timesheet] rules:
   Derive <class 'database.models.Timesheet'>.total_amount_billed as Formula (-1): Rule.formula(derive=Timesheet.total_amount_billed [...]
 
@@ -216,17 +222,17 @@ The following attributes have been referenced
 ..Timesheet.is_billable: - formula
 
 The following rules have been activated
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:18.813718)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:17.129225)
 Mapped Class[Timesheet] rules:
   Derive <class 'database.models.Timesheet'>.total_amount_billed as Formula (1): Rule.formula(derive=Timesheet.total_amount_billed [...]
-Logic Bank 01.20.26 - 3 rules loaded
+Logic Bank 01.20.25 - 3 rules loaded
 
-[32mActivated rule 01JMCRS3A70Z44J4CR9NS12034[0m
+[32mActivated rule 01JMW5DWX9Q6GB7F5GKC75W9QG[0m
 
-[34mVerifying rule: Timesheet_Hours_Worked_Constraint - 01JMCRS3A8J59C3D0TZGQDWV9C[0m
+[34mVerifying rule: Timesheet_Hours_Worked_Constraint - 01JMW5DWY1NGPH7CE3WQXDNVQ0[0m
 
 The following rules have been loaded
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:19.151804)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:19.658348)
 Mapped Class[Timesheet] rules:
   Constraint Function: None 
 
@@ -235,17 +241,17 @@ The following attributes have been referenced
 ..Timesheet.hours_worked: constraint
 
 The following rules have been activated
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:19.151804)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:19.658348)
 Mapped Class[Timesheet] rules:
   Constraint Function: None 
-Logic Bank 01.20.26 - 3 rules loaded
+Logic Bank 01.20.25 - 3 rules loaded
 
-[32mActivated rule 01JMCRS3A8J59C3D0TZGQDWV9C[0m
+[32mActivated rule 01JMW5DWY1NGPH7CE3WQXDNVQ0[0m
 
-[34mVerifying rule: Task_Total_Task_Hours_Worked - 01JMCRS3A8CDV1X1J36EFTGY52[0m
+[34mVerifying rule: Task_Hours_Calculations - 01JMW5DWYTXJ3N98QVWCYV7FBM[0m
 
 The following rules have been loaded
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:19.486406)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:22.145113)
 Mapped Class[Task] rules:
   Derive <class 'database.models.Task'>.total_task_hours_worked as Sum(Timesheet.hours_worked Where  - None)
 
@@ -255,17 +261,17 @@ The following attributes have been referenced
 ..Timesheet.hours_worked: sum derived from
 
 The following rules have been activated
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:19.486406)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:22.145113)
 Mapped Class[Task] rules:
   Derive <class 'database.models.Task'>.total_task_hours_worked as Sum(Timesheet.hours_worked Where  - None)
-Logic Bank 01.20.26 - 3 rules loaded
+Logic Bank 01.20.25 - 3 rules loaded
 
-[32mActivated rule 01JMCRS3A8CDV1X1J36EFTGY52[0m
+[32mActivated rule 01JMW5DWYTXJ3N98QVWCYV7FBM[0m
 
-[34mVerifying rule: Task_Total_Task_Amount_Billed - 01JMCRS3A92ZYN64PPWZQYZNVE[0m
+[34mVerifying rule: Task_Amount_Calculations - 01JMW5DWZ5V2FAMVYFVC0DD7GP[0m
 
 The following rules have been loaded
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:19.812450)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:24.602121)
 Mapped Class[Task] rules:
   Derive <class 'database.models.Task'>.total_task_amount_billed as Sum(Timesheet.total_amount_billed Where  - None)
 
@@ -275,17 +281,17 @@ The following attributes have been referenced
 ..Timesheet.total_amount_billed: sum derived from
 
 The following rules have been activated
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:19.812450)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:24.602121)
 Mapped Class[Task] rules:
   Derive <class 'database.models.Task'>.total_task_amount_billed as Sum(Timesheet.total_amount_billed Where  - None)
-Logic Bank 01.20.26 - 3 rules loaded
+Logic Bank 01.20.25 - 3 rules loaded
 
-[32mActivated rule 01JMCRS3A92ZYN64PPWZQYZNVE[0m
+[32mActivated rule 01JMW5DWZ5V2FAMVYFVC0DD7GP[0m
 
-[34mVerifying rule: Task_Is_Over_Budget_Formula - 01JMCRS3A9PK2YGHHPJVY03C5M[0m
+[34mVerifying rule: Task_Budget_Check - 01JMW5DWZF891E8702490NSGHA[0m
 
 The following rules have been loaded
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:20.132330)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:27.118509)
 Mapped Class[Task] rules:
   Derive <class 'database.models.Task'>.is_over_budget as Formula (-1): Rule.formula(derive=Task.is_over_budget, as_expre [...]
 
@@ -295,17 +301,17 @@ The following attributes have been referenced
 ..Task.task_budget_hours: - formula
 
 The following rules have been activated
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:20.132330)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:27.118509)
 Mapped Class[Task] rules:
   Derive <class 'database.models.Task'>.is_over_budget as Formula (1): Rule.formula(derive=Task.is_over_budget, as_expre [...]
-Logic Bank 01.20.26 - 3 rules loaded
+Logic Bank 01.20.25 - 3 rules loaded
 
-[32mActivated rule 01JMCRS3A9PK2YGHHPJVY03C5M[0m
+[32mActivated rule 01JMW5DWZF891E8702490NSGHA[0m
 
-[34mVerifying rule: Project_Total_Project_Hours - 01JMCRS3AAC6AR2JVK19T283S0[0m
+[34mVerifying rule: Project_Hours_Calculations - 01JMW5DX03KFYJA5AJK9C8KYS9[0m
 
 The following rules have been loaded
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:20.461072)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:29.583149)
 Mapped Class[Project] rules:
   Derive <class 'database.models.Project'>.total_project_hours as Sum(Task.total_task_hours_worked Where  - None)
 
@@ -315,17 +321,17 @@ The following attributes have been referenced
 ..Task.total_task_hours_worked: sum derived from
 
 The following rules have been activated
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:20.461072)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:29.583149)
 Mapped Class[Project] rules:
   Derive <class 'database.models.Project'>.total_project_hours as Sum(Task.total_task_hours_worked Where  - None)
-Logic Bank 01.20.26 - 3 rules loaded
+Logic Bank 01.20.25 - 3 rules loaded
 
-[32mActivated rule 01JMCRS3AAC6AR2JVK19T283S0[0m
+[32mActivated rule 01JMW5DX03KFYJA5AJK9C8KYS9[0m
 
-[34mVerifying rule: Project_Total_Project_Amount - 01JMCRS3AA7YW7ZCS54H8P9P94[0m
+[34mVerifying rule: Project_Amount_Calculations - 01JMW5DX0TD8SHCZYE7G1MSQ7J[0m
 
 The following rules have been loaded
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:20.809032)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:31.712394)
 Mapped Class[Project] rules:
   Derive <class 'database.models.Project'>.total_project_amount as Sum(Task.total_task_amount_billed Where  - None)
 
@@ -335,17 +341,17 @@ The following attributes have been referenced
 ..Task.total_task_amount_billed: sum derived from
 
 The following rules have been activated
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:20.809032)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:31.712394)
 Mapped Class[Project] rules:
   Derive <class 'database.models.Project'>.total_project_amount as Sum(Task.total_task_amount_billed Where  - None)
-Logic Bank 01.20.26 - 3 rules loaded
+Logic Bank 01.20.25 - 3 rules loaded
 
-[32mActivated rule 01JMCRS3AA7YW7ZCS54H8P9P94[0m
+[32mActivated rule 01JMW5DX0TD8SHCZYE7G1MSQ7J[0m
 
-[34mVerifying rule: Project_Is_Over_Budget_Formula - 01JMCRS3AAFVFAR2WHFNJ38PF8[0m
+[34mVerifying rule: Project_Budget_Check - 01JMW5DX1B07T9QV15HE1V5MFB[0m
 
 The following rules have been loaded
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:21.145020)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:34.167822)
 Mapped Class[Project] rules:
   Derive <class 'database.models.Project'>.is_over_budget as Formula (-1): Rule.formula(derive=Project.is_over_budget, as_ex [...]
 
@@ -355,17 +361,17 @@ The following attributes have been referenced
 ..Project.project_budget_amount: - formula
 
 The following rules have been activated
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:21.145020)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:34.167822)
 Mapped Class[Project] rules:
   Derive <class 'database.models.Project'>.is_over_budget as Formula (1): Rule.formula(derive=Project.is_over_budget, as_ex [...]
-Logic Bank 01.20.26 - 3 rules loaded
+Logic Bank 01.20.25 - 3 rules loaded
 
-[32mActivated rule 01JMCRS3AAFVFAR2WHFNJ38PF8[0m
+[32mActivated rule 01JMW5DX1B07T9QV15HE1V5MFB[0m
 
-[34mVerifying rule: Client_Total_Hours - 01JMCRS3ABD4CABTBM26G3591E[0m
+[34mVerifying rule: Client_Hours_Calculations - 01JMW5DX1R3BXWYJH4CH4650DK[0m
 
 The following rules have been loaded
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:21.476669)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:36.676383)
 Mapped Class[Client] rules:
   Derive <class 'database.models.Client'>.total_hours as Sum(Project.total_project_hours Where  - None)
 
@@ -375,17 +381,17 @@ The following attributes have been referenced
 ..Project.total_project_hours: sum derived from
 
 The following rules have been activated
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:21.476669)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:36.676383)
 Mapped Class[Client] rules:
   Derive <class 'database.models.Client'>.total_hours as Sum(Project.total_project_hours Where  - None)
-Logic Bank 01.20.26 - 3 rules loaded
+Logic Bank 01.20.25 - 3 rules loaded
 
-[32mActivated rule 01JMCRS3ABD4CABTBM26G3591E[0m
+[32mActivated rule 01JMW5DX1R3BXWYJH4CH4650DK[0m
 
-[34mVerifying rule: Client_Total_Amount - 01JMCRS3ABMA88DHBGKG90E27K[0m
+[34mVerifying rule: Client_Amount_Calculations - 01JMW5DX27DQABTT3XZ6TP985N[0m
 
 The following rules have been loaded
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:21.795664)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:39.153566)
 Mapped Class[Client] rules:
   Derive <class 'database.models.Client'>.total_amount as Sum(Project.total_project_amount Where  - None)
 
@@ -395,17 +401,17 @@ The following attributes have been referenced
 ..Project.total_project_amount: sum derived from
 
 The following rules have been activated
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:21.795664)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:39.153566)
 Mapped Class[Client] rules:
   Derive <class 'database.models.Client'>.total_amount as Sum(Project.total_project_amount Where  - None)
-Logic Bank 01.20.26 - 3 rules loaded
+Logic Bank 01.20.25 - 3 rules loaded
 
-[32mActivated rule 01JMCRS3ABMA88DHBGKG90E27K[0m
+[32mActivated rule 01JMW5DX27DQABTT3XZ6TP985N[0m
 
-[34mVerifying rule: Client_Is_Over_Budget_Formula - 01JMCRS3ACBS9834HZ180DCME0[0m
+[34mVerifying rule: Client_Budget_Check - 01JMW5DX34P4CF7NAPZEWJ67P7[0m
 
 The following rules have been loaded
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:22.132561)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:41.587961)
 Mapped Class[Client] rules:
   Derive <class 'database.models.Client'>.is_over_budget as Formula (-1): Rule.formula(derive=Client.is_over_budget, as_exp [...]
 
@@ -415,17 +421,75 @@ The following attributes have been referenced
 ..Client.budget_amount: - formula
 
 The following rules have been activated
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:22.132561)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:41.587961)
 Mapped Class[Client] rules:
   Derive <class 'database.models.Client'>.is_over_budget as Formula (1): Rule.formula(derive=Client.is_over_budget, as_exp [...]
-Logic Bank 01.20.26 - 3 rules loaded
+Logic Bank 01.20.25 - 3 rules loaded
 
-[32mActivated rule 01JMCRS3ACBS9834HZ180DCME0[0m
+[32mActivated rule 01JMW5DX34P4CF7NAPZEWJ67P7[0m
 
-[34mVerifying rule: Invoice_Invoice_Amount - 01JMCRS3ACECESFGBBECAW098X[0m
+[34mVerifying rule: Client_Invoice_Total_Calculation - 01JMW5DX3JV7G9ZE5P9H9HXM6H[0m
 
 The following rules have been loaded
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:22.452940)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:44.064180)
+Mapped Class[Client] rules:
+  Derive <class 'database.models.Client'>.invoice_total as Sum(Invoice.invoice_amount Where  - None)
+
+The following attributes have been referenced
+
+..Client.invoice_total: aggregate derivation
+..Invoice.invoice_amount: sum derived from
+
+The following rules have been activated
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:44.064180)
+Mapped Class[Client] rules:
+  Derive <class 'database.models.Client'>.invoice_total as Sum(Invoice.invoice_amount Where  - None)
+Logic Bank 01.20.25 - 3 rules loaded
+
+[32mActivated rule 01JMW5DX3JV7G9ZE5P9H9HXM6H[0m
+
+[34mVerifying rule: Client_Payment_Total_Calculation - 01JMW5DX43MBDE38C28W76HVAR[0m
+
+The following rules have been loaded
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:46.314074)
+Mapped Class[Client] rules:
+  Derive <class 'database.models.Client'>.payment_total as Sum(Invoice.payment_total Where  - None)
+
+The following attributes have been referenced
+
+..Client.payment_total: aggregate derivation
+..Invoice.payment_total: sum derived from
+
+The following rules have been activated
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:46.314074)
+Mapped Class[Client] rules:
+  Derive <class 'database.models.Client'>.payment_total as Sum(Invoice.payment_total Where  - None)
+Logic Bank 01.20.25 - 3 rules loaded
+
+[32mActivated rule 01JMW5DX43MBDE38C28W76HVAR[0m
+
+[34mVerifying rule: Client_Kafka_Event - 01JMW5DX4EJ2M8C6XJDQDEH5RM[0m
+
+The following rules have been loaded
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:48.677579)
+Mapped Class[Client] rules:
+  RowEvent Client.send_row_to_kafka() 
+
+The following attributes have been referenced
+
+
+The following rules have been activated
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:48.677579)
+Mapped Class[Client] rules:
+  RowEvent Client.send_row_to_kafka() 
+Logic Bank 01.20.25 - 3 rules loaded
+
+[32mActivated rule 01JMW5DX4EJ2M8C6XJDQDEH5RM[0m
+
+[34mVerifying rule: Invoice_Amount_Credit - 01JMW5DX59HGF46T3DHPD0GD8K[0m
+
+The following rules have been loaded
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:51.303978)
 Mapped Class[Invoice] rules:
   Derive <class 'database.models.Invoice'>.invoice_amount as Sum(InvoiceItem.task_amount Where  - None)
 
@@ -435,17 +499,17 @@ The following attributes have been referenced
 ..InvoiceItem.task_amount: sum derived from
 
 The following rules have been activated
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:22.452940)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:51.303978)
 Mapped Class[Invoice] rules:
   Derive <class 'database.models.Invoice'>.invoice_amount as Sum(InvoiceItem.task_amount Where  - None)
-Logic Bank 01.20.26 - 3 rules loaded
+Logic Bank 01.20.25 - 3 rules loaded
 
-[32mActivated rule 01JMCRS3ACECESFGBBECAW098X[0m
+[32mActivated rule 01JMW5DX59HGF46T3DHPD0GD8K[0m
 
-[34mVerifying rule: Invoice_Payment_Total - 01JMCRS3ADQEK2SXQ2GAJDV5PY[0m
+[34mVerifying rule: Invoice_Payment_Credit - 01JMW5DX5WFK04KWHEPE33GDRJ[0m
 
 The following rules have been loaded
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:22.779018)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:53.809799)
 Mapped Class[Invoice] rules:
   Derive <class 'database.models.Invoice'>.payment_total as Sum(Payment.amount Where  - None)
 
@@ -455,17 +519,17 @@ The following attributes have been referenced
 ..Payment.amount: sum derived from
 
 The following rules have been activated
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:22.779018)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:53.809799)
 Mapped Class[Invoice] rules:
   Derive <class 'database.models.Invoice'>.payment_total as Sum(Payment.amount Where  - None)
-Logic Bank 01.20.26 - 3 rules loaded
+Logic Bank 01.20.25 - 3 rules loaded
 
-[32mActivated rule 01JMCRS3ADQEK2SXQ2GAJDV5PY[0m
+[32mActivated rule 01JMW5DX5WFK04KWHEPE33GDRJ[0m
 
-[34mVerifying rule: Invoice_Balance_Formula - 01JMCRS3AD527KCXQFBHZ2PXNM[0m
+[34mVerifying rule: Invoice_Balance_Calculation - 01JMW5DX69TVMQ1S9QRHJS74D9[0m
 
 The following rules have been loaded
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:23.109952)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:56.241987)
 Mapped Class[Invoice] rules:
   Derive <class 'database.models.Invoice'>.invoice_balance as Formula (-1): Rule.formula(derive=Invoice.invoice_balance, as_e [...]
 
@@ -475,17 +539,17 @@ The following attributes have been referenced
 ..Invoice.payment_total: - formula
 
 The following rules have been activated
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:23.109952)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:56.241987)
 Mapped Class[Invoice] rules:
   Derive <class 'database.models.Invoice'>.invoice_balance as Formula (1): Rule.formula(derive=Invoice.invoice_balance, as_e [...]
-Logic Bank 01.20.26 - 3 rules loaded
+Logic Bank 01.20.25 - 3 rules loaded
 
-[32mActivated rule 01JMCRS3AD527KCXQFBHZ2PXNM[0m
+[32mActivated rule 01JMW5DX69TVMQ1S9QRHJS74D9[0m
 
-[34mVerifying rule: Invoice_Is_Paid_Formula - 01JMCRS3AE89MRN0YPX0EZJPG5[0m
+[34mVerifying rule: Invoice_Payment_Constraint - 01JMW5DX76ZTX5M03HR47KTT06[0m
 
 The following rules have been loaded
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:23.455308)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:58.348108)
 Mapped Class[Invoice] rules:
   Derive <class 'database.models.Invoice'>.is_paid as Formula (-1): Rule.formula(derive=Invoice.is_paid, as_expressio [...]
 
@@ -494,17 +558,17 @@ The following attributes have been referenced
 ..Invoice.invoice_balance: - formula
 
 The following rules have been activated
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:23.455308)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:23:58.348108)
 Mapped Class[Invoice] rules:
   Derive <class 'database.models.Invoice'>.is_paid as Formula (1): Rule.formula(derive=Invoice.is_paid, as_expressio [...]
-Logic Bank 01.20.26 - 3 rules loaded
+Logic Bank 01.20.25 - 3 rules loaded
 
-[32mActivated rule 01JMCRS3AE89MRN0YPX0EZJPG5[0m
+[32mActivated rule 01JMW5DX76ZTX5M03HR47KTT06[0m
 
-[34mVerifying rule: Invoice_Task_Count - 01JMCRS3AE8ZKPXZPHE7PEYQ1F[0m
+[34mVerifying rule: Invoice_Task_Count_Calculation - 01JMW5DX7RZD5NJYGT45RKA48Q[0m
 
 The following rules have been loaded
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:23.777773)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:24:00.797892)
 Mapped Class[Invoice] rules:
   Derive <class 'database.models.Invoice'>.task_count as Count(<class 'database.models.InvoiceItem'> Where  - None)
 
@@ -513,19 +577,19 @@ The following attributes have been referenced
 ..Invoice.task_count: aggregate derivation
 
 The following rules have been activated
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:23.777773)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:24:00.797892)
 Mapped Class[Invoice] rules:
   Derive <class 'database.models.Invoice'>.task_count as Count(<class 'database.models.InvoiceItem'> Where  - None)
-Logic Bank 01.20.26 - 3 rules loaded
+Logic Bank 01.20.25 - 3 rules loaded
 
-[32mActivated rule 01JMCRS3AE8ZKPXZPHE7PEYQ1F[0m
+[32mActivated rule 01JMW5DX7RZD5NJYGT45RKA48Q[0m
 
-[34mVerifying rule: Invoice_Task_Completed_Count - 01JMCRS3AFE9QBJBYWYYTTYJ6A[0m
+[34mVerifying rule: Invoice_Task_Completion_Count - 01JMW5DX866R30GT9X5FEXBVYM[0m
 
 The following rules have been loaded
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:24.158407)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:24:03.466930)
 Mapped Class[Invoice] rules:
-  Derive <class 'database.models.Invoice'>.completed_task_count as Count(<class 'database.models.InvoiceItem'> Where Rule.count(derive=Invoice.completed_task_count, as_count_of=InvoiceItem, where=lambda row: row.is_completed == True) - <function init_rule.<locals>.<lambda> at 0xffffa281ce00>)
+  Derive <class 'database.models.Invoice'>.completed_task_count as Count(<class 'database.models.InvoiceItem'> Where Rule.count(derive=Invoice.completed_task_count, as_count_of=InvoiceItem, where=lambda row: row.is_completed is True) - <function init_rule.<locals>.<lambda> at 0x72622c290040>)
 
 The following attributes have been referenced
 
@@ -533,17 +597,17 @@ The following attributes have been referenced
 ..InvoiceItem.is_completed: aggregate where clause
 
 The following rules have been activated
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:24.158407)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:24:03.466930)
 Mapped Class[Invoice] rules:
-  Derive <class 'database.models.Invoice'>.completed_task_count as Count(<class 'database.models.InvoiceItem'> Where Rule.count(derive=Invoice.completed_task_count, as_count_of=InvoiceItem, where=lambda row: row.is_completed == True) - <function init_rule.<locals>.<lambda> at 0xffffa281ce00>)
-Logic Bank 01.20.26 - 3 rules loaded
+  Derive <class 'database.models.Invoice'>.completed_task_count as Count(<class 'database.models.InvoiceItem'> Where Rule.count(derive=Invoice.completed_task_count, as_count_of=InvoiceItem, where=lambda row: row.is_completed is True) - <function init_rule.<locals>.<lambda> at 0x72622c290040>)
+Logic Bank 01.20.25 - 3 rules loaded
 
-[32mActivated rule 01JMCRS3AFE9QBJBYWYYTTYJ6A[0m
+[32mActivated rule 01JMW5DX866R30GT9X5FEXBVYM[0m
 
-[34mVerifying rule: Invoice_Is_Ready_Formula - 01JMCRS3AFDWY5TPA8Z46TM33C[0m
+[34mVerifying rule: Invoice_Readiness_Check - 01JMW5DX9694SWB6AF2ZWDG4QH[0m
 
 The following rules have been loaded
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:24.480977)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:24:05.988934)
 Mapped Class[Invoice] rules:
   Derive <class 'database.models.Invoice'>.is_ready as Formula (-1): Rule.formula(derive=Invoice.is_ready, as_expressi [...]
 
@@ -553,17 +617,17 @@ The following attributes have been referenced
 ..Invoice.completed_task_count: - formula
 
 The following rules have been activated
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:24.480977)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:24:05.988934)
 Mapped Class[Invoice] rules:
   Derive <class 'database.models.Invoice'>.is_ready as Formula (1): Rule.formula(derive=Invoice.is_ready, as_expressi [...]
-Logic Bank 01.20.26 - 3 rules loaded
+Logic Bank 01.20.25 - 3 rules loaded
 
-[32mActivated rule 01JMCRS3AFDWY5TPA8Z46TM33C[0m
+[32mActivated rule 01JMW5DX9694SWB6AF2ZWDG4QH[0m
 
-[34mVerifying rule: Invoice_Kafka_Event - 01JMCRS3AFZ88WR74F3B52ZHFV[0m
+[34mVerifying rule: Invoice_Kafka_Event - 01JMW5DX9TSQXHGRJD88PYV2D9[0m
 
 The following rules have been loaded
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:24.806251)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:24:08.447574)
 Mapped Class[Invoice] rules:
   RowEvent Invoice.send_row_to_kafka() 
 
@@ -571,17 +635,17 @@ The following attributes have been referenced
 
 
 The following rules have been activated
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:24.806251)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:24:08.447574)
 Mapped Class[Invoice] rules:
   RowEvent Invoice.send_row_to_kafka() 
-Logic Bank 01.20.26 - 3 rules loaded
+Logic Bank 01.20.25 - 3 rules loaded
 
-[32mActivated rule 01JMCRS3AFZ88WR74F3B52ZHFV[0m
+[32mActivated rule 01JMW5DX9TSQXHGRJD88PYV2D9[0m
 
-[34mVerifying rule: InvoiceItem_Copy_Task_Amount - 01JMCRS3AGH97HQ0MKGX5MNF3P[0m
+[34mVerifying rule: InvoiceItem_Task_Amount - 01JMW5DXA53HY0Z8R16HP0X1TC[0m
 
 The following rules have been loaded
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:25.151034)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:24:10.881524)
 Mapped Class[InvoiceItem] rules:
   Derive <class 'database.models.InvoiceItem'>.task_amount as Copy(task.total_task_amount_billed)
 
@@ -591,62 +655,48 @@ The following attributes have been referenced
 ..Task.total_task_amount_billed: parent copy from
 
 The following rules have been activated
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:25.151034)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:24:10.881524)
 Mapped Class[InvoiceItem] rules:
   Derive <class 'database.models.InvoiceItem'>.task_amount as Copy(task.total_task_amount_billed)
-Logic Bank 01.20.26 - 3 rules loaded
+Logic Bank 01.20.25 - 3 rules loaded
 
-[32mActivated rule 01JMCRS3AGH97HQ0MKGX5MNF3P[0m
+[32mActivated rule 01JMW5DXA53HY0Z8R16HP0X1TC[0m
 
-[34mVerifying rule: InvoiceItem_Is_Completed - 01JMCRS3AG1NFX5W2M98DJ52EG[0m
+[34mVerifying rule: InvoiceItem_Completion_Check - 01JMW5DXAQJNWBP7364GXGB0CX[0m
 
 The following rules have been loaded
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:25.544696)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:24:13.338588)
 Mapped Class[InvoiceItem] rules:
-  Derive <class 'database.models.InvoiceItem'>.is_completed as Formula (-1): Rule.formula(derive=InvoiceItem.is_completed, as_ [...]
+  Derive <class 'database.models.InvoiceItem'>.is_completed as Copy(task.is_completed)
 
 The following attributes have been referenced
 
-..InvoiceItem.invoice_items): - formula
-LBActivateException: 
-[]
-['InvoiceItem.invoice_items): - formula']
-LogicBank Activation Error
-Traceback (most recent call last):
-  File "/opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/logic/load_verify_rules.py", line 147, in verify_rules
-    LogicBank.activate(session=safrs.DB.session, activator=rule_module.init_rule)
-  File "/usr/local/lib/python3.12/site-packages/logic_bank/logic_bank.py", line 152, in activate
-    raise LBActivateException(rule_bank.invalid_rules, missing_attributes)
-logic_bank.exceptions.LBActivateException: LBActivateException: 
-[]
-['InvoiceItem.invoice_items): - formula']
-LogicBank Activation Error
-[31mFailed to verify accepted rule code
-Rule.formula(derive=InvoiceItem.is_completed, as_expression=lambda row: all(item.is_completed for item in row.invoice_items))
-[33mLBActivateException: LBActivateException: 
-[]
-['InvoiceItem.invoice_items): - formula']
-LogicBank Activation Error[0m
+..InvoiceItem.is_completed: parent copy derivation
+..Task.is_completed: parent copy from
+
+The following rules have been activated
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:24:13.338588)
+Mapped Class[InvoiceItem] rules:
+  Derive <class 'database.models.InvoiceItem'>.is_completed as Copy(task.is_completed)
+Logic Bank 01.20.25 - 3 rules loaded
+
+[32mActivated rule 01JMW5DXAQJNWBP7364GXGB0CX[0m
 
 The following rules have been loaded
-Rule Bank[0xffffa2a06450] (loaded 2025-02-18 14:53:25.544696)
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:24:13.338588)
 Mapped Class[InvoiceItem] rules:
-  Derive <class 'database.models.InvoiceItem'>.is_completed as Formula (1): Rule.formula(derive=InvoiceItem.is_completed, as_ [...]
-Circular dependencies in InvoiceItem formula: Rule.formula(derive=InvoiceItem.is_completed, as_expression=lambda row: all(item.is_completed for item in row.invoice_items))
-Logic Bank Activation Error: Mapped Class[InvoiceItem] blocked by circular dependencies:
-Mapped Class[InvoiceItem] blocked by circular dependencies:
-Traceback (most recent call last):
-  File "/opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/config/activate_logicbank.py", line 24, in activate_logicbank
-    LogicBank.activate(session=session,
-  File "/usr/local/lib/python3.12/site-packages/logic_bank/logic_bank.py", line 144, in activate
-    missing_attributes = rule_bank_setup.compute_formula_execution_order()
-                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/site-packages/logic_bank/rule_bank/rule_bank_setup.py", line 159, in compute_formula_execution_order
-    compute_formula_execution_order_for_class(class_name=each_key)  # might raise excp
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/site-packages/logic_bank/rule_bank/rule_bank_setup.py", line 146, in compute_formula_execution_order_for_class
-    raise LBCircularDependencyException("Mapped Class[" + class_name + "] blocked by circular dependencies:" + cycles, formula_list)
-logic_bank.exceptions.LBCircularDependencyException: Mapped Class[InvoiceItem] blocked by circular dependencies:
+  Derive <class 'database.models.InvoiceItem'>.is_completed as Copy(task.is_completed)
+
+The following attributes have been referenced
+
+..InvoiceItem.is_completed: parent copy derivation
+..Task.is_completed: parent copy from
+
+The following rules have been activated
+Rule Bank[0x72622db0f860] (loaded 2025-02-24 14:24:13.338588)
+Mapped Class[InvoiceItem] rules:
+  Derive <class 'database.models.InvoiceItem'>.is_completed as Copy(task.is_completed)
+Logic Bank 01.20.25 - 3 rules loaded
 Exposing /Client
 Exposing /Invoice
 Exposing /InvoiceItem
@@ -655,8 +705,8 @@ Exposing /Person
 Exposing /Project
 Exposing /Task
 Exposing /Timesheet
-Declare   API - api/expose_api_models, endpoint for each table on localhost:8282, customizing...
-..discovered services: ['ontimize_api.py', 'system.py', 'new_service.py', 'newer_service.py']
+Declare   API - api/expose_api_models, endpoint for each table on g.apifabric.ai:443, customizing...
+..discovered services: ['new_service.py', 'newer_service.py', 'ontimize_api.py', 'system.py']
 
 Authentication loaded -- api calls now require authorization header
 ..declare security - security/declare_security.py authentication tables loaded
@@ -666,33 +716,33 @@ Kafka Consumer not activated
 sys_info here
 
 Environment Variables...
-.. APILOGICPROJECT_EXTERNAL_HOST = localhost
+.. APILOGICPROJECT_EXTERNAL_HOST = g.apifabric.ai
 .. WG_SQLALCHEMY_DATABASE_URI = sqlite:////opt/projects/wgadmin/db.sqlite
-.. VITE_PORT = 6041
+.. VITE_PORT = 6801
 .. ALL_DEFAULTS = True
 .. APILOGICSERVER_CHATGPT_AZURE_ENDPOINT = 
-.. APILOGICPROJECT_SWAGGER_PORT = 8282
-.. GH_TOKEN = 
+.. APILOGICPROJECT_SWAGGER_PORT = 443
+.. GH_TOKEN = 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
 .. APILOGICPROJECT_PORT = 4444
-.. LOG_DIR = /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/logs
+.. LOG_DIR = /opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/logs
 .. GH_ORG = 
-.. APILOGICPROJECT_EXTERNAL_PORT = 8282
+.. APILOGICPROJECT_EXTERNAL_PORT = 443
 .. SECURITY_ENABLED = true
 .. APILOGICPROJECT_IS_GENAI_DEMO = False
-.. GENAI_LOGIC_PROD = None
+.. GENAI_LOGIC_PROD = True
 .. PATH = /usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/api_logic_server/bin
 .. APILOGICSERVER_CHATGPT_APIKEY = 
 .. APILOGICSERVER_CHATGPT_AZURE_API_VERSION = 
-.. PROJECT_ID = 01JMCRP6RTCT32TMNM2532VCN2
-.. APILOGICPROJECT_HTTP_SCHEME = http
+.. PROJECT_ID = 01JMW56P6X34M85CN1WNAZCFFR
+.. APILOGICPROJECT_HTTP_SCHEME = https
 .. PROJ_ROOT = /opt/projects/by-ulid
-.. APILOGICPROJECT_API_PREFIX = /01JMCRP6RTCT32TMNM2532VCN2
-.. URL_ROOT = http://localhost:8282
-.. PWD = /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2
+.. APILOGICPROJECT_API_PREFIX = /01JMW56P6X34M85CN1WNAZCFFR
+.. URL_ROOT = https://apifabric.ai
+.. PWD = /opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR
 .. VERIFY_RULES = True
 .. PYTHONPATH = /opt/webgenai:/opt/webgenai
 .. WG_PROJECT = True
-.. APILOGICPROJECT_SWAGGER_HOST = localhost
+.. APILOGICPROJECT_SWAGGER_HOST = g.apifabric.ai
 .. LOGICBANK_FAILSAFE = true
 .. LC_CTYPE = C.UTF-8
 .. SECRET_KEY = whatnothow
@@ -725,12 +775,12 @@ flask_app.config:
 	'PREFERRED_URL_SCHEME': 'http',
 	'TEMPLATES_AUTO_RELOAD': None,
 	'MAX_COOKIE_SIZE': 4093,
-	'API_PREFIX': '/01JMCRP6RTCT32TMNM2532VCN2',
+	'API_PREFIX': '/01JMW56P6X34M85CN1WNAZCFFR',
 	'FLASK_HOST': '0.0.0.0',
-	'SWAGGER_HOST': 'localhost',
+	'SWAGGER_HOST': 'g.apifabric.ai',
 	'PORT': 4444,
-	'SWAGGER_PORT': '8282',
-	'HTTP_SCHEME': 'http',
+	'SWAGGER_PORT': '443',
+	'HTTP_SCHEME': 'https',
 	'KAFKA_PRODUCER': None,
 	'KAFKA_CONSUMER': None,
 	'N8N_PRODUCER': None,
@@ -753,32 +803,32 @@ flask_app.config:
 	'OPT_LOCKING': 'optional',
 	'SECURITY_ENABLED': True,
 	'SECURITY_PROVIDER': <class 'security.authentication_provider.sql.auth_provider.Authentication_Provider'>,
-	'SQLALCHEMY_DATABASE_URI': 'sqlite:////opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/database/db.sqlite',
-	'SQLALCHEMY_DATABASE_URI_AUTHENTICATION': 'sqlite:////opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/database/authentication_db.sqlite',
-	'SQLALCHEMY_DATABASE_URI_LANDING': 'sqlite:////opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/database/db_spa.sqlite',
+	'SQLALCHEMY_DATABASE_URI': 'sqlite:////opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/database/db.sqlite',
+	'SQLALCHEMY_DATABASE_URI_AUTHENTICATION': 'sqlite:////opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/database/authentication_db.sqlite',
+	'SQLALCHEMY_DATABASE_URI_LANDING': 'sqlite:////opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/database/db_spa.sqlite',
 	'SQLALCHEMY_TRACK_MODIFICATIONS': False,
-	'EXTERNAL_HOST': 'localhost',
-	'EXTERNAL_PORT': 8282,
+	'EXTERNAL_HOST': 'g.apifabric.ai',
+	'EXTERNAL_PORT': 443,
 	'IS_GENAI_DEMO': 'False'}>
 
 
 PYTHONPATH..
-../opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2
+../opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR
 ../opt/webgenai
 ../usr/local/lib/python312.zip
 ../usr/local/lib/python3.12
 ../usr/local/lib/python3.12/lib-dynload
 ../usr/local/lib/python3.12/site-packages
 ../home/api_logic_server
-../opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2
+../opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR
 ../home/api_logic_server
 
 sys.prefix (venv): /usr/local
 
 
-hostname=5f23a89e1360 on local_ip=172.21.0.3, IPAddr=172.21.0.3
+hostname=b47642243e99 on local_ip=172.18.0.2, IPAddr=172.18.0.2
 
 
-os.getcwd()=/opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2
+os.getcwd()=/opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR
 
 

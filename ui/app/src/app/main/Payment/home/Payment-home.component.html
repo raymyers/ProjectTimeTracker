@@ -6,9 +6,9 @@
             entity="Payment" 
             title="PAYMENT"
             keys="id"
-            columns="id;invoice_id;amount;payment_date;notes" 
+            columns="id;client_id;invoice_id;amount;payment_date;notes" 
             header-actions="R;D"
-            visible-columns="id;invoice_id;amount;payment_date;notes"  
+            visible-columns="id;client_id;invoice_id;amount;payment_date;notes"  
             sort-columns="id" 
             query-rows="20" 
             quick-filter="yes"
@@ -22,7 +22,16 @@
             show-title="yes"
             export-button="yes">
             
-            <o-table-column #id attr="id" title=" id*" type="integer" editable="no" required="no" content-align="center"></o-table-column>
+            <o-table-column #id attr="id" title=" id" type="integer" editable="no" required="no" content-align="center"></o-table-column>
+            
+            <o-table-column attr="client_id" title="client_id">
+    <o-table-cell-renderer-service attr="client_id" 
+        service="Client" entity="ClientType" columns="id;name"
+        parent-keys="id:client_id"
+        value-column="name" keys="client_id"
+        visible-columns="name" separator=" - " width="680px">
+    </o-table-cell-renderer-service>
+</o-table-column>
             
             <o-table-column attr="invoice_id" title="invoice_id">
     <o-table-cell-renderer-service attr="invoice_id" 
@@ -35,7 +44,7 @@
             
             <o-table-column #amount attr="amount" title="amount" type="currency" editable="no" required="no" currency-symbol="$" currency-symbol-position="left" thousand-separator=","decimal-separator="."></o-table-column>
             
-            <o-date-input #payment_date attr="payment_date" type="timestamp" label="payment_date" editable="no" required="no" format="LL" fxFlex="20%" class="form-field"></o-date-input>
+            <o-date-input #payment_date attr="payment_date" type="date" label="payment_date" enabled="yes" required="no" format="LL" fxFlex="20%" class="form-field"></o-date-input>
             
             <o-table-column #notes attr="notes" title="notes" editable="no" required="no" content-align="left"></o-table-column>
             

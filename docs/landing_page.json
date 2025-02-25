@@ -1,72 +1,146 @@
 {
-    "name": "ProjectTrue",
+    "name": "ProTimeTrack",
     "logo": {
         "Type": "Logo",
-        "name": "ProjectTrueLogo",
-        "description": "Logo of ProjectTrue featuring a stopwatch and invoice icon indicating project tracking and billing services."
+        "name": "ProTimeTrack Logo",
+        "description": "The logo for ProTimeTrack, a project time tracking and invoice application."
     },
     "sections": [
         {
-            "title": "Effortless Project Time Tracking and Invoicing",
-            "subtitle": "",
+            "title": "Effortless Time Tracking & Invoicing",
+            "subtitle": "Track, manage, and invoice your projects with precision.",
             "name": "hero",
             "label": "Home",
-            "content": "Welcome to **ProjectTrue**, your comprehensive solution for seamless project time tracking and invoicing. Streamline your project management and billing in one efficient platform.",
+            "content": "### Welcome to ProTimeTrack\n\nEasily track project times, manage tasks, and generate invoices all in one place.\nStart streamlining your project management today!",
             "order": 1,
             "Type": "Hero",
             "images": [
                 {
                     "Type": "Hero",
-                    "name": "MainBanner",
-                    "description": "An image depicting project management and invoicing, featuring a laptop and clock."
+                    "name": "Time Tracking Hero Image",
+                    "description": "A graphic illustration of a clock and documents symbolizing time tracking and invoicing."
                 }
             ]
         },
         {
-            "title": "About ProjectTrue",
-            "subtitle": "",
+            "title": "About ProTimeTrack",
+            "subtitle": "Our mission and journey",
             "name": "about",
             "label": "About",
-            "content": "At **ProjectTrue**, we believe in empowering businesses with easy and reliable time and invoice management. Our software enables you to track project progress, manage budgets, and create invoices effortlessly, giving you more time to focus on what matters most \u2013 growing your business. Join us as we pave the way towards better time management and transparency in billing.",
+            "content": "### Our Mission\n\nProTimeTrack is dedicated to helping businesses efficiently manage their project times and invoices, saving both time and resources. Our intuitive platform is designed to seamlessly integrate with your workflow, providing precise tracking and comprehensive reporting.",
             "order": 2,
             "Type": "About",
             "images": [
                 {
                     "Type": "Background",
-                    "name": "TeamWorkingTogether",
-                    "description": "A team of professionals collaborating on a project, symbolizing teamwork and productivity facilitated by ProjectTrue."
+                    "name": "Team Collaboration Image",
+                    "description": "An image depicting a team working together, highlighting collaboration."
                 }
             ]
         },
         {
-            "title": "Our Services",
-            "subtitle": "",
+            "title": "Our Comprehensive Services",
+            "subtitle": "Everything you need for project management",
             "name": "services",
             "label": "Services",
-            "content": "Explore the functionalities that make **ProjectTrue** the best choice for your business:\n\n- **Client Management:** Keep all your client data, from contact information to total billed amounts, organized in one place.\n- **Project Tracking:** Monitor hours worked and budget consumption with detailed project reports.\n- **Invoice Generation:** Create, manage, and send invoices easily, with the option to include detailed task breakdowns.\n- **Task Management:** Allocate resources efficiently, track task progress, and ensure projects stay on track.\n- **Timesheets:** Conveniently log hours worked and calculate billing with precision.",
+            "content": "### Key Features\n\n- **Project Time Tracking**: Accurately track hours with our intuitive timesheet tool.\n- **Multi-client Management**: Easily manage multiple clients and their projects.\n- **Automated Invoicing**: Generate and send invoices with a few clicks.\n- **Budget Monitoring**: Keep projects within budget using detailed budget and cost tracking.\n\nThese features are underpinned by robust relationships, ensuring data is interconnected and easily accessible.",
             "order": 3,
             "Type": "Services",
             "images": [
                 {
                     "Type": "Infographic",
-                    "name": "ServiceFeatures",
-                    "description": "Visual representation of all the features offered by ProjectTrue."
+                    "name": "Feature Infographic",
+                    "description": "An infographic illustrating the main features of ProTimeTrack."
                 }
             ]
         },
         {
-            "title": "Get in Touch",
-            "subtitle": "",
+            "title": "Contact Us",
+            "subtitle": "Get in touch with ProTimeTrack",
             "name": "contact",
             "label": "Contact",
-            "content": "For questions or support, reach out to us and our team will be happy to assist you:\n\n- **Email:** support@projecttrue.com  \n- **Phone:** +1 (800) 123-4567  \n- **Address:** 123 Project Lane, Suite 400, Business City, BC 12345  \n\nAlternatively, use the contact form to send us a message directly from here.",
-            "order": 4,
+            "content": "### We're Here to Help\n\nIf you have any questions, need support, or want to learn more about our application, don't hesitate to reach out.\n\n- **Email**: support@protimetrack.com\n- **Phone**: +1 (555) 123-4567\n\nOur team is ready to assist you!",
+            "order": 5,
             "Type": "Contact",
             "images": [
                 {
-                    "Type": "Map",
-                    "name": "OfficeMap",
-                    "description": "Map depicting the location of ProjectTrue's main office."
+                    "Type": "Icon",
+                    "name": "Contact Icon",
+                    "description": "An icon representing customer service."
+                }
+            ]
+        },
+        {
+            "title": "Join Our Team",
+            "subtitle": "Meet the people behind ProTimeTrack",
+            "name": "team",
+            "label": "Team",
+            "content": "### Our Professional Team\n\nOur talented team is committed to delivering exceptional service and innovative solutions.\n\n#### John Doe\n**Position**: CEO\n\n#### Jane Smith\n**Position**: Product Manager\n",
+            "order": 6,
+            "Type": "Team",
+            "images": [
+                {
+                    "Type": "Headshot",
+                    "name": "John Doe Headshot",
+                    "description": "A professional headshot of John Doe, CEO at ProTimeTrack."
+                },
+                {
+                    "Type": "Headshot",
+                    "name": "Jane Smith Headshot",
+                    "description": "A professional headshot of Jane Smith, Product Manager at ProTimeTrack."
+                }
+            ]
+        },
+        {
+            "title": "What Our Users Are Saying",
+            "subtitle": "Testimonials from satisfied users",
+            "name": "testimonials",
+            "label": "Testimonials",
+            "content": "### Hearing From Our Users\n\n\"ProTimeTrack has revolutionized how we manage projects and invoicing. It's intuitive and saves us countless hours each month.\"  \n\u2014 Alex Brown, Project Manager\n\n\"The automation features have been a game-changer for our team, reducing manual input and errors.\"  \n\u2014 Lisa White, Accountant\n",
+            "order": 4,
+            "Type": "Testimonials",
+            "images": [
+                {
+                    "Type": "Testimonial",
+                    "name": "Alex Brown Testimonial Image",
+                    "description": "A happy user testimonial image for Alex Brown."
+                },
+                {
+                    "Type": "Testimonial",
+                    "name": "Lisa White Testimonial Image",
+                    "description": "A happy user testimonial image for Lisa White."
+                }
+            ]
+        },
+        {
+            "title": "Get Started Today!",
+            "subtitle": "Sign up or find more information.",
+            "name": "cta",
+            "label": "CTA",
+            "content": "### Ready to Optimize Your Project Management?\n\nStart with ProTimeTrack for free and experience seamless time tracking and invoicing.\n\n[Get Started](#)  ",
+            "order": 7,
+            "Type": "CallToAction",
+            "images": [
+                {
+                    "Type": "CallToAction",
+                    "name": "Get Started Image",
+                    "description": "A visual call-to-action encouraging users to start using ProTimeTrack."
+                }
+            ]
+        },
+        {
+            "title": "Stay Updated with Us",
+            "subtitle": "Latest news and developments",
+            "name": "news",
+            "label": "News",
+            "content": "### ProTimeTrack Updates\n\nWe constantly update our platform with new features and improvements. Stay tuned for the latest news to enhance your productivity.\n\n- [New Feature: Automated Budget Alerts](#)  \n- [User Spotlight: Success Stories](#)  \n- [Platform Enhancements: Improved Reporting Tools](#)  ",
+            "order": 8,
+            "Type": "News",
+            "images": [
+                {
+                    "Type": "Promotional",
+                    "name": "Update News Image",
+                    "description": "Image showcasing new updates and features of ProTimeTrack."
                 }
             ]
         }

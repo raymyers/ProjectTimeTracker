@@ -1,9 +1,16 @@
-Creating SPA for project 01JMCRP6RTCT32TMNM2532VCN2
+Creating SPA for project 01JMW56P6X34M85CN1WNAZCFFR
 INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-INFO:httpx:HTTP Request: POST https://api.openai.com/v1/images/generations "HTTP/1.1 200 OK"
-INFO:/opt/webgenai/tools/openai_spa.py:Waiting for /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/static
-INFO:/opt/webgenai/tools/openai_spa.py:Adding page ProjectTrue to the database
-INFO:/opt/webgenai/tools/openai_spa.py:Ignoring Image: {'Type': 'Hero', 'name': 'MainBanner.png', 'description': 'An image depicting project management and invoicing, featuring a laptop and clock.'}
-INFO:/opt/webgenai/tools/openai_spa.py:Ignoring Image: {'Type': 'Background', 'name': 'TeamWorkingTogether', 'description': 'A team of professionals collaborating on a project, symbolizing teamwork and productivity facilitated by ProjectTrue.'}
-INFO:/opt/webgenai/tools/openai_spa.py:Ignoring Image: {'Type': 'Infographic', 'name': 'ServiceFeatures', 'description': 'Visual representation of all the features offered by ProjectTrue.'}
-INFO:/opt/webgenai/tools/openai_spa.py:Ignoring Image: {'Type': 'Map', 'name': 'OfficeMap', 'description': "Map depicting the location of ProjectTrue's main office."}
+INFO:/opt/webgenai/tools/openai_spa.py:Azure Image Generation 
+INFO:httpx:HTTP Request: POST https://apifabricimages.openai.azure.com//openai/deployments/dall-e-3/images/generations?api-version=2024-05-01-preview "HTTP/1.1 200 OK"
+INFO:/opt/webgenai/tools/openai_spa.py:Waiting for /opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/static
+INFO:/opt/webgenai/tools/openai_spa.py:Adding page ProTimeTrack to the database
+INFO:/opt/webgenai/tools/openai_spa.py:Ignoring Image: {'Type': 'Hero', 'name': 'Time Tracking Hero Image.png', 'description': 'A graphic illustration of a clock and documents symbolizing time tracking and invoicing.'}
+INFO:/opt/webgenai/tools/openai_spa.py:Ignoring Image: {'Type': 'Background', 'name': 'Team Collaboration Image', 'description': 'An image depicting a team working together, highlighting collaboration.'}
+INFO:/opt/webgenai/tools/openai_spa.py:Ignoring Image: {'Type': 'Infographic', 'name': 'Feature Infographic', 'description': 'An infographic illustrating the main features of ProTimeTrack.'}
+INFO:/opt/webgenai/tools/openai_spa.py:Ignoring Image: {'Type': 'Icon', 'name': 'Contact Icon', 'description': 'An icon representing customer service.'}
+INFO:/opt/webgenai/tools/openai_spa.py:Ignoring Image: {'Type': 'Headshot', 'name': 'John Doe Headshot', 'description': 'A professional headshot of John Doe, CEO at ProTimeTrack.'}
+INFO:/opt/webgenai/tools/openai_spa.py:Ignoring Image: {'Type': 'Headshot', 'name': 'Jane Smith Headshot', 'description': 'A professional headshot of Jane Smith, Product Manager at ProTimeTrack.'}
+INFO:/opt/webgenai/tools/openai_spa.py:Ignoring Image: {'Type': 'Testimonial', 'name': 'Alex Brown Testimonial Image', 'description': 'A happy user testimonial image for Alex Brown.'}
+INFO:/opt/webgenai/tools/openai_spa.py:Ignoring Image: {'Type': 'Testimonial', 'name': 'Lisa White Testimonial Image', 'description': 'A happy user testimonial image for Lisa White.'}
+INFO:/opt/webgenai/tools/openai_spa.py:Ignoring Image: {'Type': 'CallToAction', 'name': 'Get Started Image', 'description': 'A visual call-to-action encouraging users to start using ProTimeTrack.'}
+INFO:/opt/webgenai/tools/openai_spa.py:Ignoring Image: {'Type': 'Promotional', 'name': 'Update News Image', 'description': 'Image showcasing new updates and features of ProTimeTrack.'}

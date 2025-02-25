@@ -1,0 +1,51 @@
+Feature: About Sample # features/about.feature:6
+
+  Scenario: Transaction Processing                           # features/about.feature:8
+    Given Sample Database                                    # features/steps/about.py:8
+    When Transactions are submitted                          # features/steps/about.py:12
+    Then Enforce business policies with Logic (rules + code) # features/steps/about.py:16
+
+Feature: TimeTracker # features/time_track.feature:1
+
+  Scenario: New Client                        # features/time_track.feature:3
+    Given Enter Client Data                   # features/steps/time_track.py:18
+    When Client Post                          # features/steps/time_track.py:24
+    Then Client entered and balances are zero # features/steps/time_track.py:31
+
+  Scenario: New Project                        # features/time_track.feature:8
+    Given Enter Project Data                   # features/steps/time_track.py:43
+    When Project Post                          # features/steps/time_track.py:49
+    Then Project entered and balances are zero # features/steps/time_track.py:56
+
+  Scenario: New Person                        # features/time_track.feature:13
+    Given Enter Person Data                   # features/steps/time_track.py:66
+    When Person Post                          # features/steps/time_track.py:72
+    Then Person entered and balances are zero # features/steps/time_track.py:79
+
+  Scenario: New Task                        # features/time_track.feature:18
+    Given Enter Task Data                   # features/steps/time_track.py:90
+    When Task Post                          # features/steps/time_track.py:96
+    Then Task entered and balances are zero # features/steps/time_track.py:103
+
+  Scenario: New Timesheet                        # features/time_track.feature:23
+    Given Enter Timesheet Data                   # features/steps/time_track.py:114
+    When Timesheet Post                          # features/steps/time_track.py:119
+    Then Timesheet entered and balances are zero # features/steps/time_track.py:126
+
+  Scenario: New Invoice                        # features/time_track.feature:28
+    Given Enter Invoice Data                   # features/steps/time_track.py:137
+    When Invoice Post                          # features/steps/time_track.py:142
+    Then Invoice entered and balances are zero # features/steps/time_track.py:153
+
+  Scenario: Invoice Ready      # features/time_track.feature:33
+    Given Update Invoice Data  # features/steps/time_track.py:163
+    When Invoice PUT           # features/steps/time_track.py:168
+    Then Invoice sent to Kafka # features/steps/time_track.py:176
+
+  Scenario: New Payment                               # features/time_track.feature:38
+    Given Enter Payment Data                          # features/steps/time_track.py:185
+    When Payment Post                                 # features/steps/time_track.py:190
+    Then Payment entered and balances match on Client # features/steps/time_track.py:198
+
+&nbsp;&nbsp;
+/Users/tylerband/dev/ProjectTimeTracker/test/api_logic_server_behave/behave_run.py completed at February 25, 2025 13:49:22

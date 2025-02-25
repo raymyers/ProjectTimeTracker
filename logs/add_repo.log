@@ -1,30 +1,3 @@
-+ export HOME=/opt/webgenai
-+ HOME=/opt/webgenai
-+ clean_project
-+ [[ -e /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/ui/app/ ]]
-+ rm -rf /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/ui/app /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/ui/images
-+ rm -rf /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/ui/app /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/ui/images
-+ rm -fr instance
-+ rm -fr app_model_editor
-+ rm -fr api_logic_server_cli
-+ find . -name '*.pyc' -delete
-+ find . -name __pycache__ -delete
-find: cannot delete './database/database_discovery/__pycache__': Directory not empty
-find: cannot delete './database/__pycache__': Directory not empty
-find: cannot delete './database/system/__pycache__': Directory not empty
-find: cannot delete './config/__pycache__': Directory not empty
-find: cannot delete './security/__pycache__': Directory not empty
-find: cannot delete './security/system/__pycache__': Directory not empty
-find: cannot delete './security/authentication_provider/__pycache__': Directory not empty
-find: cannot delete './security/authentication_provider/sql/__pycache__': Directory not empty
-find: cannot delete './logic/__pycache__': Directory not empty
-find: './system/genai/examples/genai_demo/wg_dev_merge/base_genai_demo_no_logic/database/alembic': No such file or directory
-find: cannot delete './api/__pycache__': Directory not empty
-find: cannot delete './api/system/opt_locking/__pycache__': Directory not empty
-+ which gh
 /usr/bin/gh
-+ [[ -z /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2 ]]
-+ [[ -z '' ]]
-+ echo 'Missing required variables'
-Missing required variables
-+ return
+Creating repo: ProjectTimeTracking
+/opt/webgenai/database/models/util/util.sh: line 109: cd: ProjectTimeTracking*: No such file or directory

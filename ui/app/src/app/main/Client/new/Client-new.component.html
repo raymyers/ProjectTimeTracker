@@ -6,7 +6,7 @@ after-insert-mode="new" class="standalone-form-container" (onInsertMode)="onInse
 <o-row attr="row1" layout-align="start stretch">
   <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlex fxLayoutGap="14px">
     
-        <o-text-input #name attr="name" label=" name*" enabled="yes" required="no" fxFlex="20%" class="form-field"></o-text-input>
+        <o-text-input #name attr="name" label=" name" enabled="yes" required="no" fxFlex="20%" class="form-field"></o-text-input>
       
         <o-text-input #email attr="email" label="email" enabled="yes" required="no" fxFlex="20%" class="form-field"></o-text-input>
       
@@ -19,6 +19,10 @@ after-insert-mode="new" class="standalone-form-container" (onInsertMode)="onInse
         <o-currency-input #budget_amount attr="budget_amount" title="budget_amount" type="currency" editable="no" required="no" currency-symbol="$" currency-symbol-position="left" thousand-separator="," decimal-separator="."></o-currency-input>
       
         <o-checkbox #is_over_budget attr="is_over_budget" label="is_over_budget" read-only="no" enabled="yes"></o-checkbox>
+      
+        <o-currency-input #invoice_total attr="invoice_total" title="invoice_total" type="currency" editable="no" required="no" currency-symbol="$" currency-symbol-position="left" thousand-separator="," decimal-separator="."></o-currency-input>
+      
+        <o-currency-input #payment_total attr="payment_total" title="payment_total" type="currency" editable="no" required="no" currency-symbol="$" currency-symbol-position="left" thousand-separator="," decimal-separator="."></o-currency-input>
       
         <o-integer-input #id attr="id" label="id" type="integer" editable="no" required="no" ></o-integer-input>
       

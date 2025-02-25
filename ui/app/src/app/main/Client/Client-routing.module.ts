@@ -14,6 +14,20 @@ const routes: Routes = [
       }
     }
   },{
+    path: ':client_id/Invoice', loadChildren: () => import('../Invoice/Invoice.module').then(m => m.InvoiceModule),
+    data: {
+        oPermission: {
+            permissionId: 'Invoice-detail-permissions'
+        }
+    }
+},{
+    path: ':client_id/Payment', loadChildren: () => import('../Payment/Payment.module').then(m => m.PaymentModule),
+    data: {
+        oPermission: {
+            permissionId: 'Payment-detail-permissions'
+        }
+    }
+},{
     path: ':client_id/Person', loadChildren: () => import('../Person/Person.module').then(m => m.PersonModule),
     data: {
         oPermission: {

@@ -1,14 +1,14 @@
 Generate a project time tracking and invoice application
 
 Use these names for tables and attributes:
-* Client (id, name, email, phone, total_hours, total_amount, budget_amount, is_over_budget)
+* Client (id, name, email, phone, total_hours, total_amount, budget_amount, is_over_budget, invoice_total, payment_total)
 * Project ( id, client_id, name, total_project_hours, total_project_amount, project_budget_amount, is_over_budget, is_active)
-* Invoice: (id, invoice_date, project_id, invoice_amount, payment_total, invoice_balance, is_paid, is_ready,task_count,completed_task_count)
+* Invoice: (id, invoice_date, client_id, project_id, invoice_amount, payment_total, invoice_balance, is_paid, is_ready,task_count,completed_task_count)
 * InvoiceItem(id, invoice_id, task_id, task_amount, is_completed)
 * Task (id, project_id, name, description, total_task_hours_worked, total_task_amount_billed, task_budget_hours, is_over_budget,is_completed)
 * Person (id, client_id, name, email, phone, billing_rate, total_hours_entered, total_amount_billed)
 * Timesheet (id,task_id, person_id, date_worked, hours_worked, billing_rate, total_amount_billed, is_billable)
-* Payment (id, invoice_id, amount, payment_date, notes)
+* Payment (id, client_id, invoice_id, amount, payment_date, notes)
 
 Use decimal(10,2) for: hours_worked, total_hours, hours_entered, total_amount, billing_rate, total_task_amount_billed, project_budget_amount, total_project_amount, total_project_hours
 Default hours_worked, total_hours, hours_entered, total_amount, billing_rate, total_task_amount_billed, project_budget_amount, total_project_amount, total_project_hours to zero
@@ -41,6 +41,9 @@ Use Case: Client
 Total hours is the sum of Project total project hours
 Total amount is the sum of Project total project amount
 Formula: is Over Budget equals true when total amount exceeds budget amount
+Invoice total is sum of invoice amount
+Payment Total is the sum of invoice payment total
+Send client to Kafka when is over budget and budget amount is greater than zero
 
 Use Case: Invoice
 Invoice Amount is the sum of InvoiceItem task amount

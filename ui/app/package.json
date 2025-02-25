@@ -1,14 +1,14 @@
 {
-  "name": "ontimize-app",
-  "version": "15.1.0-SNAPSHOT-0",
+  "name": "timetracker",
+  "version": "15.4.0-SNAPSHOT-0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port 4299",
+    "start": "ng serve --port 4299 --configuration development",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "production": "ng build --base-href=/ontimize-app/"
+    "production": "ng build --configuration production --base-href=/timetracker/ --verbose=true"
   },
   "private": true,
   "engines": {

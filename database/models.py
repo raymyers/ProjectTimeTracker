@@ -10,8 +10,8 @@ from sqlalchemy.ext.declarative import declarative_base
 # Alter this file per your database maintenance policy
 #    See https://apilogicserver.github.io/Docs/Project-Rebuild/#rebuilding
 #
-# Created:  February 18, 2025 14:53:09
-# Database: sqlite:////tmp/tmp.kwRU9Ssoos-01JMCRP6RTCT32TMNM2532VCN2/ProjectTracker/database/db.sqlite
+# Created:  February 24, 2025 14:22:31
+# Database: sqlite:////tmp/tmp.LX8xAZefo9-01JMW56P6X34M85CN1WNAZCFFR/ProjectTimeTracking/database/db.sqlite
 # Dialect:  sqlite
 #
 # mypy: ignore-errors
@@ -46,7 +46,7 @@ else:
 
 class Client(Base):  # type: ignore
     """
-    description: Represents a client entity in the application.
+    description: Table to store client details including contact and budget info.
     """
     __tablename__ = 'client'
     _s_collection_name = 'Client'  # type: ignore
@@ -59,18 +59,22 @@ class Client(Base):  # type: ignore
     total_amount : DECIMAL = Column(DECIMAL(10, 2))
     budget_amount : DECIMAL = Column(DECIMAL(10, 2))
     is_over_budget = Column(Boolean)
+    invoice_total : DECIMAL = Column(DECIMAL(10, 2))
+    payment_total : DECIMAL = Column(DECIMAL(10, 2))
 
     # parent relationships (access parent)
 
     # child relationships (access children)
     PersonList : Mapped[List["Person"]] = relationship(back_populates="client")
     ProjectList : Mapped[List["Project"]] = relationship(back_populates="client")
+    InvoiceList : Mapped[List["Invoice"]] = relationship(back_populates="client")
+    PaymentList : Mapped[List["Payment"]] = relationship(back_populates="client")
 
 
 
 class Person(Base):  # type: ignore
     """
-    description: Represents a person associated with a client, who logs time and generates billing amounts.
+    description: Contains person-specific details, responsible for logging hours billed to clients.
     """
     __tablename__ = 'person'
     _s_collection_name = 'Person'  # type: ignore
@@ -94,7 +98,7 @@ class Person(Base):  # type: ignore
 
 class Project(Base):  # type: ignore
     """
-    description: Represents a project linked to a client.
+    description: Table to manage projects of clients, tracking hours, budget, and active status.
     """
     __tablename__ = 'project'
     _s_collection_name = 'Project'  # type: ignore
@@ -119,13 +123,14 @@ class Project(Base):  # type: ignore
 
 class Invoice(Base):  # type: ignore
     """
-    description: Represents an invoice related to a project, tracking financials and approval status.
+    description: Stores invoice details for clients including payment tracking.
     """
     __tablename__ = 'invoice'
     _s_collection_name = 'Invoice'  # type: ignore
 
     id = Column(Integer, primary_key=True)
     invoice_date = Column(Date)
+    client_id = Column(ForeignKey('client.id'))
     project_id = Column(ForeignKey('project.id'))
     invoice_amount : DECIMAL = Column(DECIMAL(10, 2))
     payment_total : DECIMAL = Column(DECIMAL(10, 2))
@@ -136,6 +141,7 @@ class Invoice(Base):  # type: ignore
     completed_task_count = Column(Integer)
 
     # parent relationships (access parent)
+    client : Mapped["Client"] = relationship(back_populates=("InvoiceList"))
     project : Mapped["Project"] = relationship(back_populates=("InvoiceList"))
 
     # child relationships (access children)
@@ -146,7 +152,7 @@ class Invoice(Base):  # type: ignore
 
 class Task(Base):  # type: ignore
     """
-    description: Represents a task under a project, measuring progress and budget adherence.
+    description: Manage tasks within projects, tracking work and budget allocations.
     """
     __tablename__ = 'task'
     _s_collection_name = 'Task'  # type: ignore
@@ -172,7 +178,7 @@ class Task(Base):  # type: ignore
 
 class InvoiceItem(Base):  # type: ignore
     """
-    description: Represents an individual item in an invoice, which is derived from a task.
+    description: Details individual items in an invoice, linking tasks and invoices.
     """
     __tablename__ = 'invoice_item'
     _s_collection_name = 'InvoiceItem'  # type: ignore
@@ -193,18 +199,20 @@ class InvoiceItem(Base):  # type: ignore
 
 class Payment(Base):  # type: ignore
     """
-    description: Represents a payment made against an invoice, logging the payment amounts and dates.
+    description: Stores payment details for client invoices, linking to those entities.
     """
     __tablename__ = 'payment'
     _s_collection_name = 'Payment'  # type: ignore
 
     id = Column(Integer, primary_key=True)
+    client_id = Column(ForeignKey('client.id'))
     invoice_id = Column(ForeignKey('invoice.id'))
     amount : DECIMAL = Column(DECIMAL(10, 2))
     payment_date = Column(Date)
     notes = Column(String)
 
     # parent relationships (access parent)
+    client : Mapped["Client"] = relationship(back_populates=("PaymentList"))
     invoice : Mapped["Invoice"] = relationship(back_populates=("PaymentList"))
 
     # child relationships (access children)
@@ -213,7 +221,7 @@ class Payment(Base):  # type: ignore
 
 class Timesheet(Base):  # type: ignore
     """
-    description: Tracks the time worked by a person on a task, used for billing and reporting purposes.
+    description: Tracks individual time entries and corresponding billing information.
     """
     __tablename__ = 'timesheet'
     _s_collection_name = 'Timesheet'  # type: ignore

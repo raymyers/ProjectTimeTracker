@@ -22,7 +22,7 @@
             show-title="yes"
             export-button="yes">
             
-            <o-table-column #id attr="id" title=" id*" type="integer" editable="no" required="no" content-align="center"></o-table-column>
+            <o-table-column #id attr="id" title=" id" type="integer" editable="no" required="no" content-align="center"></o-table-column>
             
             <o-table-column attr="person_id" title="person_id">
     <o-table-cell-renderer-service attr="person_id" 
@@ -49,7 +49,7 @@
         render-type="icon" boolean-type="boolean" true-value="true" false-value="false"></o-table-cell-renderer-boolean>
 </o-table-column>
             
-            <o-table-column #date_worked attr="date_worked" title="date_worked" editable="no" required="no" content-align="left"></o-table-column>
+            <o-date-input #date_worked attr="date_worked" type="date" label="date_worked" enabled="yes" required="no" format="LL" fxFlex="20%" class="form-field"></o-date-input>
             
             <o-table-column #hours_worked attr="hours_worked" title="hours_worked" type="real" min-decimal-digits="2" max-decimal-digits="4" min="0" max="1000000.0000" content-align="center"></o-table-column>
             

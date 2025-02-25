@@ -13,15 +13,15 @@
 #
 #    You typically do not customize this file.
 #
-#    (v 14.03.10, February 18, 2025 14:53:09)
+#    (v 14.03.09, February 24, 2025 14:22:31)
 #
 #    See Main Code (at end).
 #        Use log messages to understand API and Logic activation.
 #
 ###############################################################################
 
-api_logic_server__version = '14.03.10'
-api_logic_server_created__on = 'February 18, 2025 14:53:09'
+api_logic_server__version = '14.03.09'
+api_logic_server_created__on = 'February 24, 2025 14:22:31'
 api_logic_server__host = 'localhost'
 api_logic_server__port = '5656'
 
@@ -133,7 +133,7 @@ if __name__ == "__main__":
 
     flask_app.run(host=args.flask_host, threaded=True, port=args.port)
 else:
-    msg = f'API Logic Project Loaded (WSGI), version 14.03.10\n'
+    msg = f'API Logic Project Loaded (WSGI), version 14.03.09\n'
     msg += f'.. startup message: {start_up_message}\n'
 
     if server_setup.is_docker():

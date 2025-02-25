@@ -1,0 +1,81 @@
+
+The following rules have been activated
+ - 2025-02-25 13:49:22,027 - logic_logger - DEBUG
+Rule Bank[0x109d34470] (loaded 2025-02-25 13:49:17.318926)		##   - 2025-02-25 13:49:22,028 - logic_logger - INFO
+Mapped Class[Person] rules:		##   - 2025-02-25 13:49:22,028 - logic_logger - INFO
+  Derive <class 'database.models.Person'>.total_hours_entered as Sum(Timesheet.hours_worked Where  - None)		##   - 2025-02-25 13:49:22,028 - logic_logger - INFO
+  Derive <class 'database.models.Person'>.total_amount_billed as Formula (1): Rule.formula(derive=Person.total_amount_billed, a [...]		##   - 2025-02-25 13:49:22,028 - logic_logger - INFO
+  Constraint Function: None 		##   - 2025-02-25 13:49:22,028 - logic_logger - INFO
+Mapped Class[Timesheet] rules:		##   - 2025-02-25 13:49:22,028 - logic_logger - INFO
+  Derive <class 'database.models.Timesheet'>.billing_rate as Copy(person.billing_rate)		##   - 2025-02-25 13:49:22,028 - logic_logger - INFO
+  Derive <class 'database.models.Timesheet'>.total_amount_billed as Formula (1): Rule.formula(derive=Timesheet.total_amount_billed [...]		##   - 2025-02-25 13:49:22,028 - logic_logger - INFO
+  Constraint Function: None 		##   - 2025-02-25 13:49:22,028 - logic_logger - INFO
+Mapped Class[Task] rules:		##   - 2025-02-25 13:49:22,028 - logic_logger - INFO
+  Derive <class 'database.models.Task'>.total_task_hours_worked as Sum(Timesheet.hours_worked Where  - None)		##   - 2025-02-25 13:49:22,028 - logic_logger - INFO
+  Derive <class 'database.models.Task'>.total_task_amount_billed as Sum(Timesheet.total_amount_billed Where  - None)		##   - 2025-02-25 13:49:22,028 - logic_logger - INFO
+  Derive <class 'database.models.Task'>.is_over_budget as Formula (1): Rule.formula(derive=Task.is_over_budget, as_expre [...]		##   - 2025-02-25 13:49:22,028 - logic_logger - INFO
+Mapped Class[Project] rules:		##   - 2025-02-25 13:49:22,028 - logic_logger - INFO
+  Derive <class 'database.models.Project'>.total_project_hours as Sum(Task.total_task_hours_worked Where  - None)		##   - 2025-02-25 13:49:22,028 - logic_logger - INFO
+  Derive <class 'database.models.Project'>.total_project_amount as Sum(Task.total_task_amount_billed Where  - None)		##   - 2025-02-25 13:49:22,028 - logic_logger - INFO
+  Derive <class 'database.models.Project'>.is_over_budget as Formula (1): Rule.formula(derive=Project.is_over_budget, as_ex [...]		##   - 2025-02-25 13:49:22,028 - logic_logger - INFO
+Mapped Class[Client] rules:		##   - 2025-02-25 13:49:22,028 - logic_logger - INFO
+  Derive <class 'database.models.Client'>.total_hours as Sum(Project.total_project_hours Where  - None)		##   - 2025-02-25 13:49:22,029 - logic_logger - INFO
+  Derive <class 'database.models.Client'>.total_amount as Sum(Project.total_project_amount Where  - None)		##   - 2025-02-25 13:49:22,029 - logic_logger - INFO
+  Derive <class 'database.models.Client'>.is_over_budget as Formula (1): Rule.formula(derive=Client.is_over_budget, as_exp [...]		##   - 2025-02-25 13:49:22,029 - logic_logger - INFO
+  Derive <class 'database.models.Client'>.invoice_total as Sum(Invoice.invoice_amount Where  - None)		##   - 2025-02-25 13:49:22,029 - logic_logger - INFO
+  Derive <class 'database.models.Client'>.payment_total as Sum(Invoice.payment_total Where  - None)		##   - 2025-02-25 13:49:22,029 - logic_logger - INFO
+  RowEvent Client.send_row_to_kafka() 		##   - 2025-02-25 13:49:22,029 - logic_logger - INFO
+Mapped Class[Invoice] rules:		##   - 2025-02-25 13:49:22,029 - logic_logger - INFO
+  Derive <class 'database.models.Invoice'>.invoice_amount as Sum(InvoiceItem.task_amount Where  - None)		##   - 2025-02-25 13:49:22,029 - logic_logger - INFO
+  Derive <class 'database.models.Invoice'>.payment_total as Sum(Payment.amount Where  - None)		##   - 2025-02-25 13:49:22,029 - logic_logger - INFO
+  Derive <class 'database.models.Invoice'>.invoice_balance as Formula (1): Rule.formula(derive=Invoice.invoice_balance, as_e [...]		##   - 2025-02-25 13:49:22,029 - logic_logger - INFO
+  Derive <class 'database.models.Invoice'>.is_paid as Formula (2): Rule.formula(derive=Invoice.is_paid, as_expressio [...]		##   - 2025-02-25 13:49:22,029 - logic_logger - INFO
+  Derive <class 'database.models.Invoice'>.task_count as Count(<class 'database.models.InvoiceItem'> Where  - None)		##   - 2025-02-25 13:49:22,029 - logic_logger - INFO
+  Derive <class 'database.models.Invoice'>.completed_task_count as Count(<class 'database.models.InvoiceItem'> Where Rule.count(derive=Invoice.completed_task_count, as_count_of=InvoiceItem, where=lambda row: row.is_completed == True) - <function declare_logic.<locals>.<lambda> at 0x10a272520>)		##   - 2025-02-25 13:49:22,029 - logic_logger - INFO
+  Derive <class 'database.models.Invoice'>.is_ready as Formula (3): Rule.formula(derive=Invoice.is_ready, as_expressi [...]		##   - 2025-02-25 13:49:22,029 - logic_logger - INFO
+  RowEvent Invoice.send_row_to_kafka() 		##   - 2025-02-25 13:49:22,029 - logic_logger - INFO
+Mapped Class[InvoiceItem] rules:		##   - 2025-02-25 13:49:22,029 - logic_logger - INFO
+  Derive <class 'database.models.InvoiceItem'>.task_amount as Copy(task.total_task_amount_billed)		##   - 2025-02-25 13:49:22,029 - logic_logger - INFO
+  Derive <class 'database.models.InvoiceItem'>.is_completed as Copy(task.is_completed)		##   - 2025-02-25 13:49:22,029 - logic_logger - INFO
+Logic Bank - 36 rules loaded - 2025-02-25 13:49:22,029 - logic_logger - INFO
+Logic Bank - 36 rules loaded - 2025-02-25 13:49:22,029 - logic_logger - INFO
+
+Logic Phase:		ROW LOGIC		(session=0x10c8d6ae0) (sqlalchemy before_flush)			 - 2025-02-25 13:49:22,040 - logic_logger - INFO
+..Timesheet[None] {Insert - client} id: None, task_id: 15, person_id: 15, date_worked: 2025-01-01 00:00:00, hours_worked: 10, billing_rate: None, total_amount_billed: None, is_billable: True  row: 0x10c8d7710  session: 0x10c8d6ae0  ins_upd_dlt: ins, initial: ins - 2025-02-25 13:49:22,040 - logic_logger - INFO
+..Timesheet[None] {server all_defaults: billing_rate total_amount_billed } id: None, task_id: 15, person_id: 15, date_worked: 2025-01-01 00:00:00, hours_worked: 10, billing_rate: 0, total_amount_billed: 0, is_billable: True  row: 0x10c8d7710  session: 0x10c8d6ae0  ins_upd_dlt: ins, initial: ins - 2025-02-25 13:49:22,040 - logic_logger - INFO
+..Timesheet[None] {copy_rules for role: person - billing_rate} id: None, task_id: 15, person_id: 15, date_worked: 2025-01-01 00:00:00, hours_worked: 10, billing_rate: 100.00, total_amount_billed: 0, is_billable: True  row: 0x10c8d7710  session: 0x10c8d6ae0  ins_upd_dlt: ins, initial: ins - 2025-02-25 13:49:22,042 - logic_logger - INFO
+..Timesheet[None] {Formula total_amount_billed} id: None, task_id: 15, person_id: 15, date_worked: 2025-01-01 00:00:00, hours_worked: 10, billing_rate: 100.00, total_amount_billed: 1000.00, is_billable: True  row: 0x10c8d7710  session: 0x10c8d6ae0  ins_upd_dlt: ins, initial: ins - 2025-02-25 13:49:22,042 - logic_logger - INFO
+....Person[15] {Update - Adjusting person: total_hours_entered} id: 15, client_id: 15, name: Person_2025-02-25:13:49:21, email: , phone: , billing_rate: 100.00, total_hours_entered:  [0.00-->] 10.00, total_amount_billed: 0.00  row: 0x10c936960  session: 0x10c8d6ae0  ins_upd_dlt: upd, initial: upd - 2025-02-25 13:49:22,042 - logic_logger - INFO
+....Person[15] {Formula total_amount_billed} id: 15, client_id: 15, name: Person_2025-02-25:13:49:21, email: , phone: , billing_rate: 100.00, total_hours_entered:  [0.00-->] 10.00, total_amount_billed:  [0.00-->] 1000.0000  row: 0x10c936960  session: 0x10c8d6ae0  ins_upd_dlt: upd, initial: upd - 2025-02-25 13:49:22,042 - logic_logger - INFO
+....Task[15] {Update - Adjusting task: total_task_hours_worked, total_task_amount_billed} id: 15, project_id: 15, name: Task_2025-02-25:13:49:21, description: , total_task_hours_worked:  [0.00-->] 10.00, total_task_amount_billed:  [0.00-->] 1000.00, task_budget_hours: 10.00, is_over_budget: False, is_completed: False  row: 0x10c934d70  session: 0x10c8d6ae0  ins_upd_dlt: upd, initial: upd - 2025-02-25 13:49:22,043 - logic_logger - INFO
+......Project[15] {Update - Adjusting project: total_project_hours, total_project_amount} id: 15, client_id: 15, name: Project_2025-02-25:13:49:21, total_project_hours:  [0.00-->] 10.00, total_project_amount:  [0.00-->] 1000.00, project_budget_amount: 0.00, is_over_budget: False, is_active: False  row: 0x10c937650  session: 0x10c8d6ae0  ins_upd_dlt: upd, initial: upd - 2025-02-25 13:49:22,044 - logic_logger - INFO
+......Project[15] {Formula is_over_budget} id: 15, client_id: 15, name: Project_2025-02-25:13:49:21, total_project_hours:  [0.00-->] 10.00, total_project_amount:  [0.00-->] 1000.00, project_budget_amount: 0.00, is_over_budget:  [False-->] True, is_active: False  row: 0x10c937650  session: 0x10c8d6ae0  ins_upd_dlt: upd, initial: upd - 2025-02-25 13:49:22,044 - logic_logger - INFO
+........Client[15] {Update - Adjusting client: total_hours, total_amount} id: 15, name: client_2025-02-25:13:49:21, email: , phone: , total_hours:  [0.00-->] 10.00, total_amount:  [0.00-->] 1000.00, budget_amount: 0.00, is_over_budget: False, invoice_total: 0.00, payment_total: 0.00  row: 0x10c937e00  session: 0x10c8d6ae0  ins_upd_dlt: upd, initial: upd - 2025-02-25 13:49:22,045 - logic_logger - INFO
+........Client[15] {Formula is_over_budget} id: 15, name: client_2025-02-25:13:49:21, email: , phone: , total_hours:  [0.00-->] 10.00, total_amount:  [0.00-->] 1000.00, budget_amount: 0.00, is_over_budget:  [False-->] True, invoice_total: 0.00, payment_total: 0.00  row: 0x10c937e00  session: 0x10c8d6ae0  ins_upd_dlt: upd, initial: upd - 2025-02-25 13:49:22,045 - logic_logger - INFO
+Logic Phase:		COMMIT LOGIC		(session=0x10c8d6ae0)   										 - 2025-02-25 13:49:22,045 - logic_logger - INFO
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x10c8d6ae0)   										 - 2025-02-25 13:49:22,048 - logic_logger - INFO
+........Client[15] {AfterFlush Event} id: 15, name: client_2025-02-25:13:49:21, email: , phone: , total_hours:  [0.00-->] 10.00, total_amount:  [0.00-->] 1000.00, budget_amount: 0.00, is_over_budget:  [False-->] True, invoice_total: 0.00, payment_total: 0.00  row: 0x10c937e00  session: 0x10c8d6ae0  ins_upd_dlt: upd, initial: upd - 2025-02-25 13:49:22,048 - logic_logger - INFO
+........Client[15] {Sending Client to Kafka topic 'client_over_budget' [Note: **Kafka not enabled** ]} id: 15, name: client_2025-02-25:13:49:21, email: , phone: , total_hours:  [0.00-->] 10.00, total_amount:  [0.00-->] 1000.00, budget_amount: 0.00, is_over_budget:  [False-->] True, invoice_total: 0.00, payment_total: 0.00  row: 0x10c937e00  session: 0x10c8d6ae0  ins_upd_dlt: upd, initial: upd - 2025-02-25 13:49:22,048 - logic_logger - INFO
+
+These Rules Fired (see Logic Phases, above, for actual order):		## - 2025-02-25 13:49:22,048 - logic_logger - INFO
+  Client		## - 2025-02-25 13:49:22,049 - logic_logger - INFO
+    1. RowEvent Client.send_row_to_kafka() 		## - 2025-02-25 13:49:22,049 - logic_logger - INFO
+    2. Derive <class 'database.models.Client'>.total_hours as Sum(Project.total_project_hours Where  - None)		## - 2025-02-25 13:49:22,049 - logic_logger - INFO
+    3. Derive <class 'database.models.Client'>.total_amount as Sum(Project.total_project_amount Where  - None)		## - 2025-02-25 13:49:22,049 - logic_logger - INFO
+    4. Derive <class 'database.models.Client'>.is_over_budget as Formula (1): Rule.formula(derive=Client.is_over_budget, as_exp [...]		## - 2025-02-25 13:49:22,049 - logic_logger - INFO
+  Person		## - 2025-02-25 13:49:22,049 - logic_logger - INFO
+    5. Derive <class 'database.models.Person'>.total_hours_entered as Sum(Timesheet.hours_worked Where  - None)		## - 2025-02-25 13:49:22,049 - logic_logger - INFO
+    6. Derive <class 'database.models.Person'>.total_amount_billed as Formula (1): Rule.formula(derive=Person.total_amount_billed, a [...]		## - 2025-02-25 13:49:22,049 - logic_logger - INFO
+  Project		## - 2025-02-25 13:49:22,049 - logic_logger - INFO
+    7. Derive <class 'database.models.Project'>.total_project_amount as Sum(Task.total_task_amount_billed Where  - None)		## - 2025-02-25 13:49:22,049 - logic_logger - INFO
+    8. Derive <class 'database.models.Project'>.total_project_hours as Sum(Task.total_task_hours_worked Where  - None)		## - 2025-02-25 13:49:22,049 - logic_logger - INFO
+    9. Derive <class 'database.models.Project'>.is_over_budget as Formula (1): Rule.formula(derive=Project.is_over_budget, as_ex [...]		## - 2025-02-25 13:49:22,049 - logic_logger - INFO
+  Task		## - 2025-02-25 13:49:22,049 - logic_logger - INFO
+    10. Derive <class 'database.models.Task'>.total_task_hours_worked as Sum(Timesheet.hours_worked Where  - None)		## - 2025-02-25 13:49:22,049 - logic_logger - INFO
+    11. Derive <class 'database.models.Task'>.total_task_amount_billed as Sum(Timesheet.total_amount_billed Where  - None)		## - 2025-02-25 13:49:22,049 - logic_logger - INFO
+    12. Derive <class 'database.models.Task'>.is_over_budget as Formula (1): Rule.formula(derive=Task.is_over_budget, as_expre [...]		## - 2025-02-25 13:49:22,049 - logic_logger - INFO
+  Timesheet		## - 2025-02-25 13:49:22,050 - logic_logger - INFO
+    13. Derive <class 'database.models.Timesheet'>.total_amount_billed as Formula (1): Rule.formula(derive=Timesheet.total_amount_billed [...]		## - 2025-02-25 13:49:22,050 - logic_logger - INFO
+    14. Derive <class 'database.models.Timesheet'>.billing_rate as Copy(person.billing_rate)		## - 2025-02-25 13:49:22,050 - logic_logger - INFO
+
+Logic Phase:		COMPLETE(session=0x10c8d6ae0))       	 - 2025-02-25 13:49:22,050 - logic_logger - INFO

@@ -76,8 +76,20 @@ def declare_logic():
     # Formula: is Over Budget equals true when total amount exceeds budget amount
     Rule.formula(derive=Client.is_over_budget, as_expression=lambda row: row.total_amount > row.budget_amount)
     
-    # Invoice Invoice Amount 
-    # Invoice Amount is the sum of InvoiceItem task amount
+    # Client Invoice Total Calculation 
+    # Calculate total invoice amount for a client
+    Rule.sum(derive=Client.invoice_total, as_sum_of=Invoice.invoice_amount)
+    
+    # Client Payment Total Calculation 
+    # Calculate payment total for a client
+    Rule.sum(derive=Client.payment_total, as_sum_of=Invoice.payment_total)
+    
+    # Client Kafka Event 
+    # Send client to Kafka when over budget
+    Rule.after_flush_row_event(on_class=Client, calling=kafka_producer.send_row_to_kafka, if_condition=lambda row: row.is_over_budget and row.budget_amount > 0, with_args={"topic": "client_over_budget"})
+    
+    # Invoice Amount Credit 
+    # Calculate total invoice amount from items
     Rule.sum(derive=Invoice.invoice_amount, as_sum_of=InvoiceItem.task_amount)
     
     # Invoice Payment Total 
@@ -111,4 +123,8 @@ def declare_logic():
     # InvoiceItem Copy Task Amount 
     # InvoiceItem task amount is copied from Task total task amount billed
     Rule.copy(derive=InvoiceItem.task_amount, from_parent=Task.total_task_amount_billed)
+    
+    # InvoiceItem Completion Check 
+    # Complete status for InvoiceItem when Task is complete
+    Rule.copy(derive=InvoiceItem.is_completed, from_parent=Task.is_completed)
     

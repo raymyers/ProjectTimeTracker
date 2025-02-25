@@ -1,166 +1,408 @@
 INFO:response2code:Loading GPT response from system/genai/temp/response.json
 INFO:response2code:Successfully wrote test data code to database/test_data/test_data_code.py
 ..  logic_logger: <Logger logic_logger (DEBUG)>
-..  db_url: sqlite:////opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/database/test_data/db.sqlite
-..  cwd: /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2
+..  db_url: sqlite:////opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/database/test_data/db.sqlite
+..  cwd: /opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR
 ..  python_loc: /usr/local/bin/python
 ..  test_data_loader version: 1.1
-config.py - SQLALCHEMY_DATABASE_URI_AUTHENTICATION: sqlite:////opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/database/authentication_db.sqlite
+config.py - SQLALCHEMY_DATABASE_URI_AUTHENTICATION: sqlite:////opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/database/authentication_db.sqlite
 
-Loading rules from /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/logic/wg_rules
-/opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/docs/export/export.json does not exist
+config.py - SQLALCHEMY_DATABASE_URI_LANDING: sqlite:////opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/database/db_spa.sqlite
+
+Loading rules from /opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/logic/wg_rules
+/opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/docs/export/export.json does not exist
 
 The following rules have been loaded
-Rule Bank[0xffffab95ed20] (loaded 2025-02-18 14:53:15.983751)
+Rule Bank[0x7525fc3fa300] (loaded 2025-02-24 14:22:52.203614)
 
 The following attributes have been referenced
 
 
 The following rules have been activated
-Rule Bank[0xffffab95ed20] (loaded 2025-02-18 14:53:15.983751)
-Logic Bank 01.20.26 - 1 rules loaded
+Rule Bank[0x7525fc3fa300] (loaded 2025-02-24 14:22:52.203614)
+Logic Bank 01.20.25 - 1 rules loaded
 ..  LogicBank activated
 
-Logic Phase:		ROW LOGIC		(session=0xffffab647350) (sqlalchemy before_flush)			
-..Client[None] {Insert - client} id: None, name: Client A, email: clienta@example.com, phone: 123-456-7890, total_hours: 100, total_amount: 2000, budget_amount: 3000, is_over_budget: False  row: 0xffffabe4f830  session: 0xffffab647350  ins_upd_dlt: ins, initial: ins
-Logic Phase:		COMMIT LOGIC		(session=0xffffab647350)   										
-Logic Phase:		AFTER_FLUSH LOGIC	(session=0xffffab647350)   										
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..Client[1] {Insert - client} id: 1, name: Client A, email: clienta@example.com, phone: 111-222-3333, total_hours: 120, total_amount: 6000, budget_amount: 5000, is_over_budget: True, invoice_total: 6500, payment_total: 5500  row: 0x7525fbb49250  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
 
 These Rules Fired (see Logic Phases, above, for actual order):		##
 
-Logic Phase:		COMPLETE(session=0xffffab647350))       	
-Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0xffffab647350) (sqlalchemy before_flush)			
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
 
-Logic Phase:		ROW LOGIC		(session=0xffffab647350) (sqlalchemy before_flush)			
-..Client[None] {Insert - client} id: None, name: Client B, email: clientb@example.com, phone: 234-567-8901, total_hours: 150, total_amount: 3000, budget_amount: 3000, is_over_budget: False  row: 0xffffab647470  session: 0xffffab647350  ins_upd_dlt: ins, initial: ins
-Logic Phase:		COMMIT LOGIC		(session=0xffffab647350)   										
-Logic Phase:		AFTER_FLUSH LOGIC	(session=0xffffab647350)   										
-
-These Rules Fired (see Logic Phases, above, for actual order):		##
-
-Logic Phase:		COMPLETE(session=0xffffab647350))       	
-Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0xffffab647350) (sqlalchemy before_flush)			
-
-Logic Phase:		ROW LOGIC		(session=0xffffab647350) (sqlalchemy before_flush)			
-..Client[None] {Insert - client} id: None, name: Client C, email: clientc@example.com, phone: 345-678-9012, total_hours: 120, total_amount: 3500, budget_amount: 3000, is_over_budget: True  row: 0xffffab5d13a0  session: 0xffffab647350  ins_upd_dlt: ins, initial: ins
-Logic Phase:		COMMIT LOGIC		(session=0xffffab647350)   										
-Logic Phase:		AFTER_FLUSH LOGIC	(session=0xffffab647350)   										
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..Client[2] {Insert - client} id: 2, name: Client B, email: clientb@example.com, phone: 555-666-7777, total_hours: 80, total_amount: 3200, budget_amount: 3500, is_over_budget: False, invoice_total: 3000, payment_total: 3100  row: 0x7525fb8d62a0  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
 
 These Rules Fired (see Logic Phases, above, for actual order):		##
 
-Logic Phase:		COMPLETE(session=0xffffab647350))       	
-Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0xffffab647350) (sqlalchemy before_flush)			
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
 
-Logic Phase:		ROW LOGIC		(session=0xffffab647350) (sqlalchemy before_flush)			
-..Client[None] {Insert - client} id: None, name: Client D, email: clientd@example.com, phone: 456-789-0123, total_hours: 50, total_amount: 1000, budget_amount: 2000, is_over_budget: False  row: 0xffffab5d00e0  session: 0xffffab647350  ins_upd_dlt: ins, initial: ins
-Logic Phase:		COMMIT LOGIC		(session=0xffffab647350)   										
-Logic Phase:		AFTER_FLUSH LOGIC	(session=0xffffab647350)   										
-
-These Rules Fired (see Logic Phases, above, for actual order):		##
-
-Logic Phase:		COMPLETE(session=0xffffab647350))       	
-Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0xffffab647350) (sqlalchemy before_flush)			
-
-Logic Phase:		ROW LOGIC		(session=0xffffab647350) (sqlalchemy before_flush)			
-..Project[None] {Insert - client} id: None, client_id: 1, name: Project X, total_project_hours: 80, total_project_amount: 1600, project_budget_amount: 2000, is_over_budget: False, is_active: True  row: 0xffffab1930e0  session: 0xffffab647350  ins_upd_dlt: ins, initial: ins
-Logic Phase:		COMMIT LOGIC		(session=0xffffab647350)   										
-Logic Phase:		AFTER_FLUSH LOGIC	(session=0xffffab647350)   										
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..Client[3] {Insert - client} id: 3, name: Client C, email: clientc@example.com, phone: 888-999-0000, total_hours: 200, total_amount: 10000, budget_amount: 9500, is_over_budget: True, invoice_total: 10200, payment_total: 10200  row: 0x7525fbb41820  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
 
 These Rules Fired (see Logic Phases, above, for actual order):		##
 
-Logic Phase:		COMPLETE(session=0xffffab647350))       	
-Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0xffffab647350) (sqlalchemy before_flush)			
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
 
-Logic Phase:		ROW LOGIC		(session=0xffffab647350) (sqlalchemy before_flush)			
-..Project[None] {Insert - client} id: None, client_id: 2, name: Project Y, total_project_hours: 90, total_project_amount: 1800, project_budget_amount: 2000, is_over_budget: False, is_active: True  row: 0xffffad16e930  session: 0xffffab647350  ins_upd_dlt: ins, initial: ins
-Logic Phase:		COMMIT LOGIC		(session=0xffffab647350)   										
-Logic Phase:		AFTER_FLUSH LOGIC	(session=0xffffab647350)   										
-
-These Rules Fired (see Logic Phases, above, for actual order):		##
-
-Logic Phase:		COMPLETE(session=0xffffab647350))       	
-Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0xffffab647350) (sqlalchemy before_flush)			
-
-Logic Phase:		ROW LOGIC		(session=0xffffab647350) (sqlalchemy before_flush)			
-..Project[None] {Insert - client} id: None, client_id: 3, name: Project Z, total_project_hours: 60, total_project_amount: 2000, project_budget_amount: 1800, is_over_budget: True, is_active: True  row: 0xffffab1e7d70  session: 0xffffab647350  ins_upd_dlt: ins, initial: ins
-Logic Phase:		COMMIT LOGIC		(session=0xffffab647350)   										
-Logic Phase:		AFTER_FLUSH LOGIC	(session=0xffffab647350)   										
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..Client[4] {Insert - client} id: 4, name: Client D, email: clientd@example.com, phone: 333-444-5555, total_hours: 150, total_amount: 7000, budget_amount: 7500, is_over_budget: False, invoice_total: 7000, payment_total: 6800  row: 0x7525fb36aa80  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
 
 These Rules Fired (see Logic Phases, above, for actual order):		##
 
-Logic Phase:		COMPLETE(session=0xffffab647350))       	
-Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0xffffab647350) (sqlalchemy before_flush)			
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
 
-Logic Phase:		ROW LOGIC		(session=0xffffab647350) (sqlalchemy before_flush)			
-..Project[None] {Insert - client} id: None, client_id: 4, name: Project W, total_project_hours: 30, total_project_amount: 600, project_budget_amount: 1000, is_over_budget: False, is_active: True  row: 0xffffab5b3fe0  session: 0xffffab647350  ins_upd_dlt: ins, initial: ins
-Logic Phase:		COMMIT LOGIC		(session=0xffffab647350)   										
-Logic Phase:		AFTER_FLUSH LOGIC	(session=0xffffab647350)   										
-
-These Rules Fired (see Logic Phases, above, for actual order):		##
-
-Logic Phase:		COMPLETE(session=0xffffab647350))       	
-Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0xffffab647350) (sqlalchemy before_flush)			
-
-Logic Phase:		ROW LOGIC		(session=0xffffab647350) (sqlalchemy before_flush)			
-..Invoice[None] {Insert - client} id: None, invoice_date: 2023-06-01, project_id: 1, invoice_amount: 400, payment_total: 200, invoice_balance: 200, is_paid: False, is_ready: False, task_count: 2, completed_task_count: 1  row: 0xffffab1e5fa0  session: 0xffffab647350  ins_upd_dlt: ins, initial: ins
-Logic Phase:		COMMIT LOGIC		(session=0xffffab647350)   										
-Logic Phase:		AFTER_FLUSH LOGIC	(session=0xffffab647350)   										
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..Project[1] {Insert - client} id: 1, client_id: 1, name: Alpha Project, total_project_hours: 100, total_project_amount: 5000, project_budget_amount: 4500, is_over_budget: True, is_active: True  row: 0x7525fb8572f0  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
 
 These Rules Fired (see Logic Phases, above, for actual order):		##
 
-Logic Phase:		COMPLETE(session=0xffffab647350))       	
-Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0xffffab647350) (sqlalchemy before_flush)			
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
 
-Logic Phase:		ROW LOGIC		(session=0xffffab647350) (sqlalchemy before_flush)			
-..Invoice[None] {Insert - client} id: None, invoice_date: 2023-06-05, project_id: 2, invoice_amount: 500, payment_total: 500, invoice_balance: 0, is_paid: True, is_ready: True, task_count: 3, completed_task_count: 3  row: 0xffffab676960  session: 0xffffab647350  ins_upd_dlt: ins, initial: ins
-Logic Phase:		COMMIT LOGIC		(session=0xffffab647350)   										
-Logic Phase:		AFTER_FLUSH LOGIC	(session=0xffffab647350)   										
-
-These Rules Fired (see Logic Phases, above, for actual order):		##
-
-Logic Phase:		COMPLETE(session=0xffffab647350))       	
-Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0xffffab647350) (sqlalchemy before_flush)			
-
-Logic Phase:		ROW LOGIC		(session=0xffffab647350) (sqlalchemy before_flush)			
-..Invoice[None] {Insert - client} id: None, invoice_date: 2023-06-10, project_id: 3, invoice_amount: 400, payment_total: 100, invoice_balance: 300, is_paid: False, is_ready: False, task_count: 1, completed_task_count: 0  row: 0xffffab204e00  session: 0xffffab647350  ins_upd_dlt: ins, initial: ins
-Logic Phase:		COMMIT LOGIC		(session=0xffffab647350)   										
-Logic Phase:		AFTER_FLUSH LOGIC	(session=0xffffab647350)   										
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..Project[2] {Insert - client} id: 2, client_id: 2, name: Beta Project, total_project_hours: 50, total_project_amount: 2000, project_budget_amount: 2500, is_over_budget: False, is_active: False  row: 0x7525fb31d280  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
 
 These Rules Fired (see Logic Phases, above, for actual order):		##
 
-Logic Phase:		COMPLETE(session=0xffffab647350))       	
-Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0xffffab647350) (sqlalchemy before_flush)			
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
 
-Logic Phase:		ROW LOGIC		(session=0xffffab647350) (sqlalchemy before_flush)			
-..Invoice[None] {Insert - client} id: None, invoice_date: 2023-06-15, project_id: 4, invoice_amount: 200, payment_total: 200, invoice_balance: 0, is_paid: True, is_ready: True, task_count: 2, completed_task_count: 2  row: 0xffffab2060c0  session: 0xffffab647350  ins_upd_dlt: ins, initial: ins
-Logic Phase:		COMMIT LOGIC		(session=0xffffab647350)   										
-Logic Phase:		AFTER_FLUSH LOGIC	(session=0xffffab647350)   										
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..Project[3] {Insert - client} id: 3, client_id: 3, name: Gamma Project, total_project_hours: 60, total_project_amount: 3000, project_budget_amount: 3000, is_over_budget: False, is_active: True  row: 0x7525fb36bc50  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
 
 These Rules Fired (see Logic Phases, above, for actual order):		##
 
-Logic Phase:		COMPLETE(session=0xffffab647350))       	
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..Project[4] {Insert - client} id: 4, client_id: 4, name: Delta Project, total_project_hours: 130, total_project_amount: 6500, project_budget_amount: 6800, is_over_budget: False, is_active: True  row: 0x7525fb38c9b0  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..Invoice[1] {Insert - client} id: 1, invoice_date: 2023-08-15, client_id: 1, project_id: 1, invoice_amount: 2500, payment_total: 2000, invoice_balance: 500, is_paid: False, is_ready: False, task_count: 3, completed_task_count: 1  row: 0x7525fb2b8f20  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..Invoice[2] {Insert - client} id: 2, invoice_date: 2023-07-10, client_id: 2, project_id: 2, invoice_amount: 1500, payment_total: 1600, invoice_balance: -100, is_paid: True, is_ready: True, task_count: 5, completed_task_count: 5  row: 0x7525fb38f350  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..Invoice[3] {Insert - client} id: 3, invoice_date: 2023-09-20, client_id: 3, project_id: 3, invoice_amount: 3200, payment_total: 3100, invoice_balance: 100, is_paid: False, is_ready: True, task_count: 4, completed_task_count: 4  row: 0x7525fd6765a0  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..Invoice[4] {Insert - client} id: 4, invoice_date: 2023-06-05, client_id: 4, project_id: 4, invoice_amount: 2000, payment_total: 1800, invoice_balance: 200, is_paid: False, is_ready: False, task_count: 2, completed_task_count: 1  row: 0x7525fb38cbc0  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..InvoiceItem[1] {Insert - client} id: 1, invoice_id: 1, task_id: 1, task_amount: 2500, is_completed: False  row: 0x7525fb2245c0  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+..InvoiceItem[1] {Missing Parent: task} id: 1, invoice_id: 1, task_id: 1, task_amount: 2500, is_completed: False  row: 0x7525fb2245c0  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..InvoiceItem[2] {Insert - client} id: 2, invoice_id: 2, task_id: 2, task_amount: 1000, is_completed: True  row: 0x7525fb38f770  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+..InvoiceItem[2] {Missing Parent: task} id: 2, invoice_id: 2, task_id: 2, task_amount: 1000, is_completed: True  row: 0x7525fb38f770  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..InvoiceItem[3] {Insert - client} id: 3, invoice_id: 3, task_id: 3, task_amount: 2000, is_completed: True  row: 0x7525fb224680  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+..InvoiceItem[3] {Missing Parent: task} id: 3, invoice_id: 3, task_id: 3, task_amount: 2000, is_completed: True  row: 0x7525fb224680  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..InvoiceItem[4] {Insert - client} id: 4, invoice_id: 4, task_id: 4, task_amount: 1800, is_completed: False  row: 0x7525fb38c6b0  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+..InvoiceItem[4] {Missing Parent: task} id: 4, invoice_id: 4, task_id: 4, task_amount: 1800, is_completed: False  row: 0x7525fb38c6b0  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..Task[1] {Insert - client} id: 1, project_id: 1, name: Design Task, description: Design Phase, total_task_hours_worked: 50, total_task_amount_billed: 2500, task_budget_hours: 40, is_over_budget: True, is_completed: False  row: 0x7525fb36aff0  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..Task[2] {Insert - client} id: 2, project_id: 2, name: Development Task, description: Development Phase, total_task_hours_worked: 80, total_task_amount_billed: 3200, task_budget_hours: 90, is_over_budget: False, is_completed: True  row: 0x7525fb224950  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..Task[3] {Insert - client} id: 3, project_id: 3, name: Testing Task, description: Testing Phase, total_task_hours_worked: 60, total_task_amount_billed: 3000, task_budget_hours: 60, is_over_budget: False, is_completed: True  row: 0x7525fb2276b0  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..Task[4] {Insert - client} id: 4, project_id: 4, name: Deployment Task, description: Deployment Phase, total_task_hours_worked: 40, total_task_amount_billed: 2000, task_budget_hours: 50, is_over_budget: False, is_completed: False  row: 0x7525fb227fe0  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..Person[1] {Insert - client} id: 1, client_id: 1, name: Alice, email: alice@example.com, phone: 123-456-7890, billing_rate: 100, total_hours_entered: 60, total_amount_billed: 6000  row: 0x7525fb227770  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..Person[2] {Insert - client} id: 2, client_id: 2, name: Bob, email: bob@example.com, phone: 987-654-3210, billing_rate: 150, total_hours_entered: 40, total_amount_billed: 6000  row: 0x7525fb224e90  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..Person[3] {Insert - client} id: 3, client_id: 3, name: Charlie, email: charlie@example.com, phone: 567-890-1234, billing_rate: 75, total_hours_entered: 100, total_amount_billed: 7500  row: 0x7525fb258080  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..Person[4] {Insert - client} id: 4, client_id: 4, name: Diana, email: diana@example.com, phone: 321-654-9870, billing_rate: 125, total_hours_entered: 80, total_amount_billed: 10000  row: 0x7525fb38c8f0  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..Timesheet[1] {Insert - client} id: 1, task_id: 1, person_id: 1, date_worked: 2023-08-01, hours_worked: 5, billing_rate: 100, total_amount_billed: 500, is_billable: True  row: 0x7525fb224e60  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..Timesheet[2] {Insert - client} id: 2, task_id: 1, person_id: 2, date_worked: 2023-08-02, hours_worked: 2, billing_rate: 150, total_amount_billed: 300, is_billable: True  row: 0x7525fb227b30  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..Timesheet[3] {Insert - client} id: 3, task_id: 2, person_id: 3, date_worked: 2023-08-03, hours_worked: 10, billing_rate: 75, total_amount_billed: 750, is_billable: True  row: 0x7525fb36b680  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..Timesheet[4] {Insert - client} id: 4, task_id: 2, person_id: 4, date_worked: 2023-08-04, hours_worked: 8, billing_rate: 125, total_amount_billed: 1000, is_billable: True  row: 0x7525fb38d8b0  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..Payment[1] {Insert - client} id: 1, client_id: 1, invoice_id: 1, amount: 2000, payment_date: 2023-08-10, notes: Partial payment received  row: 0x7525fb227bf0  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..Payment[2] {Insert - client} id: 2, client_id: 2, invoice_id: 2, amount: 1600, payment_date: 2023-07-15, notes: Full payment  row: 0x7525fb25a480  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..Payment[3] {Insert - client} id: 3, client_id: 3, invoice_id: 3, amount: 3100, payment_date: 2023-09-25, notes: Payment for invoice 3  row: 0x7525fb25b0e0  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..Payment[4] {Insert - client} id: 4, client_id: 4, invoice_id: 4, amount: 1800, payment_date: 2023-06-10, notes: Final payment for invoice  row: 0x7525fb25b8f0  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..InvoiceItem[1] {Insert - client} id: 1, invoice_id: 1, task_id: 1, task_amount: 2500, is_completed: False  row: 0x7525fb259af0  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..InvoiceItem[2] {Insert - client} id: 2, invoice_id: 2, task_id: 2, task_amount: 1000, is_completed: True  row: 0x7525fb2593a0  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..InvoiceItem[3] {Insert - client} id: 3, invoice_id: 3, task_id: 3, task_amount: 2000, is_completed: True  row: 0x7525fb38f770  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
+Logic Phase:		ROW LOGIC IGNORE RE-RAISE(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+
+Logic Phase:		ROW LOGIC		(session=0x7525fbd3d760) (sqlalchemy before_flush)			
+..InvoiceItem[4] {Insert - client} id: 4, invoice_id: 4, task_id: 4, task_amount: 1800, is_completed: False  row: 0x7525fb224680  session: 0x7525fbd3d760  ins_upd_dlt: ins, initial: ins
+Logic Phase:		COMMIT LOGIC		(session=0x7525fbd3d760)   										
+Logic Phase:		AFTER_FLUSH LOGIC	(session=0x7525fbd3d760)   										
+
+These Rules Fired (see Logic Phases, above, for actual order):		##
+
+Logic Phase:		COMPLETE(session=0x7525fbd3d760))       	
 *** Models.py Using TestBase ***
-..  db_url: sqlite:////opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/database/test_data/db.sqlite
-..  cwd: /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2
+..  db_url: sqlite:////opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/database/test_data/db.sqlite
+..  cwd: /opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR
 ..  python_loc: /usr/local/bin/python
 ..  test_data_loader version: 1.1
 ..  LogicBank activated
 print(Pass: 1)
-..  db_url: sqlite:////opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/database/test_data/db.sqlite
-..  cwd: /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2
+Error adding variable to session: Missing Parent: task
+print(Pass: 2)
+..  db_url: sqlite:////opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/database/test_data/db.sqlite
+..  cwd: /opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR
 ..  python_loc: /usr/local/bin/python
 ..  test_data_loader version: 1.1
 ..  LogicBank activated
 print(Pass: 1)
-Error: near line 14: UNIQUE constraint failed: client.id
-Error: near line 15: UNIQUE constraint failed: client.id
+Error adding variable to session: Missing Parent: task
+print(Pass: 2)
 Error: near line 16: UNIQUE constraint failed: client.id
 Error: near line 17: UNIQUE constraint failed: client.id
-Error: near line 42: UNIQUE constraint failed: project.id
-Error: near line 43: UNIQUE constraint failed: project.id
-Error: near line 44: UNIQUE constraint failed: project.id
-Error: near line 45: UNIQUE constraint failed: project.id
-Error: near line 60: UNIQUE constraint failed: invoice.id
-Error: near line 61: UNIQUE constraint failed: invoice.id
-Error: near line 62: UNIQUE constraint failed: invoice.id
-Error: near line 63: UNIQUE constraint failed: invoice.id
+Error: near line 18: UNIQUE constraint failed: client.id
+Error: near line 19: UNIQUE constraint failed: client.id
+Error: near line 32: UNIQUE constraint failed: person.id
+Error: near line 33: UNIQUE constraint failed: person.id
+Error: near line 34: UNIQUE constraint failed: person.id
+Error: near line 35: UNIQUE constraint failed: person.id
+Error: near line 48: UNIQUE constraint failed: project.id
+Error: near line 49: UNIQUE constraint failed: project.id
+Error: near line 50: UNIQUE constraint failed: project.id
+Error: near line 51: UNIQUE constraint failed: project.id
+Error: near line 68: UNIQUE constraint failed: invoice.id
+Error: near line 69: UNIQUE constraint failed: invoice.id
+Error: near line 70: UNIQUE constraint failed: invoice.id
+Error: near line 71: UNIQUE constraint failed: invoice.id
+Error: near line 85: UNIQUE constraint failed: task.id
+Error: near line 86: UNIQUE constraint failed: task.id
+Error: near line 87: UNIQUE constraint failed: task.id
+Error: near line 88: UNIQUE constraint failed: task.id
+Error: near line 99: UNIQUE constraint failed: invoice_item.id
+Error: near line 100: UNIQUE constraint failed: invoice_item.id
+Error: near line 101: UNIQUE constraint failed: invoice_item.id
+Error: near line 102: UNIQUE constraint failed: invoice_item.id
+Error: near line 114: UNIQUE constraint failed: payment.id
+Error: near line 115: UNIQUE constraint failed: payment.id
+Error: near line 116: UNIQUE constraint failed: payment.id
+Error: near line 117: UNIQUE constraint failed: payment.id
+Error: near line 131: UNIQUE constraint failed: timesheet.id
+Error: near line 132: UNIQUE constraint failed: timesheet.id
+Error: near line 133: UNIQUE constraint failed: timesheet.id
+Error: near line 134: UNIQUE constraint failed: timesheet.id

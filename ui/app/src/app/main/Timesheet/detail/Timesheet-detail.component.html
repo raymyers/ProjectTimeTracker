@@ -14,7 +14,7 @@
   <o-row attr="row1" layout-align="start stretch">
     <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlex fxLayoutGap="14px">
       
-      <o-integer-input #id attr="id" label=" id*" type="integer" editable="no" required="no" ></o-integer-input>
+      <o-integer-input #id attr="id" label=" id" type="integer" editable="no" required="no" ></o-integer-input>
       
       <o-list-picker 
         attr="person_id"
@@ -58,7 +58,7 @@
       
       <o-checkbox #is_billable attr="is_billable" label="is_billable" read-only="no" enabled="yes"></o-checkbox>
       
-      <o-date-input #date_worked attr="date_worked" type="timestamp" label="date_worked" editable="no" required="no" format="LL" fxFlex="20%" class="form-field"></o-date-input>
+      <o-date-input #date_worked attr="date_worked" type="date" label="date_worked" enabled="yes" required="no" format="LL" fxFlex="20%" class="form-field"></o-date-input>
       
       <o-real-input #hours_worked attr="hours_worked" label="hours_worked" min-decimal-digits="2" max-decimal-digits="4" min="0" max="1000000000" fxFlex="20%" class="form-field"></o-real-input>
       

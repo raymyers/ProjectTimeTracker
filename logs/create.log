@@ -1,91 +1,94 @@
-Creating project with arguments genai_01JMCRP6RTCT32TMNM2532VCN2 01JMCRP6RTCT32TMNM2532VCN2 8 6040 True
-Prompt file: /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/prompt.txt
-Working directory: /tmp/tmp.kwRU9Ssoos-01JMCRP6RTCT32TMNM2532VCN2
-Running: 'als genai --using="/opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/prompt.txt" --opt-locking=ignored --tables "8"'
+Creating project with arguments genai_01JMW56P6X34M85CN1WNAZCFFR 01JMW56P6X34M85CN1WNAZCFFR 8 6800 True
+Prompt file: /opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/prompt.txt
+Working directory: /tmp/tmp.LX8xAZefo9-01JMW56P6X34M85CN1WNAZCFFR
+Running: 'als genai --using="/opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/prompt.txt" --opt-locking=ignored --tables "8"'
 create_project: 
 create_project: GenAI [_genai_default] creating microservice...
 log: Generating Database, Logic, API & Frontend..
-create_project: .. .. --using prompt: /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/prompt.txt
-create_project: .. .. in pwd: /tmp/tmp.kwRU9Ssoos-01JMCRP6RTCT32TMNM2532VCN2
-create_project: .. from file: /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/prompt.txt
+create_project: .. .. --using prompt: /opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/prompt.txt
+create_project: .. .. in pwd: /tmp/tmp.LX8xAZefo9-01JMW56P6X34M85CN1WNAZCFFR
+create_project: .. from file: /opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/prompt.txt
 create_project: .. inserted: Use LogicBank to enforce business logic.
 create_project: .. inserted explicit test data: Create 4 rows of test data for each table, and follow these guidelines carefully:
 create_project: .. Initial Logic enabled: True
 create_project: .. saved request: system/genai/temp/request.json
 create_project: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-create_project: ChatGPT (84 secs) - response at: system/genai/temp/chatgpt_original.response
+create_project: ChatGPT (202 secs) - response at: system/genai/temp/chatgpt_original.response
 create_project: .. call_chatgpt saved response: system/genai/temp/response.json
-create_project: .. project name: ProjectTracker (from response: ProjectTracker)
-create_project: add description to client: Represents a client entity in the application.
-create_project: Added description to model: client: class Client(Base):
-create_project: """description: Represents a client entity in the application."""
+create_project: .. project name: ProjectTimeTracking (from response: ProjectTimeTracking)
+create_project: add description to Client: Table to store client details including contact and budget info.
+create_project: Added description to model: Client: class Client(Base):
+create_project: """description: Table to store client details including contact and budget info."""
 create_project: __tablename__ = 'client'
-create_project: id = Column(Integer, primary_key=True, autoincrement=True)
+create_project: id = Column(Integer, primary_key=True)
 create_project: name = Column(String)
 create_project: email = Column(String)
 create_project: phone = Column(String)
 create_project: total_hours = Column(DECIMAL(10, 2), default=0)
 create_project: total_amount = Column(DECIMAL(10, 2), default=0)
-create_project: budget_amount = Column(DECIMAL(10, 2))
-create_project: is_over_budget = Column(Boolean, default=False)
+create_project: budget_amount = Column(DECIMAL(10, 2), default=0)
+create_project: is_over_budget = Column(Boolean)
+create_project: invoice_total = Column(DECIMAL(10, 2), default=0)
+create_project: payment_total = Column(DECIMAL(10, 2), default=0)
 create_project: 
-create_project: add description to project: Represents a project linked to a client.
-create_project: Added description to model: project: class Project(Base):
-create_project: """description: Represents a project linked to a client."""
+create_project: add description to Project: Table to manage projects of clients, tracking hours, budget, and active status.
+create_project: Added description to model: Project: class Project(Base):
+create_project: """description: Table to manage projects of clients, tracking hours, budget, and active status."""
 create_project: __tablename__ = 'project'
-create_project: id = Column(Integer, primary_key=True, autoincrement=True)
+create_project: id = Column(Integer, primary_key=True)
 create_project: client_id = Column(Integer, ForeignKey('client.id'))
 create_project: name = Column(String)
 create_project: total_project_hours = Column(DECIMAL(10, 2), default=0)
 create_project: total_project_amount = Column(DECIMAL(10, 2), default=0)
-create_project: project_budget_amount = Column(DECIMAL(10, 2))
-create_project: is_over_budget = Column(Boolean, default=False)
-create_project: is_active = Column(Boolean, default=True)
+create_project: project_budget_amount = Column(DECIMAL(10, 2), default=0)
+create_project: is_over_budget = Column(Boolean)
+create_project: is_active = Column(Boolean)
 create_project: 
-create_project: add description to invoice: Represents an invoice related to a project, tracking financials and approval status.
-create_project: Added description to model: invoice: class Invoice(Base):
-create_project: """description: Represents an invoice related to a project, tracking financials and approval status."""
+create_project: add description to Invoice: Stores invoice details for clients including payment tracking.
+create_project: Added description to model: Invoice: class Invoice(Base):
+create_project: """description: Stores invoice details for clients including payment tracking."""
 create_project: __tablename__ = 'invoice'
-create_project: id = Column(Integer, primary_key=True, autoincrement=True)
-create_project: invoice_date = Column(Date)
+create_project: id = Column(Integer, primary_key=True)
+create_project: invoice_date = Column(Date, default=date.today())
+create_project: client_id = Column(Integer, ForeignKey('client.id'))
 create_project: project_id = Column(Integer, ForeignKey('project.id'))
 create_project: invoice_amount = Column(DECIMAL(10, 2), default=0)
 create_project: payment_total = Column(DECIMAL(10, 2), default=0)
-create_project: invoice_balance = Column(DECIMAL(10, 2))
-create_project: is_paid = Column(Boolean, default=False)
-create_project: is_ready = Column(Boolean, default=False)
+create_project: invoice_balance = Column(DECIMAL(10, 2), default=0)
+create_project: is_paid = Column(Boolean)
+create_project: is_ready = Column(Boolean)
 create_project: task_count = Column(Integer, default=0)
 create_project: completed_task_count = Column(Integer, default=0)
 create_project: 
-create_project: add description to invoice_item: Represents an individual item in an invoice, which is derived from a task.
-create_project: Added description to model: invoice_item: class InvoiceItem(Base):
-create_project: """description: Represents an individual item in an invoice, which is derived from a task."""
+create_project: add description to InvoiceItem: Details individual items in an invoice, linking tasks and invoices.
+create_project: Added description to model: InvoiceItem: class InvoiceItem(Base):
+create_project: """description: Details individual items in an invoice, linking tasks and invoices."""
 create_project: __tablename__ = 'invoice_item'
-create_project: id = Column(Integer, primary_key=True, autoincrement=True)
+create_project: id = Column(Integer, primary_key=True)
 create_project: invoice_id = Column(Integer, ForeignKey('invoice.id'))
 create_project: task_id = Column(Integer, ForeignKey('task.id'))
 create_project: task_amount = Column(DECIMAL(10, 2), default=0)
-create_project: is_completed = Column(Boolean, default=False)
+create_project: is_completed = Column(Boolean)
 create_project: 
-create_project: add description to task: Represents a task under a project, measuring progress and budget adherence.
-create_project: Added description to model: task: class Task(Base):
-create_project: """description: Represents a task under a project, measuring progress and budget adherence."""
+create_project: add description to Task: Manage tasks within projects, tracking work and budget allocations.
+create_project: Added description to model: Task: class Task(Base):
+create_project: """description: Manage tasks within projects, tracking work and budget allocations."""
 create_project: __tablename__ = 'task'
-create_project: id = Column(Integer, primary_key=True, autoincrement=True)
+create_project: id = Column(Integer, primary_key=True)
 create_project: project_id = Column(Integer, ForeignKey('project.id'))
 create_project: name = Column(String)
 create_project: description = Column(String)
 create_project: total_task_hours_worked = Column(DECIMAL(10, 2), default=0)
 create_project: total_task_amount_billed = Column(DECIMAL(10, 2), default=0)
-create_project: task_budget_hours = Column(DECIMAL(10, 2))
-create_project: is_over_budget = Column(Boolean, default=False)
-create_project: is_completed = Column(Boolean, default=False)
+create_project: task_budget_hours = Column(DECIMAL(10, 2), default=0)
+create_project: is_over_budget = Column(Boolean)
+create_project: is_completed = Column(Boolean)
 create_project: 
-create_project: add description to person: Represents a person associated with a client, who logs time and generates billing amounts.
-create_project: Added description to model: person: class Person(Base):
-create_project: """description: Represents a person associated with a client, who logs time and generates billing amounts."""
+create_project: add description to Person: Contains person-specific details, responsible for logging hours billed to clients.
+create_project: Added description to model: Person: class Person(Base):
+create_project: """description: Contains person-specific details, responsible for logging hours billed to clients."""
 create_project: __tablename__ = 'person'
-create_project: id = Column(Integer, primary_key=True, autoincrement=True)
+create_project: id = Column(Integer, primary_key=True)
 create_project: client_id = Column(Integer, ForeignKey('client.id'))
 create_project: name = Column(String)
 create_project: email = Column(String)
@@ -94,55 +97,56 @@ create_project: billing_rate = Column(DECIMAL(10, 2), default=0)
 create_project: total_hours_entered = Column(DECIMAL(10, 2), default=0)
 create_project: total_amount_billed = Column(DECIMAL(10, 2), default=0)
 create_project: 
-create_project: add description to timesheet: Tracks the time worked by a person on a task, used for billing and reporting purposes.
-create_project: Added description to model: timesheet: class Timesheet(Base):
-create_project: """description: Tracks the time worked by a person on a task, used for billing and reporting purposes."""
+create_project: add description to Timesheet: Tracks individual time entries and corresponding billing information.
+create_project: Added description to model: Timesheet: class Timesheet(Base):
+create_project: """description: Tracks individual time entries and corresponding billing information."""
 create_project: __tablename__ = 'timesheet'
-create_project: id = Column(Integer, primary_key=True, autoincrement=True)
+create_project: id = Column(Integer, primary_key=True)
 create_project: task_id = Column(Integer, ForeignKey('task.id'))
 create_project: person_id = Column(Integer, ForeignKey('person.id'))
-create_project: date_worked = Column(Date)
+create_project: date_worked = Column(Date, default=date.today())
 create_project: hours_worked = Column(DECIMAL(10, 2), default=0)
 create_project: billing_rate = Column(DECIMAL(10, 2), default=0)
 create_project: total_amount_billed = Column(DECIMAL(10, 2), default=0)
-create_project: is_billable = Column(Boolean, default=False)
+create_project: is_billable = Column(Boolean)
 create_project: 
-create_project: add description to payment: Represents a payment made against an invoice, logging the payment amounts and dates.
-create_project: Added description to model: payment: class Payment(Base):
-create_project: """description: Represents a payment made against an invoice, logging the payment amounts and dates."""
+create_project: add description to Payment: Stores payment details for client invoices, linking to those entities.
+create_project: Added description to model: Payment: class Payment(Base):
+create_project: """description: Stores payment details for client invoices, linking to those entities."""
 create_project: __tablename__ = 'payment'
-create_project: id = Column(Integer, primary_key=True, autoincrement=True)
+create_project: id = Column(Integer, primary_key=True)
+create_project: client_id = Column(Integer, ForeignKey('client.id'))
 create_project: invoice_id = Column(Integer, ForeignKey('invoice.id'))
 create_project: amount = Column(DECIMAL(10, 2), default=0)
-create_project: payment_date = Column(Date)
+create_project: payment_date = Column(Date, default=date.today())
 create_project: notes = Column(String)
 create_project: 
-create_project: .... test_data_rows: 12
+create_project: .... test_data_rows: 32
 create_project: .. code for db creation and test data: system/genai/temp/create_db_models.py
-create_project: .. saving work files to: system/genai/temp/ProjectTracker
-create_project: save_prompt_messages_to_system_genai_temp_project() - /tmp/tmp.kwRU9Ssoos-01JMCRP6RTCT32TMNM2532VCN2/system/genai/temp/ProjectTracker
+create_project: .. saving work files to: system/genai/temp/ProjectTimeTracking
+create_project: save_prompt_messages_to_system_genai_temp_project() - /tmp/tmp.LX8xAZefo9-01JMW56P6X34M85CN1WNAZCFFR/system/genai/temp/ProjectTimeTracking
 create_project: .. saving[000_you_are.prompt]  - You are a data modelling exper...
 create_project: .. saving[001_logic_training.prompt]  - Here is the simplified API for...
 create_project: .. saving[002_create_db_models.prompt]  - Use SQLAlchemy to create a sql...
 create_project: .. saving response [003_create_db_models.response]  - Use SQLAlchemy to create a sql...
-create_project: ..cwd: /tmp/tmp.kwRU9Ssoos-01JMCRP6RTCT32TMNM2532VCN2
+create_project: ..cwd: /tmp/tmp.LX8xAZefo9-01JMW56P6X34M85CN1WNAZCFFR
 create_project: 
-create_project: ..docker using default directory: /tmp/tmp.kwRU9Ssoos-01JMCRP6RTCT32TMNM2532VCN2/ProjectTracker
+create_project: ..docker using default directory: /tmp/tmp.LX8xAZefo9-01JMW56P6X34M85CN1WNAZCFFR/ProjectTimeTracking
 create_project: 
 create_project: .. fixed hallucination/indent:     Rule.sum(derive=Person.total_hours_entered, as_sum_of=Timesheet.hours_worked)
 create_project: .. found class: Person in: Rule.sum(derive=Person.total_hours_entered, as_sum_of=Timesheet.hours_worked)
 create_project: .. found class: Timesheet in: Rule.sum(derive=Person.total_hours_entered, as_sum_of=Timesheet.hours_worked)
 create_project: .. fixed hallucination/indent:     Rule.formula(derive=Person.total_amount_billed, as_expression=lambda row: row.total_hours_entered * row.billing_rate)
 create_project: .. found class: Person in: Rule.formula(derive=Person.total_amount_billed, as_expression=lambda row: row.total_hours_entered * row.billing_rate)
-create_project: .. fixed hallucination/indent:     Rule.constraint(validate=Person, as_condition=lambda row: 0 < row.billing_rate < 200, error_msg='Billing rate must be between 0 and 200')
-create_project: .. found class: Person in: Rule.constraint(validate=Person, as_condition=lambda row: 0 < row.billing_rate < 200, error_msg='Billing rate must be between 0 and 200')
+create_project: .. fixed hallucination/indent:     Rule.constraint(validate=Person, as_condition=lambda row: 0 < row.billing_rate < 200, error_msg="Billing rate must be greater than 0 and less than 200")
+create_project: .. found class: Person in: Rule.constraint(validate=Person, as_condition=lambda row: 0 < row.billing_rate < 200, error_msg="Billing rate must be greater than 0 and less than 200")
 create_project: .. fixed hallucination/indent:     Rule.copy(derive=Timesheet.billing_rate, from_parent=Person.billing_rate)
 create_project: .. found class: Timesheet in: Rule.copy(derive=Timesheet.billing_rate, from_parent=Person.billing_rate)
 create_project: .. found class: Person in: Rule.copy(derive=Timesheet.billing_rate, from_parent=Person.billing_rate)
 create_project: .. fixed hallucination/indent:     Rule.formula(derive=Timesheet.total_amount_billed, as_expression=lambda row: row.billing_rate * row.hours_worked if row.is_billable else 0)
 create_project: .. found class: Timesheet in: Rule.formula(derive=Timesheet.total_amount_billed, as_expression=lambda row: row.billing_rate * row.hours_worked if row.is_billable else 0)
-create_project: .. fixed hallucination/indent:     Rule.constraint(validate=Timesheet, as_condition=lambda row: 0 < row.hours_worked < 15, error_msg='Hours worked must be between 0 and 15')
-create_project: .. found class: Timesheet in: Rule.constraint(validate=Timesheet, as_condition=lambda row: 0 < row.hours_worked < 15, error_msg='Hours worked must be between 0 and 15')
+create_project: .. fixed hallucination/indent:     Rule.constraint(validate=Timesheet, as_condition=lambda row: 0 < row.hours_worked < 15, error_msg="Hours worked must be greater than 0 and less than 15")
+create_project: .. found class: Timesheet in: Rule.constraint(validate=Timesheet, as_condition=lambda row: 0 < row.hours_worked < 15, error_msg="Hours worked must be greater than 0 and less than 15")
 create_project: .. fixed hallucination/indent:     Rule.sum(derive=Task.total_task_hours_worked, as_sum_of=Timesheet.hours_worked)
 create_project: .. found class: Task in: Rule.sum(derive=Task.total_task_hours_worked, as_sum_of=Timesheet.hours_worked)
 create_project: .. found class: Timesheet in: Rule.sum(derive=Task.total_task_hours_worked, as_sum_of=Timesheet.hours_worked)
@@ -167,6 +171,13 @@ create_project: .. found class: Client in: Rule.sum(derive=Client.total_amount, 
 create_project: .. found class: Project in: Rule.sum(derive=Client.total_amount, as_sum_of=Project.total_project_amount)
 create_project: .. fixed hallucination/indent:     Rule.formula(derive=Client.is_over_budget, as_expression=lambda row: row.total_amount > row.budget_amount)
 create_project: .. found class: Client in: Rule.formula(derive=Client.is_over_budget, as_expression=lambda row: row.total_amount > row.budget_amount)
+create_project: .. fixed hallucination/indent:     Rule.sum(derive=Client.invoice_total, as_sum_of=Invoice.invoice_amount)
+create_project: .. found class: Client in: Rule.sum(derive=Client.invoice_total, as_sum_of=Invoice.invoice_amount)
+create_project: .. found class: Invoice in: Rule.sum(derive=Client.invoice_total, as_sum_of=Invoice.invoice_amount)
+create_project: .. fixed hallucination/indent:     Rule.sum(derive=Client.payment_total, as_sum_of=Invoice.payment_total)
+create_project: .. found class: Client in: Rule.sum(derive=Client.payment_total, as_sum_of=Invoice.payment_total)
+create_project: .. found class: Invoice in: Rule.sum(derive=Client.payment_total, as_sum_of=Invoice.payment_total)
+create_project: .. fixed hallucination/indent:     Rule.after_flush_row_event(on_class=Client, calling=kafka_producer.send_row_to_kafka, if_condition=lambda row: row.is_over_budget and row.budget_amount > 0, with_args={"topic": "client_over_budget"})
 create_project: .. fixed hallucination/indent:     Rule.sum(derive=Invoice.invoice_amount, as_sum_of=InvoiceItem.task_amount)
 create_project: .. found class: Invoice in: Rule.sum(derive=Invoice.invoice_amount, as_sum_of=InvoiceItem.task_amount)
 create_project: .. found class: InvoiceItem in: Rule.sum(derive=Invoice.invoice_amount, as_sum_of=InvoiceItem.task_amount)
@@ -180,17 +191,18 @@ create_project: .. found class: Invoice in: Rule.formula(derive=Invoice.is_paid,
 create_project: .. fixed hallucination/indent:     Rule.count(derive=Invoice.task_count, as_count_of=InvoiceItem)
 create_project: .. found class: Invoice in: Rule.count(derive=Invoice.task_count, as_count_of=InvoiceItem)
 create_project: .. found class: InvoiceItem in: Rule.count(derive=Invoice.task_count, as_count_of=InvoiceItem)
-create_project: .. fixed hallucination/indent:     Rule.count(derive=Invoice.completed_task_count, as_count_of=InvoiceItem, where=lambda row: row.is_completed == True)
-create_project: .. found class: Invoice in: Rule.count(derive=Invoice.completed_task_count, as_count_of=InvoiceItem, where=lambda row: row.is_completed == True)
-create_project: .. found class: InvoiceItem in: Rule.count(derive=Invoice.completed_task_count, as_count_of=InvoiceItem, where=lambda row: row.is_completed == True)
+create_project: .. fixed hallucination/indent:     Rule.count(derive=Invoice.completed_task_count, as_count_of=InvoiceItem, where=lambda row: row.is_completed is True)
+create_project: .. found class: Invoice in: Rule.count(derive=Invoice.completed_task_count, as_count_of=InvoiceItem, where=lambda row: row.is_completed is True)
+create_project: .. found class: InvoiceItem in: Rule.count(derive=Invoice.completed_task_count, as_count_of=InvoiceItem, where=lambda row: row.is_completed is True)
 create_project: .. fixed hallucination/indent:     Rule.formula(derive=Invoice.is_ready, as_expression=lambda row: row.task_count == row.completed_task_count)
 create_project: .. found class: Invoice in: Rule.formula(derive=Invoice.is_ready, as_expression=lambda row: row.task_count == row.completed_task_count)
-create_project: .. fixed hallucination/indent:     Rule.after_flush_row_event(on_class=Invoice, calling=kafka_producer.send_row_to_kafka, if_condition=lambda row: row.is_ready, with_args={'topic': 'invoice_ready'})
+create_project: .. fixed hallucination/indent:     Rule.after_flush_row_event(on_class=Invoice, calling=kafka_producer.send_row_to_kafka, if_condition=lambda row: row.is_ready, with_args={"topic": "invoice_ready"})
 create_project: .. fixed hallucination/indent:     Rule.copy(derive=InvoiceItem.task_amount, from_parent=Task.total_task_amount_billed)
 create_project: .. found class: InvoiceItem in: Rule.copy(derive=InvoiceItem.task_amount, from_parent=Task.total_task_amount_billed)
 create_project: .. found class: Task in: Rule.copy(derive=InvoiceItem.task_amount, from_parent=Task.total_task_amount_billed)
-create_project: .. fixed hallucination/indent:     Rule.formula(derive=InvoiceItem.is_completed, as_expression=lambda row: all(item.is_completed for item in row.invoice_items))
-create_project: .. found class: InvoiceItem in: Rule.formula(derive=InvoiceItem.is_completed, as_expression=lambda row: all(item.is_completed for item in row.invoice_items))
+create_project: .. fixed hallucination/indent:     Rule.copy(derive=InvoiceItem.is_completed, from_parent=Task.is_completed)
+create_project: .. found class: InvoiceItem in: Rule.copy(derive=InvoiceItem.is_completed, from_parent=Task.is_completed)
+create_project: .. found class: Task in: Rule.copy(derive=InvoiceItem.is_completed, from_parent=Task.is_completed)
 create_project: 
 create_project: Project created.  Next steps:
 create_project: 
@@ -198,36 +210,36 @@ create_project: $ ApiLogicServer run      # Run created API and Admin App, or
 create_project: 
 create_project: Customize using IDE on local machine:
 create_project: exit     # exit the Docker container
-create_project: code <local machine directory for: ProjectTracker>  # e.g., open VSCode on created project
+create_project: code <local machine directory for: ProjectTimeTracking>  # e.g., open VSCode on created project
 create_project: 
 create_project: 
-create_project: GENAI (85 secs) successful on try 1
+create_project: GENAI (204 secs) successful on try 1
 log: Model Generation Successful
 create_project: 
 create_project: 
-create_project: Welcome to API Logic Server, 14.03.10
+create_project: Welcome to API Logic Server, 14.03.09
 create_project: 
 create_project: creating in manager: sqlite:///system/genai/temp/create_db_models.sqlite
 create_project: 
 Adding security
   .. docker operation enabled on current project: .
-... Error - does not appear to be a project: /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2
+... Error - does not appear to be a project: /opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR
 ... Typical usage - cd into project, use --project_name=. 
 
 
-Welcome to API Logic Server, 14.03.10
+Welcome to API Logic Server, 14.03.09
 
 
-Waiting for background tasks to complete.. (in /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2)
-+ manager -jp 01JMCRP6RTCT32TMNM2532VCN2
+Waiting for background tasks to complete.. (in /opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR)
 [1]   Running                 create_spa &
 [2]-  Running                 gen_descriptions &
 [3]+  Running                 cleanup &
++ manager -jp 01JMW56P6X34M85CN1WNAZCFFR
 + PYTHONPATH=/opt/webgenai
-+ python /opt/webgenai/database/manager.py -jp 01JMCRP6RTCT32TMNM2532VCN2
++ python /opt/webgenai/database/manager.py -jp 01JMW56P6X34M85CN1WNAZCFFR
 Background tasks completed
 log: Project created, starting..
 log: Creating sample data..
-+ [[ ! -f /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/docs/db.dbml ]]
-+ dbml-renderer -i /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/docs/db.dbml -o /opt/projects/by-ulid/01JMCRP6RTCT32TMNM2532VCN2/ui/dber.svg
++ [[ ! -f /opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/docs/db.dbml ]]
++ dbml-renderer -i /opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/docs/db.dbml -o /opt/projects/by-ulid/01JMW56P6X34M85CN1WNAZCFFR/ui/dber.svg
 + set +x

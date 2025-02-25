@@ -4,4 +4,4 @@ from database.models import *
 import integration.kafka.kafka_producer as kafka_producer
 
 def init_rule():
-  Rule.formula(derive=InvoiceItem.is_completed, as_expression=lambda row: all(item.is_completed for item in row.invoice_items))
+  Rule.sum(derive=Client.payment_total, as_sum_of=Invoice.payment_total)

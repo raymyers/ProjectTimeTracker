@@ -7,18 +7,8 @@
 # sh ./devops/docker-compose-dev-local/docker-compose.sh
 # --> builds, runs at localhost:5656
 
-version: "3.5"
 
 services:
-
-    sqlite3:
-      # hmm... runs, but not access; SQLAlchemy syntax for sqlite service?  (it's just files below)
-      image: nouchka/sqlite3:latest
-      stdin_open: true
-      tty: true
-      volumes:
-        - ../../database/:/root/db/
-      # thanks: https://stackoverflow.com/questions/65811608/how-to-connect-flask-app-to-sqlite-db-running-in-docker
 
     api-logic-server:
         image: apilogicserver/projecttracker
@@ -26,13 +16,29 @@ services:
           - APILOGICPROJECT_VERBOSE=true
           - SECURITY_ENABLED=true
           ## todid - use default database uri's:
-          # - APILOGICPROJECT_SQLALCHEMY_DATABASE_URI=sqlite:///../database/db.sqlite
-          # - APILOGICPROJECT_SQLALCHEMY_DATABASE_URI_AUTHENTICATION=sqlite:///../database/authentication_db.sqlite
+          - APILOGICPROJECT_SQLALCHEMY_DATABASE_URI=postgresql://postgres:Mart1nbaum$2908@database-1.ct6ae4ec4d3p.us-east-1.rds.amazonaws.com:5432/timetracker
+          - APILOGICPROJECT_SQLALCHEMY_DATABASE_URI_AUTHENTICATION=postgresql://postgres:Mart1nbaum$2908@database-1.ct6ae4ec4d3p.us-east-1.rds.amazonaws.com:5432/authdb
         expose:
           - 5656
         ports:
           - 5656:5656
-        volumes:
+
+    timetracker-front-end:
+        image: tylerm007/timetracker_frontend:latest
+        container_name: timetracker_frontend
+        expose:
+          - 80
+        ports:
+          - 80:80
+        #volumes:
+        # local:path-in-container
+        #  - ../../ui/app/dist:/home/node  
+        #volumes:
           # local:path-in-container
-          - ../:/app
-          - ../../database/:/my/sqlite/path/
+          #- ../ui/app/nginx:/etc/nginx  
+          #- ./Users/tylerband/medai+/medai2/ui/app/dist:/usr/share/nginx/html
+        depends_on:
+          - apilogicserver
+        environment:
+          - NODE_ENV=production
+          - API_URL=http://ec2-54-90-86-54.compute-1.amazonaws.com:5656/ontimizeweb/services/rest

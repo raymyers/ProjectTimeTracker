@@ -17,5 +17,6 @@
     "python.defaultInterpreterPath": "/usr/local/bin/python",
     "workbench.editorAssociations": {
         "*.md": "vscode.markdown.preview.editor"
-    }
+    },
+    "git.ignoreLimitWarning": true
 }

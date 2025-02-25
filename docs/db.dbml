@@ -2,27 +2,119 @@
 // Or, https://databasediagram.com/app
 // Or, view in VSCode with extension: "DBML Live Preview"
 
-Table Role {
-    name VARCHAR(64) [primary key]
+Project DBML {
+  Note: '''
+Client: Table to store client details including contact and budget info.
+Invoice: Stores invoice details for clients including payment tracking.
+Project: Table to manage projects of clients, tracking hours, budget, and active status.
+InvoiceItem: Details individual items in an invoice, linking tasks and invoices.
+Task: Manage tasks within projects, tracking work and budget allocations.
+Payment: Stores payment details for client invoices, linking to those entities.
+Person: Contains person-specific details, responsible for logging hours billed to clients.
+Timesheet: Tracks individual time entries and corresponding billing information.
+'''
+}
+
+Table Client {
+    id INTEGER [primary key]
+    name VARCHAR 
+    email VARCHAR 
+    phone VARCHAR 
+    total_hours DECIMAL 
+    total_amount DECIMAL 
+    budget_amount DECIMAL 
+    is_over_budget BOOLEAN 
+    invoice_total DECIMAL 
+    payment_total DECIMAL 
     }
 
-Table User {
-    name VARCHAR(128) 
-    notes TEXT 
-    id VARCHAR(64) [primary key]
-    username VARCHAR(128) 
-    email VARCHAR(128) 
-    password_hash VARCHAR(200) 
+Table Invoice {
+    id INTEGER [primary key]
+    invoice_date DATE 
+    client_id INTEGER 
+    project_id INTEGER 
+    invoice_amount DECIMAL 
+    payment_total DECIMAL 
+    invoice_balance DECIMAL 
+    is_paid BOOLEAN 
+    is_ready BOOLEAN 
+    task_count INTEGER 
+    completed_task_count INTEGER 
     }
 
-Table UserRole {
-    user_id VARCHAR(64) [primary key]
-    notes TEXT 
-    role_name VARCHAR(64) 
+Table Project {
+    id INTEGER [primary key]
+    client_id INTEGER 
+    name VARCHAR 
+    total_project_hours DECIMAL 
+    total_project_amount DECIMAL 
+    project_budget_amount DECIMAL 
+    is_over_budget BOOLEAN 
+    is_active BOOLEAN 
+    }
+
+Table InvoiceItem {
+    id INTEGER [primary key]
+    invoice_id INTEGER 
+    task_id INTEGER 
+    task_amount DECIMAL 
+    is_completed BOOLEAN 
+    }
+
+Table Task {
+    id INTEGER [primary key]
+    project_id INTEGER 
+    name VARCHAR 
+    description VARCHAR 
+    total_task_hours_worked DECIMAL 
+    total_task_amount_billed DECIMAL 
+    task_budget_hours DECIMAL 
+    is_over_budget BOOLEAN 
+    is_completed BOOLEAN 
+    }
+
+Table Payment {
+    id INTEGER [primary key]
+    client_id INTEGER 
+    invoice_id INTEGER 
+    amount DECIMAL 
+    payment_date DATE 
+    notes VARCHAR 
+    }
+
+Table Person {
+    id INTEGER [primary key]
+    client_id INTEGER 
+    name VARCHAR 
+    email VARCHAR 
+    phone VARCHAR 
+    billing_rate DECIMAL 
+    total_hours_entered DECIMAL 
+    total_amount_billed DECIMAL 
+    }
+
+Table Timesheet {
+    id INTEGER [primary key]
+    task_id INTEGER 
+    person_id INTEGER 
+    date_worked DATE 
+    hours_worked DECIMAL 
+    billing_rate DECIMAL 
+    total_amount_billed DECIMAL 
+    is_billable BOOLEAN 
     }
 
 
 
 // Relationships
-    Ref: UserRole.(role_name) < Role.(name)
-    Ref: UserRole.(user_id) < User.(id)
+    Ref: Invoice.(client_id) < Client.(id)
+    Ref: Invoice.(project_id) < Project.(id)
+    Ref: Project.(client_id) < Client.(id)
+    Ref: InvoiceItem.(invoice_id) < Invoice.(id)
+    Ref: InvoiceItem.(task_id) < Task.(id)
+    Ref: Task.(project_id) < Project.(id)
+    Ref: Payment.(client_id) < Client.(id)
+    Ref: Payment.(invoice_id) < Invoice.(id)
+    Ref: Person.(client_id) < Client.(id)
+    Ref: Timesheet.(person_id) < Person.(id)
+    Ref: Timesheet.(task_id) < Task.(id)

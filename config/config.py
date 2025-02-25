@@ -95,7 +95,7 @@ class Config:
     # Database
     db_path = str(project_path.joinpath('database/db.sqlite'))
     SQLALCHEMY_DATABASE_URI : typing.Optional[str] = f"sqlite:///{db_path}"
-    SQLALCHEMY_DATABASE_URI : typing.Optional[str] = f"postgresql://postgres:postgres@127.0.0.1:5432/timetracker"
+    #SQLALCHEMY_DATABASE_URI : typing.Optional[str] = f"postgresql://postgres:postgres@127.0.0.1:5432/timetracker"
     # override SQLALCHEMY_DATABASE_URI here as required
 
     BACKTIC_AS_QUOTE = False # use backtic as quote for table names for API Bridge
@@ -139,13 +139,14 @@ class Config:
         from security.authentication_provider.sql.auth_provider import Authentication_Provider
         # typically, authentication_provider is [ keycloak | sql ]
         SECURITY_PROVIDER = Authentication_Provider
-        app_logger.debug(f'config.py - security enabled')
+        app_logger.debug('config.py - security enabled')
     else:
-        app_logger.info(f'config.py - security disabled')
+        app_logger.info('config.py - security disabled')
 
     # Begin Multi-Database URLs (from ApiLogicServer add-db...)
     auth_db_path = str(project_path.joinpath('database/authentication_db.sqlite'))
-    SQLALCHEMY_DATABASE_URI_AUTHENTICATION = f"postgresql://postgres:postgres@127.0.0.1:5432/authdb"
+    #SQLALCHEMY_DATABASE_URI_AUTHENTICATION = f"postgresql://postgres:postgres@127.0.0.1:5432/authdb"
+    SQLALCHEMY_DATABASE_URI_AUTHENTICATION = f'sqlite:///{auth_db_path}'
     app_logger.info(f'config.py - SQLALCHEMY_DATABASE_URI_AUTHENTICATION: {SQLALCHEMY_DATABASE_URI_AUTHENTICATION}\n')
 
     # as desired, use env variable: export SQLALCHEMY_DATABASE_URI='sqlite:////Users/val/dev/servers/docker_api_logic_project/database/db.sqliteXX'
